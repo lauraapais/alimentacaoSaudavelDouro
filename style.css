@@ -1053,6 +1053,10 @@ svg {
         flex-direction: column;
     }
 
+    .imageInfo {
+        width: 100%;
+    }
+
 
 
 
