@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alimentação Saudável e Sustentável nas Terras de Trás-os-Montes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="gameBody" id="backgroundNiveis">
+
+    <div class="headerGame">
+        <div class="logoHeaderIndex">
+            <a href="index.html"><img src="data/general/logoWhite.png"
+                    alt="Alimentação Saudável e Sustentável de Trás-os-Montes"></a>
+        </div>
+        <div class="gameMenu">
+            <a href="index.html">
+                <svg id="closeGame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                <g>
+                  <line class="cls-1" x1="17" y1="17" x2="1" y2="1"/>
+                  <line class="cls-1" x1="1" y1="17" x2="17" y2="1"/>
+                </g>
+              </svg></a>
+        </div>
+    </div>
+
+    <main id="levelMain">
+        <div class="level nonBlock" id="alimentosSazonais">
+            <div class="levelTitle">
+                <span>Alimentos<br>Sazonais</span>
+            </div>
+            <div class="cover"></div>
+        </div>
+
+        <div class="level nonBlock" id="alimentosRegionais">
+            <div class="levelTitle">
+                <span>Alimentos<br>Regionais</span>
+            </div>
+            <div class="cover"></div>
+        </div>
+
+        <div class="level nonBlock" id="rodadosAlimentos">
+            <div class="levelTitle">
+                <span>Roda dos<br>Alimentos</span>
+            </div>
+            <div class="cover"></div>
+        </div>
+
+        <div class="level nonBlock" id="alimentacaoEquilibrada">
+            <div class="levelTitle">
+                <span>Dieta<br>Mediterrânea</span>
+            </div>
+            <div class="cover"></div>
+        </div>
+    </main>
+
+    <script src="interact.js" defer></script>
+    <script src="JS/mobileHeight.js"></script>
+</body>
+
+</html>

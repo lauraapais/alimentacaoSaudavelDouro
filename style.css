@@ -1,0 +1,1153 @@
+:root {
+    --orange: #ED7726;
+    --yellow: #F7EB2D;
+    --armygreen: #9C9936;
+    --green: #37B34A;
+    --pink: #EB99C2;
+    --grey: #ABA9A9;
+    --red: #EE3F25;
+    --purple: #B33894;
+    --blue: #1B75BB;
+    --lightBlue: #63B6DF;
+
+    --white: #FFF;
+    --blueText: #FFF;
+    --black: #221E1F;
+
+
+    --headerHmin: 12vh;
+    --marginH: 2vw;
+
+    --headerHminMobile: 12vh;
+    --marginHMobile: 6vw;
+}
+
+
+
+
+/*backgrounds*/
+#backgroundNiveis {
+    background-color: var(--armygreen);
+}
+
+#projectBackground {
+    background-color: var(--pink);
+}
+
+#explorarBackground {
+    background-color: #F3822B;
+    transition: background-color 1s ease;
+
+}
+
+#escolasBackground {
+    background-color: var(--orange);
+}
+
+#paisBackground {
+    background-color: var(--blue);
+}
+
+
+
+
+/*general*/
+@font-face {
+    font-family: AuthenticSans130;
+    src: url(data/font/AUTHENTIC\ Sans\ ^.otf);
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    font-family: AuthenticSans130;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+p {
+    font-size: calc(14px + 0.390625vw);
+    text-wrap: pretty;
+    color: var(--blueText);
+    margin: calc(var(--marginH)/3) 0;
+}
+
+h1 {
+    font-size: calc(65px + 0.390625vw);
+    text-wrap: pretty;
+    color: var(--blueText);
+    margin: 0;
+}
+
+li {
+    font-size: calc(65px + 0.390625vw);
+    text-wrap: pretty;
+    color: var(--white);
+    margin: 0;
+}
+
+h2 {
+    font-size: calc(40px + 0.390625vw);
+    text-wrap: pretty;
+    color: var(--white);
+    margin: 0;
+}
+
+h3 {
+    font-size: calc(30px + 0.390625vw);
+    text-wrap: pretty;
+    color: var(--white);
+}
+
+h4 {
+    font-size: calc(20px + 0.390625vw);
+    text-wrap: pretty;
+    color: var(--white);
+}
+
+
+#main-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--marginH);
+    margin-bottom: 0;
+    height: min(var(--headerHmin), 500px);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.menu li {
+    list-style-type: none;
+    cursor: pointer;
+    height: fit-content;
+    margin: 0 var(--marginH);
+}
+
+.menu a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.menuSelect {
+    text-decoration: underline;
+}
+
+.menuDiv {
+    width: 100vw;
+    min-height: calc(var(--vh, 1h) * 100);
+    position: fixed;
+    top: calc(var(--vh, 1h) * -100);
+    z-index: 201;
+    transition: top 1s;
+    background-color: var(--armygreen);
+}
+
+#menuIcon {
+    width: calc(15px + 1.5vw) !important;
+    height: fit-content;
+}
+
+#closeMenu,
+#closeGame {
+    width: calc(1px + 1.5vw) !important;
+    height: fit-content;
+}
+
+#menuIcon {
+    stroke-width: 5px;
+    cursor: pointer;
+}
+
+#closeMenu,
+#closeGame {
+    stroke-width: 1.6px;
+}
+
+.active {
+    transition: top 1s;
+    top: 0 !important;
+}
+
+main {
+    padding: var(--marginH);
+}
+
+.menuItems {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - min(var(--headerHmin), 500px) - var(--marginH) * 2);
+    width: calc(100vw - var(--marginH)*2);
+    margin: 0 var(--marginH);
+}
+
+.menuItems li {
+    margin-bottom: calc(var(--marginH) / 2);
+}
+
+.menuItems li:hover {
+    text-decoration: underline;
+}
+
+.menuItems a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer {
+    margin: var(--marginH);
+    width: calc(100vw - var(--marginH) * 2);
+}
+
+.support {
+    margin-bottom: 4vh;
+}
+
+.support span {
+    font-family: AuthenticSans130;
+    font-size: 23px;
+    color: var(--white);
+}
+
+.footerImg {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.footerImg img {
+    height: 3vh;
+    min-height: 30px;
+    margin-right: 2vw;
+    margin-top: 1vh;
+}
+
+.footerDiv {
+    display: flex;
+}
+
+
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+svg {
+    stroke: var(--white);
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+
+
+/** Index **/
+.logoHeader {}
+
+.logoHeaderIndex img {
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+}
+
+.logoHeaderIndex {
+    height: 100%;
+}
+
+.mainLanding {
+    height: calc(100vh - min(var(--headerHmin), 500px) - var(--marginH) * 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--marginH);
+    position: relative;
+}
+
+.indexImage {
+    height: 100%;
+}
+
+.indexImage .indexIllustration {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.buttonIndex {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    z-index: 1;
+    max-width: 25vw;
+    max-height: 25vw;
+    width: 12vw;
+    filter: drop-shadow(0px 0px 0px #4444);
+    transform: rotate(15deg);
+}
+
+.buttonIndex:hover {
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.15));
+}
+
+.landingIntro {
+    margin-top: 15vh;
+    margin-bottom: 20vh;
+    width: 45%;
+}
+
+.landingIntro p {
+    color: var(--white);
+}
+
+.iconsIntro {
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+.iconsIntro p {
+    color: var(--white);
+}
+
+.iconsIntroTitle {
+    margin-bottom: 5vh;
+}
+
+.iconsIntroTitle h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.illustrationsIndex {
+    display: flex;
+    justify-content: space-around
+}
+
+.illustrationsIndex img {
+    height: 20vw;
+    margin-bottom: 5vh;
+}
+
+.illustrationsIndex div {
+    display: grid;
+    justify-items: center;
+}
+
+
+
+
+/** Level Menu **/
+#levelMain {
+    width: calc(100vw - var(--marginH) * 2);
+    height: calc(100vh - min(var(--headerHmin), 500px) - var(--marginH) * 4);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: var(--marginH);
+}
+
+.levelMenu {
+    display: flex;
+}
+
+.level {
+    width: 16vw;
+    height: 25vw;
+    min-width: 280px;
+    min-height: 410px;
+    border-radius: 25px;
+    filter: drop-shadow(0px 0px 0px #4444);
+    transition: filter 0.3s;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: var(--marginH);
+    overflow: hidden;
+    max-width: 45%;
+}
+
+.level:hover {
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.15));
+}
+
+.block:hover {
+    filter: none;
+    cursor: default;
+}
+
+.levelTitle {
+    padding: 20px 20px 0 20px;
+    height: 25%;
+}
+
+#levelMain span {
+    color: var(--white);
+    font-size: calc(21px + 0.6vw);
+    line-height: calc(21px + 0.6vw);
+    margin-top: 5px;
+}
+
+.level .cover {
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    bottom: 0;
+}
+
+#alimentosSazonais {
+    background-color: #DE93C0;
+}
+
+#alimentosSazonais .cover {
+    background-image: url(data/jogo/levels/alimentosSazonais.png);
+}
+
+#alimentosRegionais {
+    background-color: #EE7726;
+}
+
+#alimentosRegionais .cover {
+    background-image: url(data/jogo/levels/alimentosRegionais.png);
+}
+
+#rodadosAlimentos {
+    background-color: #8E3B96;
+}
+
+#rodadosAlimentos .cover {
+    background-image: url(data/jogo/levels/rodaAlimentos.png);
+}
+
+#alimentacaoEquilibrada {
+    background-color: var(--lightBlue);
+}
+
+#alimentacaoEquilibrada .cover {
+    background-image: url(data/jogo/levels/alimentacaoEquilibrada.png);
+}
+
+#levelMain a {
+    text-decoration: none;
+}
+
+.block>.blockDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+
+.blockDiv img {
+    width: 45px !important;
+}
+
+.nonBlock>.blockDiv {
+    display: none !important;
+}
+
+.nonBlock .playLevel {
+    position: absolute;
+    bottom: -70px;
+    right: -50px;
+}
+
+.block .playLevel {
+    display: none;
+}
+
+.playLevel {
+    display: none;
+}
+
+.playLevel img {
+    width: 200px;
+    height: auto;
+}
+
+.playLevel img:hover {
+    filter: drop-shadow(0px 9px 40px rgba(0, 0, 0, 15));
+}
+
+
+
+
+/** Game **/
+#canvas_parent {
+    display: flex;
+    justify-content: center;
+    height: 85vh;
+    width: 100%;
+}
+
+.gameBody {
+    padding: 0 !important;
+}
+
+.headerGame {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--marginH);
+    height: min(var(--headerHmin), 500px);
+}
+
+.headerGameInside {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: var(--marginH);
+}
+
+.closeIcon {
+    width: calc(7px + 1.5vw);
+    margin-left: 1.5vw;
+}
+
+.homeIcon {
+    width: calc(7px + 1.5vw);
+}
+
+.menu img {
+    width: calc(7px + 1.5vw);
+    height: fit-content;
+}
+
+.gameMenu {
+    display: flex;
+}
+
+
+
+/** Project **/
+.mainInfoText {
+    display: flex;
+    flex-direction: row-reverse
+}
+
+.leftInfoText {
+    width: 40%;
+}
+
+.textInfo {
+    width: 100%;
+}
+
+.info {
+    margin-top: calc(var(--marginH));
+}
+
+.textInfo span {}
+
+.textInfoBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imageInfo {
+    width: 60%;
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+}
+
+.imageInfo img {
+    position: absolute;
+    width: 35%;
+    height: auto;
+}
+
+#textInfoTitle span {
+    font-family: AuthenticSans130;
+    font-size: calc(65px + 0.5vw);
+    color: var(--white);
+    margin-top: var(--marginH);
+}
+
+#textInfoTitle img {
+    width: 20vw;
+    margin-bottom: calc(var(--marginH) /2);
+    margin-top: calc(var(--marginH) /2);
+}
+
+
+
+
+/*new Explore*/
+#videoMain {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - var(--marginH) * 3 - var(--headerHmin));
+    max-height: calc(100vh - var(--marginH) * 3 - var(--headerHmin));
+    position: relative;
+    justify-content: space-between;
+}
+
+#videoMain p {
+    color: var(--white);
+}
+
+.arrow {
+    display: flex;
+    z-index: 200;
+}
+
+#arrowLeft {
+    width: 1.7vw;
+    margin-right: 1vw;
+    stroke: var(--white);
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.6px;
+}
+
+#arrowRight {
+    width: 1.7vw;
+    margin-left: 1vw;
+    stroke: var(--white);
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.6px;
+}
+
+.exploreContainer {
+    height: calc(100vh - var(--marginH) * 3 - var(--headerHmin));
+    display: flex;
+    align-items: center;
+}
+
+.videoMain {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: calc(var(--marginH)/2);
+}
+
+.videoContainer {
+    width: 65%;
+}
+
+.videoContainer video {
+    width: 100%;
+    max-height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.exploreContainer {
+    position: relative;
+}
+
+.video_plus_info {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--marginH);
+    position: absolute;
+    top: 0;
+    max-height: calc(100vh - var(--marginH) * 3 - var(--headerHmin));
+}
+
+.exploreVideos {
+    width: 90%;
+    position: relative;
+}
+
+.exploreInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 1s ease;
+
+    width: 35%;
+    max-height: calc(100vh - var(--marginH) * 3 - var(--headerHmin));
+
+}
+
+.exploreInfo p {
+    margin: calc(var(--marginH)/2) 0;
+}
+
+.infoVideoTitle {
+    margin-top: 0.9vw !important;
+}
+
+.infoVideop {
+    margin-top: 0.9vw !important;
+}
+
+
+.infoVideop h4 {
+    margin: calc(var(--marginH)/2) 0;
+}
+
+.exploreInfoImg img {
+    width: 10vw;
+    position: absolute;
+}
+
+.exploreInfoImg {
+    position: relative;
+    overflow-y: hidden !important;
+}
+
+#dietaMediterranica1 {
+    top: 0;
+    right: 0;
+}
+
+#dietaMediterranica2 {
+    top: 50%;
+    left: 0;
+}
+
+#dietaMediterranica3 {
+    bottom: 0;
+    right: 0;
+}
+
+
+
+
+@media screen and (max-width:1500px) {
+
+    /*index*/
+    .indexImage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttonIndex {
+        width: 15vw;
+        max-width: 15vw;
+        max-height: 15vw;
+    }
+
+    .landingIntro {
+        width: 70%;
+    }
+
+
+
+
+    /*general*/
+    .menuItems {
+        font-size: calc(45px + 0.5vw);
+    }
+
+
+
+
+    /*niveis*/
+    .level {
+        margin: 0;
+        gap: var(--marginHMobile);
+        box-sizing: border-box;
+        min-height: 70%;
+        width: 23%;
+        min-width: auto;
+    }
+
+    #levelMain {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100vw - var(--marginHMobile) * 2);
+        height: calc(var(--vh, 1h) * 100 - var(--marginHMobile) * 3 - min(var(--headerHminMobile), 500px));
+        margin: var(--marginHMobile);
+        padding: 0;
+    }
+
+    .levelTitle {
+        display: none;
+    }
+
+    #levelMain span {
+        font-size: calc(20px + 0.6vw);
+    }
+
+
+
+
+    /*info pages*/
+    .textInfo {
+        width: 100%;
+        margin-bottom: var(--marginHMobile);
+    }
+
+    .imageInfo {
+        width: 50%;
+    }
+
+    .leftInfoText {
+        width: 50%;
+    }
+
+    #textInfoTitle img {
+        width: 25vw;
+    }
+
+
+
+
+    /*new explore*/
+    .video_plus_info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .videoContainer {
+        width: 100%;
+    }
+
+    .exploreInfo {
+        width: 80%;
+    }
+
+    .infoVideoTitle {
+        margin-left: 0.9vw !important;
+        margin-top: 0 !important;
+    }
+
+    .infoVideop {
+        margin-left: 0.9vw !important;
+        margin-top: 0 !important;
+    }
+
+}
+
+
+
+
+@media screen and (max-width:900px) {
+
+    .buttonIndex {
+        width: 35vw;
+        max-width: 35vw;
+        max-height: 35vw;
+    }
+
+    p {
+        font-size: calc(14px + 0.390625vw);
+        margin: calc(var(--marginHMobile)/4) 0;
+    }
+
+    h1 {
+        font-size: calc(40px + 0.390625vw);
+    }
+
+    li {
+        font-size: calc(40px + 0.390625vw);
+    }
+
+    h2 {
+        font-size: calc(36px + 0.390625vw);
+    }
+
+    h3 {
+        font-size: calc(20px + 0.390625vw);
+    }
+
+    h4 {
+        font-size: calc(17px + 0.390625vw);
+        margin: calc(var(--marginHMobile)/2) 0 calc(var(--marginHMobile)/4) 0
+    }
+
+
+
+
+
+    /*icons*/
+    .homeIcon {
+        width: calc(20px + 1.5vw) !important;
+        height: fit-content;
+    }
+
+    .closeIcon {
+        width: calc(20px + 1.5vw) !important;
+        margin-left: 5vw;
+        height: fit-content;
+    }
+
+    #menuIcon {
+        width: calc(27px + 1.5vw) !important;
+        height: fit-content;
+    }
+
+    #closeMenu,
+    #closeGame {
+        width: calc(17px + 1.5vw) !important;
+        height: fit-content;
+    }
+
+
+
+
+    /*index*/
+    .indexImage {
+        display: flex;
+        align-items: center;
+    }
+
+    .landingIntro {
+        width: 100%;
+        margin-bottom: 10vh;
+    }
+
+    .mainLanding {
+        height: calc(var(--vh, 1h)*100 - min(var(--headerHminMobile), 500px) - var(--marginHMobile)* 4);
+        margin: 0;
+    }
+
+    .illustrationsIndex {
+        flex-direction: column;
+    }
+
+    .illustrationsIndex img {
+        height: 50vw;
+    }
+
+
+
+
+
+
+    /*general*/
+    main {
+        padding: var(--marginHMobile);
+    }
+
+    footer {
+        margin: var(--marginHMobile);
+        width: calc(100vw - var(--marginHMobile)*2);
+    }
+
+    .footerDiv {
+        flex-direction: column;
+    }
+
+    .footerImg {
+        flex-wrap: wrap;
+    }
+
+    .menuItems {
+        margin: 0 var(--marginHMobile);
+        height: calc(var(--vh, 1h)*100 - min(var(--headerHminMobile), 500px) - var(--marginHMobile) * 2);
+        width: calc(100vw - var(--marginHMobile)*2);
+    }
+
+    .menuItems li {
+        margin-bottom: calc(var(--marginHMobile) / 2);
+    }
+
+    .level .cover {
+        height: 100%;
+        background-size: cover;
+    }
+
+    #alimentosSazonais .cover {
+        background-image: url(data/jogo/levels/alimentosSazonais.png);
+    }
+
+    #alimentosRegionais .cover {
+        background-image: url(data/jogo/levels/alimentosRegionais.png);
+    }
+
+    #rodadosAlimentos .cover {
+        background-image: url(data/jogo/levels/rodaAlimentos.png);
+    }
+
+    #alimentacaoEquilibrada .cover {
+        background-image: url(data/jogo/levels/alimentacaoEquilibrada.png);
+    }
+
+    #menuExplorePage {
+        margin-bottom: 10vh;
+    }
+
+    header {
+        height: min(var(--headerHminMobile), 200px);
+        margin: var(--marginHMobile);
+        margin-bottom: 0;
+    }
+
+    .headerGame {
+        height: min(var(--headerHminMobile), 200px);
+        margin: var(--marginHMobile);
+        padding: 0;
+    }
+
+    .menuDiv {
+        display: block;
+        height: calc(var(--vh, 1h)*100);
+        position: absolute;
+        top: calc((var(--vh, 1h)*100) *-1);
+        overflow-y: auto;
+    }
+
+
+
+
+    /*info Pages*/
+    .leftInfoText {
+        width: 100%;
+    }
+
+    .imageInfo img {
+        position: static;
+    }
+
+    #textInfoTitle img {
+        width: 70vw;
+        margin-bottom: calc(var(--marginHMobile) /2);
+        margin-top: calc(var(--marginHMobile) /2);
+    }
+
+    .info {
+        margin-top: calc(var(--marginH) * 3);
+    }
+
+    .imageInfo img {
+        width: 100%;
+    }
+
+    .imageInfo {
+        margin: var(--marginHMobile) 0;
+    }
+
+    .textInfoBox {
+        flex-direction: column;
+    }
+
+    .mainInfoText {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+
+    /*niveis*/
+    .level {
+        width: 48%;
+        height: 42%;
+        max-height: 370px;
+        margin-bottom: var(--marginHMobile);
+        gap: var(--marginHMobile);
+        box-sizing: border-box;
+        min-width: unset;
+        min-height: unset;
+    }
+
+    #levelMain {
+
+        width: calc(100vw - var(--marginHMobile) * 2);
+        height: calc(var(--vh, 1h) * 100 - var(--marginHMobile) * 3 - min(var(--headerHminMobile), 500px));
+        margin: var(--marginHMobile);
+        padding: 0;
+
+    }
+
+    .levelTitle {
+        display: none;
+    }
+
+    .headerGameInside {
+        margin: var(--marginHMobile);
+    }
+
+
+    /*explore*/
+    .mainVideo {
+        height: auto;
+    }
+
+    .exploreVideo video {
+        width: 100%;
+        height: 100%
+    }
+
+    .exploreVideo {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .videoSection .exploreVideo {
+        height: fit-content;
+    }
+
+    .videoSection {
+        height: fit-content;
+    }
+
+
+
+    /*new explore*/
+    .exploreVideos {
+        position: absolute;
+    }
+
+    .video_plus_info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .videoContainer {
+        width: 100%;
+    }
+
+    .exploreInfo {
+        width: 100%;
+    }
+
+    .exploreContainer {
+        align-items: flex-start;
+    }
+
+    .exploreInfo {
+        margin-top: var(--marginHMobile);
+    }
+
+    #arrowLeft {
+        width: 4vw;
+        stroke-width: 2px;
+    }
+
+    #arrowRight {
+        width: 4vw;
+        stroke-width: 2px;
+    }
+
+    .infoVideoTitle {
+        margin-bottom: calc(var(--marginHMobile) / 4);
+    }
+}
