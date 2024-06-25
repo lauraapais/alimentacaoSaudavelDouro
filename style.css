@@ -674,7 +674,16 @@ svg {
     position: absolute;
     top: 0;
     max-height: calc(100vh - var(--marginH) * 3 - var(--headerHmin));
+    height: 100%;
+    align-items: center;
 }
+
+.videoInfoFlex{
+    display: flex;
+    height: auto;
+    gap: var(--marginH);
+}
+
 
 .exploreVideos {
     width: 90%;
@@ -1153,5 +1162,18 @@ svg {
 
     .infoVideoTitle {
         margin-bottom: calc(var(--marginHMobile) / 4);
+    }
+
+    .videoInfoFlex{
+        flex-direction: column;
+    }
+
+    #videoMain{
+        height: calc(100vh - var(--marginHMobile)* 3 - var(--headerHminMobile));
+    max-height: calc(100vh - var(--marginHmobile)* 3 - var(--headerHminMobile));
+    }
+
+    .arrow{
+        align-self: flex-end;
     }
 }
