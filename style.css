@@ -548,22 +548,26 @@ svg {
 /** Project **/
 .mainInfoText {
     display: flex;
-    flex-direction: row-reverse
 }
 
 .leftInfoText {
     width: 40%;
+    margin-top: 5vh;
 }
 
 .textInfo {
     width: 100%;
 }
 
-.info {
-    margin-top: calc(var(--marginH));
+.textInfo p:first-child{
+    margin:0!important
 }
 
-.textInfo span {}
+.info {
+    margin-top: calc(var(--marginH));
+    position: relative;
+}
+
 
 .textInfoBox {
     display: flex;
@@ -578,8 +582,7 @@ svg {
 }
 
 .imageInfo img {
-    position: absolute;
-    width: 35%;
+    width: 70%;
     height: auto;
 }
 
@@ -591,8 +594,8 @@ svg {
 }
 
 #textInfoTitle img {
-    width: 20vw;
-    margin-bottom: calc(var(--marginH) /2);
+    width: 30vw;
+    margin-bottom: 0;
     margin-top: calc(var(--marginH) /2);
 }
 
@@ -807,22 +810,44 @@ svg {
 
 
 
-    /*info pages*/
-    .textInfo {
-        width: 100%;
-        margin-bottom: var(--marginHMobile);
-    }
-
-    .imageInfo {
-        width: 50%;
-    }
-
+    /*info Pages*/
     .leftInfoText {
-        width: 50%;
+        width: 100%;
+    }
+
+    .imageInfo img {
+        position: static;
     }
 
     #textInfoTitle img {
-        width: 25vw;
+        width: 70vw;
+        margin-bottom: calc(var(--marginHMobile) /2);
+        margin-top: calc(var(--marginHMobile) /2);
+    }
+
+    .info {
+        margin-top: calc(var(--marginH) * 3);
+    }
+
+    .imageInfo img {
+        width: 70%;
+    }
+
+    .imageInfo {
+        margin: var(--marginHMobile) 0;
+    }
+
+    .textInfoBox {
+        flex-direction: column;
+    }
+
+    .mainInfoText {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imageInfo {
+        width: 100%;
     }
 
 

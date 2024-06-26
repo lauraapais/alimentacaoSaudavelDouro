@@ -109,26 +109,26 @@ function textsize() {
 }
 
 function loadItems() {
-    //Trás-os-Montes
-    items.lemon = new Gameitem('data/jogo/level1/screen1/4.png');
-    items.pepper = new Gameitem('data/jogo/level1/screen2/2.png');
-    items.leek = new Gameitem('data/jogo/level1/screen3/2.png');
-    items.chestnut = new Gameitem('data/jogo/level1/screen3/3.png');
-    items.peach = new Gameitem('data/jogo/level2/screen1/6.png');
-    items.alheira = new Gameitem('data/jogo/level2/screen1/1.png');
+    //Douro
+    items.almond = new Gameitem('data/jogo/level1/screen3/4.png');
+    items.cherry = new Gameitem('data/jogo/level1/screen1/5.png');
+    items.oliveOil = new Gameitem('data/jogo/level2/screen1/3.png');
+    items.fig = new Gameitem('data/jogo/level1/screen2/1.png');
+    items.papaya = new Gameitem('data/jogo/level1/screen3/3.png');
+    items.tomato = new Gameitem('data/jogo/level2/screen1/6.png');
 }
 
 function loadLevels() {
     var level_one;
-    //Trás-os-Montes
+    //Douro
     level_one = new Level(color(239,190,46),'Quais são os alimentos locais das Terras de  Trás-os-Montes?' ,
     new UIFinish('data/jogo/endLevel/5.png'));
-    level_one.addItem(items.alheira, true, 'data/jogo/certoErrado/level2/screen1/certo.png');
-    level_one.addItem(items.leek, false, 'data/jogo/certoErrado/level2/screen1/errado.png');
-    level_one.addItem(items.chestnut, true, 'data/jogo/certoErrado/level2/screen1/certo.png');
-    level_one.addItem(items.lemon, false, 'data/jogo/certoErrado/level2/screen1/errado.png');
-    level_one.addItem(items.pepper, false, 'data/jogo/certoErrado/level2/screen1/errado.png');
-    level_one.addItem(items.peach, true, 'data/jogo/certoErrado/level2/screen1/certo.png');    
+    level_one.addItem(items.almond, true, 'data/jogo/certoErrado/level2/screen1/certo.png');
+    level_one.addItem(items.cherry, false, 'data/jogo/certoErrado/level2/screen1/errado.png');
+    level_one.addItem(items.oliveOil, true, 'data/jogo/certoErrado/level2/screen1/certo.png');
+    level_one.addItem(items.fig, false, 'data/jogo/certoErrado/level2/screen1/errado.png');
+    level_one.addItem(items.papaya, false, 'data/jogo/certoErrado/level2/screen1/errado.png');
+    level_one.addItem(items.tomato, true, 'data/jogo/certoErrado/level2/screen1/certo.png');    
     level_one.setDefaultPosition();
 
     levels = new LevelLoader();
@@ -416,7 +416,7 @@ class Level {
         let lastY;
         textSize(h2Size);
         textFont(fontBold);
-        fill(109, 111, 113);
+        fill(255);
 
         if (w < 900) {
             let maxWidth = windowWidth * 0.7;
@@ -454,7 +454,7 @@ class Level {
         textSize(h2Size*0.8);
         textFont(fontRegular);
         push();
-        fill(109, 111, 113);
+        fill(255);
 
         if (windowWidth < 900) {
             text(content, marginMobile, lastY + marginMobile/2);

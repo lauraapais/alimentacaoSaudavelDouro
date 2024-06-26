@@ -166,9 +166,9 @@ function loadLevels() {
         'Quais são os alimentos sazonais do outono?',
         new UIFinish('data/jogo/endLevel/3.png')
     );
-    level_three.addItem(items.pumpkin, false, 'data/jogo/certoErrado/level1/screen3/errado.png');
-    level_three.addItem(items.calabash, false, 'data/jogo/certoErrado/level1/screen3/errado.png');
-    level_three.addItem(items.papaya, true, 'data/jogo/certoErrado/level1/screen3/certo.png');
+    level_three.addItem(items.pumpkin, true, 'data/jogo/certoErrado/level1/screen3/errado.png');
+    level_three.addItem(items.calabash, true, 'data/jogo/certoErrado/level1/screen3/errado.png');
+    level_three.addItem(items.papaya, false, 'data/jogo/certoErrado/level1/screen3/certo.png');
     level_three.addItem(items.almond, true, 'data/jogo/certoErrado/level1/screen3/certo.png');
     level_three.addItem(items.pepper, false, 'data/jogo/certoErrado/level1/screen3/errado.png');
     level_three.addItem(items.watermelon, false, 'data/jogo/certoErrado/level1/screen3/errado.png');
