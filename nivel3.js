@@ -224,7 +224,7 @@ function loadLevels() {
 class LevelLoader {
     constructor() {
         this.levels = [];
-        this.currentLevel = 5;
+        this.currentLevel = 0;
         this.status = false;
     }
 
