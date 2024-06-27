@@ -158,6 +158,10 @@ header {
     text-decoration: underline;
 }
 
+.menuDiv.loading {
+    display: none;
+}
+
 .menuDiv {
     width: 100vw;
     min-height: calc(var(--vh, 1h) * 100);
@@ -728,6 +732,8 @@ svg {
     width: 35%;
     max-height: calc(100vh - var(--marginH) * 3 - var(--headerHmin));
 
+    overflow-y: auto;
+    padding-right: 1em;
 }
 
 .exploreInfo p {

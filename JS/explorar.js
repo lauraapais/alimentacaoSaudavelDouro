@@ -18,12 +18,12 @@ function showVideo(index) {
             video.style.display = 'flex';
             setTimeout(() => {
                 video.style.opacity = 1;
-            }, 50);
+            });
         } else {
             video.style.opacity = 0;
             setTimeout(() => {
                 video.style.display = 'none';
-            }, 500);
+            });
         }
     });
 
@@ -32,12 +32,12 @@ function showVideo(index) {
             video.style.display = 'flex';
             setTimeout(() => {
                 video.style.opacity = 1;
-            }, 50);
+            });
         } else {
             video.style.opacity = 0;
             setTimeout(() => {
                 video.style.display = 'none';
-            }, 500);
+            });
         }
     });
 }
@@ -120,30 +120,3 @@ document.addEventListener('keydown', (event) => {
 });
 
 showVideo(currentVideo);
-
-
-
-
-function checkOverflowAndAddScroll() {
-    const elements = document.querySelectorAll('.exploreInfo');
-    const infoVideo = document.querySelectorAll('.infoVideop');
-
-    elements.forEach(element => {
-        if (element.scrollHeight > element.clientHeight) {
-            element.style.overflowY = 'scroll';
-
-            infoVideo.forEach(video => {
-                video.style.marginLeft = 'var(--marginH)';
-            });
-
-        } else {
-            element.style.overflowY = 'auto';
-
-            infoVideo.forEach(video => {
-                video.style.marginLeft = '0';
-            });
-        }
-    });
-}
-
-checkOverflowAndAddScroll();

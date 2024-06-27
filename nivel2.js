@@ -121,8 +121,9 @@ function loadItems() {
 function loadLevels() {
     var level_one;
     //Douro
-    level_one = new Level(color(237,119,38),'Quais são os alimentos locais do Douro?' ,
-    new UIFinish('data/jogo/endLevel/5.png'));
+    level_one = new Level(color(237,119,38),
+    'Quais são os alimentos locais do Douro?' ,
+    new UIFinish('data/jogo/endLevel/5.png'), color(237,119,38));
     level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png');
     level_one.addItem(items.cherry, false, 'data/jogo/certoErrado/errado.png');
     level_one.addItem(items.oliveOil, true, 'data/jogo/certoErrado/certo.png');
@@ -209,13 +210,14 @@ class LevelLoader {
 }
 
 class UIFinish {
-    constructor(imageURL) {
+    constructor(imageURL, buttonColor) {
         this.image = loadImage(imageURL);
         this.text = "Concluíste o nível primavera!";
         this.w = 400;
         this.h = 400;
         this.margin = 40;
         this.status = false;
+        this.buttonColor = buttonColor;
     }
 
     display() {
@@ -247,7 +249,7 @@ class UIFinish {
         push();
         rectMode(CENTER);
         noStroke();
-        fill(109, 111, 113);
+        fill(this.buttonColor);
 
         if (w < 900) {
             rect(width / 2, height / 2 + 105 - 7.5, 150, 45, 22);

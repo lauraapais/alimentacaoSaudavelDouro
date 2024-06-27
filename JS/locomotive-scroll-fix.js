@@ -5,6 +5,11 @@ const scroller = new LocomotiveScroll({
 
 window.addEventListener('load', (event) => {
     scroller.start();
+
+    let loadingElements = document.querySelectorAll('.loading');
+    loadingElements.forEach(element => {
+        element.classList.remove('loading');
+    });
 });
 
 scroller.stop();
@@ -13,7 +18,7 @@ scroller.on('scroll', (instance) => {
     onScrollMenu(instance.scroll.y);
 });
 
-window.onload = function() {
+window.onload = function () {
     scroller.update();
 }
 

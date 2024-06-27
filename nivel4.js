@@ -23,8 +23,8 @@ marginDesktop = 0.02 * w;
 function preload() {
     plate = loadImage('data/jogo/plate.png');
     close = loadImage('data/icons/home.png');
-    fontBold=loadFont('data/font/AUTHENTICSans-130.otf');
-    fontRegular=loadFont('data/font/AUTHENTICSans-90.otf');
+    fontBold = loadFont('data/font/AUTHENTICSans-130.otf');
+    fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
 }
 
 function setup() {
@@ -125,7 +125,7 @@ function loadItems() {
     items.rice = new Gameitem('data/jogo/level3/screen6/1.png');
     items.tomato = new Gameitem('data/jogo/level2/screen1/6.png');
     items.oliveOil = new Gameitem('data/jogo/level2/screen1/3.png');
-    
+
     //Lanche
     items.bread2 = new Gameitem('data/jogo/level4/screen3/1.png');
     items.watermelon = new Gameitem('data/jogo/level4/screen3/3.png');
@@ -141,8 +141,9 @@ function loadItems() {
 function loadLevels() {
     var level_one, level_two, level_three, level_four;
     //Pequeno-Almoço
-    level_one = new Level(color(232,210,54), 'Cria um pequeno-almoço equilibrado e com alimentos saudáveis!',
-        new UIFinish('data/jogo/endLevel/12.png'));
+    level_one = new Level(color(232, 210, 54),
+        'Cria um pequeno-almoço equilibrado e com alimentos saudáveis!',
+        new UIFinish('data/jogo/endLevel/12.png'), color(232, 210, 54));
     level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png');
     level_one.addItem(items.croissant, false, 'data/jogo/certoErrado/errado.png');
     level_one.addItem(items.apple, true, 'data/jogo/certoErrado/certo.png');
@@ -151,8 +152,9 @@ function loadLevels() {
     level_one.addItem(items.eggs, true, 'data/jogo/certoErrado/certo.png');
     level_one.setDefaultPosition();
     //Almoço
-    level_two = new Level(color(156, 153, 54), 'Cria um almoço equilibrado e com alimentos saudáveis!',
-        new UIFinish('data/jogo/endLevel/13.png'));
+    level_two = new Level(color(156, 153, 54),
+        'Cria um almoço equilibrado e com alimentos saudáveis!',
+        new UIFinish('data/jogo/endLevel/13.png'), color(156, 153, 54));
     level_two.addItem(items.sausage2, false, 'data/jogo/certoErrado/errado.png');
     level_two.addItem(items.rice, true, 'data/jogo/certoErrado/certo.png');
     level_two.addItem(items.chicken, true, 'data/jogo/certoErrado/certo.png');
@@ -161,8 +163,9 @@ function loadLevels() {
     level_two.addItem(items.bacon, false, 'data/jogo/certoErrado/errado.png');
     level_two.setDefaultPosition();
     //Lanche
-    level_three = new Level(color(237, 119, 38), 'Cria um lanche equilibrado e com alimentos saudáveis!',
-        new UIFinish('data/jogo/endLevel/14.png'));
+    level_three = new Level(color(237, 119, 38),
+        'Cria um lanche equilibrado e com alimentos saudáveis!',
+        new UIFinish('data/jogo/endLevel/14.png'), color(237, 119, 38));
     level_three.addItem(items.bread2, true, 'data/jogo/certoErrado/certo.png');
     level_three.addItem(items.sausage, false, 'data/jogo/certoErrado/errado.png');
     level_three.addItem(items.watermelon, true, 'data/jogo/certoErrado/certo.png');
@@ -171,8 +174,9 @@ function loadLevels() {
     level_three.addItem(items.croissant, false, 'data/jogo/certoErrado/errado.png');
     level_three.setDefaultPosition();
     //Jantar
-    level_four = new Level(color(27, 117, 187), 'Cria um jantar equilibrado e com alimentos saudáveis!',
-        new UIFinish('data/jogo/endLevel/15.png'));
+    level_four = new Level(color(27, 117, 187),
+        'Cria um jantar equilibrado e com alimentos saudáveis!',
+        new UIFinish('data/jogo/endLevel/15.png'), color(27, 117, 187));
     level_four.addItem(items.pasta2, true, 'data/jogo/certoErrado/certo.png');
     level_four.addItem(items.shrimp, true, 'data/jogo/certoErrado/certo.png');
     level_four.addItem(items.cheese4, false, 'data/jogo/certoErrado/errado.png');
@@ -261,13 +265,14 @@ class LevelLoader {
 }
 
 class UIFinish {
-    constructor(imageURL) {
+    constructor(imageURL, buttonColor) {
         this.image = loadImage(imageURL);
         this.text = "Concluíste o nível primavera!";
         this.w = 400;
         this.h = 400;
         this.margin = 40;
         this.status = false;
+        this.buttonColor = buttonColor;
     }
 
     display() {
@@ -298,7 +303,7 @@ class UIFinish {
         push();
         rectMode(CENTER);
         noStroke();
-        fill(109, 111, 113);
+        fill(this.buttonColor);
 
         if (w < 900) {
             rect(width / 2, height / 2 + 105 - 7.5, 150, 45, 22);
@@ -323,7 +328,7 @@ class UIFinish {
 
         fill(255);
         textAlign(CENTER);
-textFont(fontBold);
+        textFont(fontBold);
         if (w < 900) {
             text('Continuar', width / 2, height / 2 + 105 - 8.1 + textAscent() / 2);
         }
@@ -499,16 +504,16 @@ class Level {
         }
         pop();
 
-        
+
 
         let content = this.points + "/" + this.totalTrues;
-        textSize(h2Size*0.8);
+        textSize(h2Size * 0.8);
         textFont(fontRegular);
         push();
         fill(255);
 
         if (windowWidth < 900) {
-            text(content, marginMobile, lastY + marginMobile/2);
+            text(content, marginMobile, lastY + marginMobile / 2);
         } else if (windowWidth < 1500) {
             text(content, marginDesktop, lastY + textAscent());
         } else {
@@ -589,15 +594,15 @@ class Level {
     setDefaultPosition() {
         let space;
         let rowSpacingFactor = 1.4;
-    
+
         if (w < 600) {
             space = width * 0.95 / (this.items.length / 2 + 3);
             for (let i = 0; i < this.items.length; i++) {
                 let xd;
                 if (i % 2 == 0) xd = 0;
                 else xd = 1;
-    
-            
+
+
                 this.items[i].pos.set(
                     (width * 0.025) + space * (i + 1 - xd),
                     height * (1 - itemsScale / 1.8 * (1 + xd * rowSpacingFactor))
@@ -608,12 +613,12 @@ class Level {
             for (let i = 0; i < this.items.length; i++) {
                 this.items[i].pos.set(
                     (width * 0.1) + space * (i + 1),
-                    height * (1 - itemsScale / 1.5) 
+                    height * (1 - itemsScale / 1.5)
                 );
             }
         }
     }
-    
+
 
     insidePlate(item) {
         if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
@@ -677,18 +682,18 @@ function replaceItem(px, py, pw, ph, w, h) {
 }
 
 function wrapText(txt, maxWidth) {
-    let words = txt.split(' '); 
+    let words = txt.split(' ');
     let lines = [];
     let currentLine = words[0];
 
     for (let i = 1; i < words.length; i++) {
         let word = words[i];
-        let width = textWidth(currentLine + ' ' + word); 
+        let width = textWidth(currentLine + ' ' + word);
         if (width < maxWidth) {
-            currentLine += ' ' + word; 
+            currentLine += ' ' + word;
         } else {
-            lines.push(currentLine); 
-            currentLine = word; 
+            lines.push(currentLine);
+            currentLine = word;
         }
     }
     lines.push(currentLine);
