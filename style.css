@@ -117,12 +117,12 @@ h4 {
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--grey);
+    background: var(--black);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #919191;
+    background: var(--black);
   }
 
 
