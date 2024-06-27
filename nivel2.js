@@ -123,12 +123,12 @@ function loadLevels() {
     //Douro
     level_one = new Level(color(237,119,38),'Quais são os alimentos locais das Terras de  Trás-os-Montes?' ,
     new UIFinish('data/jogo/endLevel/5.png'));
-    level_one.addItem(items.almond, true, 'data/jogo/certoErrado/level2/screen1/certo.png');
-    level_one.addItem(items.cherry, false, 'data/jogo/certoErrado/level2/screen1/errado.png');
-    level_one.addItem(items.oliveOil, true, 'data/jogo/certoErrado/level2/screen1/certo.png');
-    level_one.addItem(items.fig, false, 'data/jogo/certoErrado/level2/screen1/errado.png');
-    level_one.addItem(items.papaya, false, 'data/jogo/certoErrado/level2/screen1/errado.png');
-    level_one.addItem(items.tomato, true, 'data/jogo/certoErrado/level2/screen1/certo.png');    
+    level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png');
+    level_one.addItem(items.cherry, false, 'data/jogo/certoErrado/errado.png');
+    level_one.addItem(items.oliveOil, true, 'data/jogo/certoErrado/certo.png');
+    level_one.addItem(items.fig, false, 'data/jogo/certoErrado/errado.png');
+    level_one.addItem(items.papaya, false, 'data/jogo/certoErrado/errado.png');
+    level_one.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png');    
     level_one.setDefaultPosition();
 
     levels = new LevelLoader();

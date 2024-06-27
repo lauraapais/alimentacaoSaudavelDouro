@@ -70,7 +70,6 @@ p {
     font-size: calc(14px + 0.390625vw);
     text-wrap: pretty;
     color: var(--blueText);
-    margin: calc(var(--marginH)/3) 0;
 }
 
 h1 {
@@ -337,6 +336,7 @@ svg {
 
 .iconsIntro p {
     color: var(--white);
+    font-size: calc(20px + 0.390625vw);
 }
 
 .iconsIntroTitle {
@@ -596,6 +596,7 @@ svg {
 .textInfoBox {
     display: flex;
     justify-content: space-between;
+    margin-bottom: calc(var(--marginH)/1.5);
 }
 
 .imageInfo {
@@ -620,7 +621,7 @@ svg {
 #textInfoTitle img {
     width: 25vw;
     margin-bottom: 0;
-    margin-top: calc(var(--marginH) /2);
+    margin-bottom: calc(var(--marginH));
 }
 
 
