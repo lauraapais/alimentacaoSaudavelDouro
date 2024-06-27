@@ -113,25 +113,32 @@ function textsize() {
 
 function loadItems() {
     //Pequeno-Almoço
-    items.sausage = new Gameitem('data/jogo/level4/screen1/1.png');
-    items.grape = new Gameitem('data/jogo/level1/screen1/1.png');
-    items.milk = new Gameitem('data/jogo/level3/screen1/1.png');
-    items.bread = new Gameitem('data/jogo/level3/screen6/3.png');
-    items.eggs = new Gameitem('data/jogo/level4/screen1/6.png');
-    items.cheese1 = new Gameitem('data/jogo/level3/screen1/2.png');
+    items.almond = new Gameitem('data/jogo/level1/screen3/4.png');
+    items.bacon = new Gameitem('data/jogo/level3/screen4/4.png');
+    items.croissant = new Gameitem('data/jogo/level4/screen1/2.png');
+    items.apple = new Gameitem('data/jogo/level4/screen1/3.png');
+    items.yogurt = new Gameitem('data/jogo/level3/screen1/4.png');
+    items.sausage = new Gameitem('data/jogo/level4/screen1/5.png');
+    items.eggs = new Gameitem('data/jogo/level3/screen4/6.png');
+
     //Almoço
-    items.cheese2 = new Gameitem('data/jogo/level3/screen1/6.png');
-    items.rice = new Gameitem('data/jogo/level4/screen2/6.png');
-    items.chicken = new Gameitem('data/jogo/level3/screen4/5.png');
-    items.carot = new Gameitem('data/jogo/level1/screen3/1.png');
-    items.orange = new Gameitem('data/jogo/level1/screen4/5.png');
+    items.sausage2 = new Gameitem('data/jogo/level4/screen2/1.png');
+    items.chicken = new Gameitem('data/jogo/level3/screen1/5.png');
+    items.cheese3 = new Gameitem('data/jogo/level4/screen2/4.png');
+    items.rice = new Gameitem('data/jogo/level3/screen6/1.png');
+    items.tomato = new Gameitem('data/jogo/level2/screen1/6.png');
+    items.oliveOil = new Gameitem('data/jogo/level2/screen1/3.png');
+    
     //Lanche
     items.bread2 = new Gameitem('data/jogo/level4/screen3/1.png');
-    items.watermelon = new Gameitem('data/jogo/level1/screen2/3.png');
+    items.watermelon = new Gameitem('data/jogo/level4/screen3/3.png');
+    items.milk = new Gameitem('data/jogo/level3/screen1/1.png');
     //Jantar
-    items.pasta = new Gameitem('data/jogo/level3/screen6/4.png');
+    items.pasta2 = new Gameitem('data/jogo/level4/screen2/2.png');
     items.shrimp = new Gameitem('data/jogo/level3/screen4/2.png');
-    items.lettuce = new Gameitem('data/jogo/level3/screen3/1.png');
+    items.lettuce = new Gameitem('data/jogo/level4/screen2/5.png');
+    items.cheese4 = new Gameitem('data/jogo/level4/screen4/3.png');
+    items.kiwi = new Gameitem('data/jogo/level4/screen4/5.png');
 }
 
 function loadLevels() {
@@ -139,42 +146,42 @@ function loadLevels() {
     //Pequeno-Almoço
     level_one = new Level(color(103, 175, 136), 'Cria um pequeno-almoço equilibrado e com alimentos saudáveis!',
         new UIFinish('data/jogo/endLevel/12.png'));
-    level_one.addItem(items.sausage, false, 'data/jogo/certoErrado/level4/screen1/errado.png');
-    level_one.addItem(items.grape, true, 'data/jogo/certoErrado/level4/screen1/certo.png');
-    level_one.addItem(items.milk, true, 'data/jogo/certoErrado/level4/screen1/certo.png');
-    level_one.addItem(items.bread, true, 'data/jogo/certoErrado/level4/screen1/certo.png');
-    level_one.addItem(items.eggs, true, 'data/jogo/certoErrado/level4/screen1/certo.png');
-    level_one.addItem(items.cheese1, false, 'data/jogo/certoErrado/level4/screen1/errado.png');
+    level_one.addItem(items.almond, true, 'data/jogo/certoErrado/level4/screen1/errado.png');
+    level_one.addItem(items.croissant, false, 'data/jogo/certoErrado/level4/screen1/certo.png');
+    level_one.addItem(items.apple, true, 'data/jogo/certoErrado/level4/screen1/certo.png');
+    level_one.addItem(items.yogurt, true, 'data/jogo/certoErrado/level4/screen1/certo.png');
+    level_one.addItem(items.sausage, false, 'data/jogo/certoErrado/level4/screen1/certo.png');
+    level_one.addItem(items.eggs, true, 'data/jogo/certoErrado/level4/screen1/errado.png');
     level_one.setDefaultPosition();
     //Almoço
     level_two = new Level(color(221, 106, 101), 'Cria um almoço equilibrado e com alimentos saudáveis!',
         new UIFinish('data/jogo/endLevel/13.png'));
-    level_two.addItem(items.chicken, true, 'data/jogo/certoErrado/level4/screen2/certo.png');
-    level_two.addItem(items.carot, true, 'data/jogo/certoErrado/level4/screen2/certo.png');
-    level_two.addItem(items.orange, true, 'data/jogo/certoErrado/level4/screen2/certo.png');
-    level_two.addItem(items.sausage, false, 'data/jogo/certoErrado/level4/screen2/errado.png');
-    level_two.addItem(items.cheese2, false, 'data/jogo/certoErrado/level4/screen2/errado.png');
+    level_two.addItem(items.sausage2, false, 'data/jogo/certoErrado/level4/screen2/certo.png');
     level_two.addItem(items.rice, true, 'data/jogo/certoErrado/level4/screen2/certo.png');
+    level_two.addItem(items.chicken, true, 'data/jogo/certoErrado/level4/screen2/certo.png');
+    level_two.addItem(items.oliveOil, true, 'data/jogo/certoErrado/level4/screen2/errado.png');
+    level_two.addItem(items.tomato, true, 'data/jogo/certoErrado/level4/screen2/errado.png');
+    level_two.addItem(items.bacon, false, 'data/jogo/certoErrado/level4/screen2/certo.png');
     level_two.setDefaultPosition();
     //Lanche
     level_three = new Level(color(239, 190, 46), 'Cria um lanche equilibrado e com alimentos saudáveis!',
         new UIFinish('data/jogo/endLevel/14.png'));
     level_three.addItem(items.bread2, true, 'data/jogo/certoErrado/level4/screen3/certo.png');
-    level_three.addItem(items.watermelon, true, 'data/jogo/certoErrado/level4/screen3/certo.png');
-    level_three.addItem(items.milk, true, 'data/jogo/certoErrado/level4/screen3/certo.png');
-    level_three.addItem(items.cheese1, false, 'data/jogo/certoErrado/level4/screen3/errado.png');
-    level_three.addItem(items.cheese2, false, 'data/jogo/certoErrado/level4/screen3/errado.png');
     level_three.addItem(items.sausage, false, 'data/jogo/certoErrado/level4/screen3/certo.png');
+    level_three.addItem(items.watermelon, true, 'data/jogo/certoErrado/level4/screen3/certo.png');
+    level_three.addItem(items.milk, true, 'data/jogo/certoErrado/level4/screen3/errado.png');
+    level_three.addItem(items.sausage2, false, 'data/jogo/certoErrado/level4/screen3/errado.png');
+    level_three.addItem(items.croissant, false, 'data/jogo/certoErrado/level4/screen3/certo.png');
     level_three.setDefaultPosition();
     //Jantar
     level_four = new Level(color(235, 182, 180), 'Cria um jantar equilibrado e com alimentos saudáveis!',
         new UIFinish('data/jogo/endLevel/15.png'));
-    level_four.addItem(items.cheese1, false, 'data/jogo/certoErrado/level4/screen4/errado.png');
-    level_four.addItem(items.lettuce, true, 'data/jogo/certoErrado/level4/screen4/certo.png');
-    level_four.addItem(items.milk, false, 'data/jogo/certoErrado/level4/screen4/errado.png');
-    level_four.addItem(items.sausage, false, 'data/jogo/certoErrado/level4/screen4/errado.png');
+    level_four.addItem(items.pasta2, false, 'data/jogo/certoErrado/level4/screen4/errado.png');
     level_four.addItem(items.shrimp, true, 'data/jogo/certoErrado/level4/screen4/certo.png');
-    level_four.addItem(items.pasta, true, 'data/jogo/certoErrado/level4/screen4/certo.png');
+    level_four.addItem(items.cheese4, false, 'data/jogo/certoErrado/level4/screen4/errado.png');
+    level_four.addItem(items.sausage, false, 'data/jogo/certoErrado/level4/screen4/errado.png');
+    level_four.addItem(items.kiwi, true, 'data/jogo/certoErrado/level4/screen4/certo.png');
+    level_four.addItem(items.lettuce, true, 'data/jogo/certoErrado/level4/screen4/certo.png');
     level_four.setDefaultPosition();
 
     levels = new LevelLoader();
@@ -464,7 +471,7 @@ class Level {
         let lastY;
         textSize(h2Size);
         textFont(fontBold);
-        fill(109, 111, 113);
+        fill(255);
 
         if (w < 900) {
             let maxWidth = windowWidth * 0.7;
@@ -502,7 +509,7 @@ class Level {
         textSize(h2Size*0.8);
         textFont(fontRegular);
         push();
-        fill(109, 111, 113);
+        fill(255);
         if (windowWidth < 900) {
             text(content, marginMobile, lastY + marginMobile/2);
         } else if (windowWidth < 1500) {

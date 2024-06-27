@@ -162,19 +162,19 @@ function loadLevels() {
      //Frutas
      level_two = new Level(color(235,182,180),'Sabes que alimentos são da família das frutas?',
      new UIFinish('data/jogo/endLevel/7.png'));
+     level_two.addItem(items.pinaple, true, 'data/jogo/certoErrado/level3/screen2/certo.png');
      level_two.addItem(items.peach, true, 'data/jogo/certoErrado/level3/screen2/errado.png');
      level_two.addItem(items.cauliflower, false, 'data/jogo/certoErrado/level3/screen2/certo.png');
-     level_two.addItem(items.pinaple, true, 'data/jogo/certoErrado/level3/screen2/certo.png');
      level_two.addItem(items.tomato, true, 'data/jogo/certoErrado/level3/screen2/certo.png');
-     level_two.addItem(items.lemon, true, 'data/jogo/certoErrado/level3/screen2/errado.png');
      level_two.addItem(items.eggplant, false, 'data/jogo/certoErrado/level3/screen2/certo.png');    
+     level_two.addItem(items.lemon, true, 'data/jogo/certoErrado/level3/screen2/errado.png');
      level_two.setDefaultPosition();
      //Hortículas
      level_three = new Level(color(103,175,136),'Sabes que alimentos são do grupo dos hortículas?',
      new UIFinish('data/jogo/endLevel/8.png'));
-     level_three.addItem(items.milk, false, 'data/jogo/certoErrado/level3/screen3/certo.png');
      level_three.addItem(items.turnip, true, 'data/jogo/certoErrado/level3/screen3/errado.png');
      level_three.addItem(items.leek, true, 'data/jogo/certoErrado/level3/screen3/errado.png');
+     level_three.addItem(items.pasta, false, 'data/jogo/certoErrado/level3/screen3/certo.png');
      level_three.addItem(items.broccoli, true, 'data/jogo/certoErrado/level3/screen3/errado.png');    
      level_three.addItem(items.pepper, true, 'data/jogo/certoErrado/level3/screen3/certo.png');
      level_three.addItem(items.potato, false, 'data/jogo/certoErrado/level3/screen3/certo.png');
@@ -498,7 +498,7 @@ class Level {
         let lastY;
         textSize(h2Size);
         textFont(fontBold);
-        fill(109, 111, 113);
+        fill(255);
 
         if (w < 900) {
             let maxWidth = windowWidth * 0.7;
@@ -536,7 +536,7 @@ class Level {
         textSize(h2Size*0.8);
         textFont(fontRegular);
         push();
-        fill(109, 111, 113);
+        fill(255);
 
         if (windowWidth < 900) {
             text(content, marginMobile, lastY + marginMobile/2);
