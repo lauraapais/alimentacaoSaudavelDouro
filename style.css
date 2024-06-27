@@ -369,7 +369,7 @@ svg {
 /** Level Menu **/
 #levelMain {
     width: calc(100vw - var(--marginH) * 2);
-    height: calc(100vh - min(var(--headerHmin), 500px) - var(--marginH) * 4);
+    min-height: calc(100vh - min(var(--headerHmin), 500px) - var(--marginH) * 4);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -827,7 +827,7 @@ svg {
         display: flex;
         justify-content: center;
         width: calc(100vw);
-        height: calc(var(--vh, 1h) * 100 - var(--marginHMobile)  - min(var(--headerHminMobile), 500px));
+        min-height: calc(var(--vh, 1h) * 100 - var(--marginHMobile)  - min(var(--headerHminMobile), 500px));
         padding: 0;
         gap: var(--marginHMobile);
     }
@@ -1154,9 +1154,8 @@ svg {
     }
 
     #levelMain {
-
         width: calc(100vw - var(--marginHMobile) * 2);
-        height: calc(var(--vh, 1h) * 100 - var(--marginHMobile) * 3 - min(var(--headerHminMobile), 500px));
+        min-height: calc(var(--vh, 1h) * 100 - var(--marginHMobile) * 3 - min(var(--headerHminMobile), 500px));
         margin: var(--marginHMobile);
         padding: 0;
 
