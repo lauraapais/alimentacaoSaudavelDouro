@@ -121,7 +121,7 @@ function loadItems() {
 function loadLevels() {
     var level_one;
     //Douro
-    level_one = new Level(color(239,190,46),'Quais são os alimentos locais das Terras de  Trás-os-Montes?' ,
+    level_one = new Level(color(237,119,38),'Quais são os alimentos locais das Terras de  Trás-os-Montes?' ,
     new UIFinish('data/jogo/endLevel/5.png'));
     level_one.addItem(items.almond, true, 'data/jogo/certoErrado/level2/screen1/certo.png');
     level_one.addItem(items.cherry, false, 'data/jogo/certoErrado/level2/screen1/errado.png');

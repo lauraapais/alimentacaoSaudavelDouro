@@ -138,7 +138,7 @@ function loadItems() {
 function loadLevels() {
     var level_one, level_two, level_three, level_four;
     //Primavera
-    level_one = new Level(color(235, 153, 194),
+    level_one = new Level(color(235, 154, 194),
         'Quais são os alimentos sazonais da primavera?',
         new UIFinish('data/jogo/endLevel/1.png')
     );
@@ -150,7 +150,7 @@ function loadLevels() {
     level_one.addItem(items.tomato, false, 'data/jogo/certoErrado/level1/screen1/errado.png');
     level_one.setDefaultPosition();
     //Verão
-    level_two = new Level(color(103, 175, 136),
+    level_two = new Level(color(239, 221, 53),
         'Quais são os alimentos sazonais do verão?',
         new UIFinish('data/jogo/endLevel/2.png')
     );
@@ -162,19 +162,19 @@ function loadLevels() {
     level_two.addItem(items.eggplant, false, 'data/jogo/certoErrado/level1/screen2/errado.png');
     level_two.setDefaultPosition();
     //Outono
-    level_three = new Level(color(239, 190, 46),
+    level_three = new Level(color(29, 117, 188),
         'Quais são os alimentos sazonais do outono?',
         new UIFinish('data/jogo/endLevel/3.png')
     );
-    level_three.addItem(items.pumpkin, true, 'data/jogo/certoErrado/level1/screen3/errado.png');
-    level_three.addItem(items.calabash, true, 'data/jogo/certoErrado/level1/screen3/errado.png');
-    level_three.addItem(items.papaya, false, 'data/jogo/certoErrado/level1/screen3/certo.png');
+    level_three.addItem(items.pumpkin, true, 'data/jogo/certoErrado/level1/screen3/certo.png');
+    level_three.addItem(items.calabash, true, 'data/jogo/certoErrado/level1/screen3/certo.png');
+    level_three.addItem(items.papaya, false, 'data/jogo/certoErrado/level1/screen3/errado.png');
     level_three.addItem(items.almond, true, 'data/jogo/certoErrado/level1/screen3/certo.png');
     level_three.addItem(items.pepper, false, 'data/jogo/certoErrado/level1/screen3/errado.png');
     level_three.addItem(items.watermelon, false, 'data/jogo/certoErrado/level1/screen3/errado.png');
     level_three.setDefaultPosition();
     //Inverno
-    level_four = new Level(color(114, 190, 195),
+    level_four = new Level(color(171, 169, 169),
         'Quais são os alimentos sazonais do inverno?',
         new UIFinish('data/jogo/endLevel/4.png')
     );
@@ -298,12 +298,13 @@ class UIFinish {
         else {
             image(close, width / 2 - 136, height / 2 - 140, 40, 40);
         }
+
         pop();
 
         push();
         rectMode(CENTER);
         noStroke();
-        fill(255);
+        fill(109, 111, 113);
 
         if (w < 900) {
             rect(width / 2, height / 2 + 105 - 7.5, 150, 45, 22);
@@ -437,6 +438,7 @@ class Level {
     display() {
         background(this.background);
         push();
+
         if (w < 900) {
             image(plate, width / 2, height / 2.2, plateSize, plateSize);
         } else if (w < 1500) {

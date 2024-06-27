@@ -1,6 +1,6 @@
 :root {
     --orange: #ED7726;
-    --yellow: #F7EB2D;
+    --yellow: #EFDD35;
     --armygreen: #9C9936;
     --green: #37B34A;
     --pink: #EB99C2;
@@ -8,7 +8,7 @@
     --red: #EE3F25;
     --purple: #B33894;
     --blue: #1B75BB;
-    --lightBlue: #63B6DF;
+    --lightBlue: #5BA5DA;
 
     --white: #FFF;
     --blueText: #FFF;
@@ -766,6 +766,9 @@ svg {
         width: 70%;
     }
 
+    .indexImage .indexIllustration {
+        margin-bottom: 20vh;
+    }
 
 
 
@@ -1147,9 +1150,7 @@ svg {
 
 
     /*new explore*/
-    .exploreVideos {
-        position: absolute;
-    }
+
 
     .video_plus_info {
         display: flex;
@@ -1191,8 +1192,8 @@ svg {
     }
 
     #videoMain{
-        height: calc(100vh - var(--marginHMobile)* 3 - var(--headerHminMobile));
-    max-height: calc(100vh - var(--marginHmobile)* 3 - var(--headerHminMobile));
+        height: calc(var(--vh, 1h)* 100 - var(--marginHMobile)* 3 - var(--headerHminMobile));
+    max-height: calc(var(--vh, 1h)* 100 - var(--marginHmobile)* 3 - var(--headerHminMobile));
     }
 
     .arrow{
