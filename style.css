@@ -1143,8 +1143,8 @@ svg {
 
     /*niveis*/
     .level {
-        width: 45vw;
-        height: 45vw;
+        width: 40vw;
+        height: 40vw;
         max-height: 250px;
         max-width: 250px;
         gap: var(--marginHMobile);
@@ -1154,6 +1154,7 @@ svg {
     }
 
     #levelMain {
+
         width: calc(100vw - var(--marginHMobile) * 2);
         min-height: calc(var(--vh, 1h) * 100 - var(--marginHMobile) * 3 - min(var(--headerHminMobile), 500px));
         margin: var(--marginHMobile);
