@@ -427,6 +427,17 @@ svg {
     bottom: 0;
 }
 
+.levelFlex{
+    width: 100%;
+        height: 100%;
+        display: flex;
+        gap: var(--marginH);
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
 #alimentosSazonais {
     background-color: #DE93C0;
 }
@@ -798,21 +809,27 @@ svg {
 
     /*niveis*/
     .level {
-        margin: 0;
+        width: 48%;
+        height: 42%;
+        max-width: 300px;
+        max-height: 300px;
         gap: var(--marginHMobile);
         box-sizing: border-box;
-        min-height: 70%;
-        width: 23%;
-        min-width: auto;
+        min-width: unset;
+        min-height: unset;
     }
+    
+.level .cover {
+    height: 100%;
+}
 
     #levelMain {
         display: flex;
-        justify-content: space-between;
-        width: calc(100vw - var(--marginHMobile) * 2);
-        height: calc(var(--vh, 1h) * 100 - var(--marginHMobile) * 3 - min(var(--headerHminMobile), 500px));
-        margin: var(--marginHMobile);
+        justify-content: center;
+        width: calc(100vw);
+        height: calc(var(--vh, 1h) * 100 - var(--marginHMobile)  - min(var(--headerHminMobile), 500px));
         padding: 0;
+        gap: var(--marginHMobile);
     }
 
     .levelTitle {
@@ -1067,6 +1084,17 @@ svg {
         overflow-y: auto;
     }
 
+    .levelFlex{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: var(--marginH);
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
 
 
 
@@ -1117,8 +1145,8 @@ svg {
     .level {
         width: 48%;
         height: 42%;
-        max-height: 370px;
-        margin-bottom: var(--marginHMobile);
+        max-height: 250px;
+        max-width: 250px;
         gap: var(--marginHMobile);
         box-sizing: border-box;
         min-width: unset;
@@ -1140,6 +1168,14 @@ svg {
 
     .headerGameInside {
         margin: var(--marginHMobile);
+    }
+
+    #rodadosAlimentos{
+        margin-bottom: 20vh;
+    }
+
+    #alimentacaoEquilibrada{
+        margin-bottom: 20vh;
     }
 
 
