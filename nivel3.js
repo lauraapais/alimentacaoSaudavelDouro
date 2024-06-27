@@ -174,9 +174,9 @@ function loadLevels() {
      level_three = new Level(color(239,221,53),'Sabes que alimentos são do grupo dos hortículas?',
      new UIFinish('data/jogo/endLevel/8.png'));
      level_three.addItem(items.turnip, true, 'data/jogo/certoErrado/level3/screen3/certo.png');
-     level_three.addItem(items.leek, true, 'data/jogo/certoErrado/level3/screen3/certo.png');
+     level_three.addItem(items.broccoli, true, 'data/jogo/certoErrado/level3/screen3/certo.png');
      level_three.addItem(items.bread2, false, 'data/jogo/certoErrado/level3/screen3/errado.png');
-     level_three.addItem(items.broccoli, true, 'data/jogo/certoErrado/level3/screen3/certo.png');    
+     level_three.addItem(items.leek, true, 'data/jogo/certoErrado/level3/screen3/certo.png');    
      level_three.addItem(items.pepper, true, 'data/jogo/certoErrado/level3/screen3/certo.png');
      level_three.addItem(items.potato, false, 'data/jogo/certoErrado/level3/screen3/errado.png');
      level_three.setDefaultPosition();
@@ -205,9 +205,9 @@ function loadLevels() {
      new UIFinish('data/jogo/endLevel/11.png'));
      level_six.addItem(items.rice, true, 'data/jogo/certoErrado/level3/screen6/certo.png');
      level_six.addItem(items.cabbage, false, 'data/jogo/certoErrado/level3/screen6/errado.png');
-     level_six.addItem(items.bread, true, 'data/jogo/certoErrado/level3/screen6/certo.png');
+     level_six.addItem(items.tomato, true, 'data/jogo/certoErrado/level3/screen6/certo.png');
      level_six.addItem(items.leek, false, 'data/jogo/certoErrado/level3/screen6/errado.png');
-     level_six.addItem(items.tomato, false, 'data/jogo/certoErrado/level3/screen6/errado.png');
+     level_six.addItem(items.bread, false, 'data/jogo/certoErrado/level3/screen6/errado.png');
      level_six.addItem(items.pasta, true, 'data/jogo/certoErrado/level3/screen6/certo.png');    
      level_six.setDefaultPosition();
 
