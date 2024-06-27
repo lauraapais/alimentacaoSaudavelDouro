@@ -141,7 +141,7 @@ function loadItems() {
 function loadLevels() {
     var level_one, level_two, level_three, level_four;
     //Pequeno-Almoço
-    level_one = new Level(color(239, 221, 53), 'Cria um pequeno-almoço equilibrado e com alimentos saudáveis!',
+    level_one = new Level(color(232,210,54), 'Cria um pequeno-almoço equilibrado e com alimentos saudáveis!',
         new UIFinish('data/jogo/endLevel/12.png'));
     level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png');
     level_one.addItem(items.croissant, false, 'data/jogo/certoErrado/errado.png');

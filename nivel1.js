@@ -150,7 +150,7 @@ function loadLevels() {
     level_one.addItem(items.tomato, false, 'data/jogo/certoErrado/errado.png');
     level_one.setDefaultPosition();
     //Verão
-    level_two = new Level(color(239, 221, 53),
+    level_two = new Level(color(232,210,54),
         'Quais são os alimentos sazonais do verão?',
         new UIFinish('data/jogo/endLevel/2.png')
     );

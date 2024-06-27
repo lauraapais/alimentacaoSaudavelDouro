@@ -171,7 +171,7 @@ function loadLevels() {
      level_two.addItem(items.lemon, true, 'data/jogo/certoErrado/certo.png');
      level_two.setDefaultPosition();
      //Hortículas
-     level_three = new Level(color(239,221,53),'Sabes que alimentos são do grupo dos hortículas?',
+     level_three = new Level(color(232,210,54),'Sabes que alimentos são do grupo dos hortículas?',
      new UIFinish('data/jogo/endLevel/8.png'));
      level_three.addItem(items.turnip, true, 'data/jogo/certoErrado/certo.png');
      level_three.addItem(items.broccoli, true, 'data/jogo/certoErrado/certo.png');
