@@ -126,12 +126,22 @@ showVideo(currentVideo);
 
 function checkOverflowAndAddScroll() {
     const elements = document.querySelectorAll('.exploreInfo');
+    const infoVideo = document.querySelectorAll('.infoVideop');
 
     elements.forEach(element => {
         if (element.scrollHeight > element.clientHeight) {
             element.style.overflowY = 'scroll';
+
+            infoVideo.forEach(video => {
+                video.style.marginLeft = 'var(--marginH)';
+            });
+
         } else {
             element.style.overflowY = 'auto';
+
+            infoVideo.forEach(video => {
+                video.style.marginLeft = '0';
+            });
         }
     });
 }

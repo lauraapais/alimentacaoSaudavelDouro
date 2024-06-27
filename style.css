@@ -107,7 +107,7 @@ h4 {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
   }
   
   /* Track */
@@ -117,12 +117,12 @@ h4 {
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--grey);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #919191;
   }
 
 
@@ -830,6 +830,9 @@ svg {
 
 
     /*info Pages*/
+    ::-webkit-scrollbar {
+        width: 0px;
+      }
     .leftInfoText {
         width: 100%;
     }
