@@ -918,8 +918,9 @@ svg {
     .infoVideop {
         margin-left: 0.9vw !important;
         margin-top: 0 !important;
-    }
+        align-self: flex-start;
 
+    }
 }
 
 
