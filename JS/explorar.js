@@ -13,42 +13,28 @@ var arrowLeft = document.getElementById('arrowLeft');
 var arrowRight = document.getElementById('arrowRight');
 
 function showVideo(index) {
-    // Hide and pause all videos first
-    infoVideo.forEach((video) => {
-        video.style.display = 'none';
-        video.style.opacity = 0;
+    infoVideo.forEach((video, i) => {
+        if (i === index) {
+            video.style.display = 'flex';
+            video.style.opacity = 1;
+        } else {
+            video.style.opacity = 0;
+            video.style.display = 'none';
+        }
     });
 
-    exploreVideo.forEach((video) => {
-        video.style.display = 'none';
-        video.style.opacity = 0;
-        video.pause();
+    exploreVideo.forEach((video, i) => {
+        if (i === index) {
+            video.style.display = 'flex';
+            video.style.opacity = 1;
+            video.play();
+        } else {
+            video.style.opacity = 0;
+            video.pause();
+            video.currentTime = 0;
+            video.style.display = 'none';
+        }
     });
-
-    // Display the selected info video
-    if (infoVideo[index]) {
-        infoVideo[index].style.display = 'flex';
-        infoVideo[index].style.opacity = 1;
-    }
-
-    // Display and play the selected explore video
-    if (exploreVideo[index]) {
-        exploreVideo[index].style.display = 'flex';
-        exploreVideo[index].style.opacity = 1;
-
-        // Create a promise to ensure the video is loaded before playing
-        new Promise((resolve) => {
-            if (exploreVideo[index].readyState >= 3) { // Check if the video is already loaded
-                resolve();
-            } else {
-                exploreVideo[index].addEventListener('canplaythrough', resolve, { once: true });
-            }
-        }).then(() => {
-            exploreVideo[index].play().catch(error => {
-                console.log('Play request was interrupted:', error);
-            });
-        });
-    }
 }
 
 function changeBackgroundColor(index) {
