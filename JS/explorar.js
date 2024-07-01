@@ -31,7 +31,6 @@ function showVideo(index) {
         } else {
             video.style.opacity = 0;
             video.pause();
-            video.currentTime = 0;
             video.style.display = 'none';
         }
     });
