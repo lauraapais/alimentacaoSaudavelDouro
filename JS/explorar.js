@@ -35,8 +35,18 @@ function showVideo(index) {
     if (exploreVideo[index]) {
         exploreVideo[index].style.display = 'flex';
         exploreVideo[index].style.opacity = 1;
-        exploreVideo[index].play().catch(error => {
-            console.log('Play request was interrupted:', error);
+
+        // Create a promise to ensure the video is loaded before playing
+        new Promise((resolve) => {
+            if (exploreVideo[index].readyState >= 3) { // Check if the video is already loaded
+                resolve();
+            } else {
+                exploreVideo[index].addEventListener('canplaythrough', resolve, { once: true });
+            }
+        }).then(() => {
+            exploreVideo[index].play().catch(error => {
+                console.log('Play request was interrupted:', error);
+            });
         });
     }
 }
