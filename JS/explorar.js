@@ -13,27 +13,32 @@ var arrowLeft = document.getElementById('arrowLeft');
 var arrowRight = document.getElementById('arrowRight');
 
 function showVideo(index) {
-    infoVideo.forEach((video, i) => {
-        if (i === index) {
-            video.style.display = 'flex';
-            video.style.opacity = 1;
-        } else {
-            video.style.opacity = 0;
-            video.style.display = 'none';
-        }
+    // Hide and pause all videos first
+    infoVideo.forEach((video) => {
+        video.style.display = 'none';
+        video.style.opacity = 0;
     });
 
-    exploreVideo.forEach((video, i) => {
-        if (i === index) {
-            video.style.display = 'flex';
-            video.style.opacity = 1;
-            video.play();
-        } else {
-            video.style.opacity = 0;
-            video.pause();
-            video.style.display = 'none';
-        }
+    exploreVideo.forEach((video) => {
+        video.style.display = 'none';
+        video.style.opacity = 0;
+        video.pause();
     });
+
+    // Display the selected info video
+    if (infoVideo[index]) {
+        infoVideo[index].style.display = 'flex';
+        infoVideo[index].style.opacity = 1;
+    }
+
+    // Display and play the selected explore video
+    if (exploreVideo[index]) {
+        exploreVideo[index].style.display = 'flex';
+        exploreVideo[index].style.opacity = 1;
+        exploreVideo[index].play().catch(error => {
+            console.log('Play request was interrupted:', error);
+        });
+    }
 }
 
 function changeBackgroundColor(index) {
