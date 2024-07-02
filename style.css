@@ -1178,6 +1178,10 @@ svg {
         margin: var(--marginHMobile);
     }
 
+    #alimentosRegionais .cover {
+        background-image: url(data/jogo/levels/alimentosRegionais_baixo2.png);
+    }
+
 
 
 
