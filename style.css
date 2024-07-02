@@ -908,6 +908,7 @@ svg {
     .video_plus_info {
         display: flex;
         flex-direction: column;
+        margin-top: var(--marginHMobile);
     }
 
     .videoContainer {
