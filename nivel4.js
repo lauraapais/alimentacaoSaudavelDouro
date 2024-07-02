@@ -65,7 +65,6 @@ window.onresize = function () {
 }
 
 function platesize() {
-
     if (w > 2500) {
         plateSize = min(min(width * itemSize * 8,
             width * .85),
