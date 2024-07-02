@@ -65,16 +65,12 @@ window.onresize = function () {
 }
 
 function platesize() {
-    console.log(w);
-
     if (w > 2500) {
         plateSize = min(min(width * itemSize * 8,
             width * .85),
             height * .55);
     }
-
     else if (w < 600) {
-
         if (w > h) {
             plateSize = min(min(width * itemSize * 8,
                 width * .75),
@@ -84,15 +80,11 @@ function platesize() {
             plateSize = min(min(width * itemSize * 5,
                 width * 1.8),
                 height * .8);
-
-            console.log(plateSize);
         } else {
             plateSize = min(min(width * itemSize * 9,
                 width * 1.8),
                 height * .8);
-
         }
-
     }
     else {
         plateSize = min(min(width * itemSize * 8,
