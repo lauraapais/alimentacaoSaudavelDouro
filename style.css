@@ -763,19 +763,17 @@ svg {
     overflow-y: hidden !important;
 }
 
-#dietaMediterranica1 {
-    top: 0;
-    right: 0;
+.videoContainer {
+    position: relative;
 }
 
-#dietaMediterranica2 {
-    top: 50%;
-    left: 0;
+#douroVideo, #fallbackImage {
+    width: 100%;
+    height: auto;
 }
 
-#dietaMediterranica3 {
-    bottom: 0;
-    right: 0;
+#fallbackImage {
+    display: none;
 }
 
 

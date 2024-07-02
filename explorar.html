@@ -5,10 +5,7 @@
     <title>Alimentação Saudável e Sustentável nas Terras de Trás-os-Montes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="locomotive-scroll.css">
 </head>
 
 
@@ -318,16 +315,16 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video playsinline autoplay loop muted>
+                                <video id="douroVideo" playsinline autoplay loop muted poster="data/videos/Animation_01.jpg" onerror="showFallbackImage()">
                                     <source src="data/videos/Animation_12.mp4" type="video/mp4">
                                 </video>
+                                <img id="fallbackImage" src="data/images/Animation_12_fallback.jpg" alt="Produtos locais do Douro">
                             </div>
                             <div class="exploreInfo">
-                                <h3 class="infoVideoTitle">Produtos locais<br>do douro</h3>
+                                <h3 class="infoVideoTitle">Produtos locais<br>do Douro</h3>
                                 <div class="infoVideop">
                                     <p>Vamos conhecer melhor alguns alimentos da nossa região?</p>
-                                    <p>Conhecendo melhor estes produtos poderás começar a introduzi-los nas tuas
-                                        refeições:</p>
+                                    <p>Conhecendo melhor estes produtos poderás começar a introduzi-los nas tuas refeições:</p>
                                     <p>Azeite, Mel, Amêndoa, Tomate Coração de Boi, Laranja, Maçã.</p>
                                 </div>
                             </div>
@@ -349,8 +346,17 @@
         </main>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="JS/locomotive-scroll.min.js"></script>
+
+    <script>
+        function showFallbackImage() {
+            var videoElement = document.getElementById('douroVideo');
+            var fallbackImage = document.getElementById('fallbackImage');
+            
+            videoElement.style.display = 'none';
+            fallbackImage.style.display = 'block';
+        }
+        document.getElementById('douroVideo').addEventListener('error', showFallbackImage);
+    </script>
 
     <script src="JS/explorar.js"></script>
     <script src="JS/header.js"></script>
