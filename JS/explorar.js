@@ -48,10 +48,10 @@ function changeBackgroundColor(index) {
         case index < 1:
             backgroundColor = "#F3822B";
             break;
-        case index >= 1 && index <= 4 :
+        case index >= 1 && index <= 4:
             backgroundColor = "#F1A6CB";
             break;
-        case index ==5:
+        case index == 5:
             backgroundColor = "#A7A53E";
             break;
         case index == 6:
@@ -69,7 +69,7 @@ function changeBackgroundColor(index) {
         case index == 10:
             backgroundColor = "#993DA6";
             break;
-            case index == 11:
+        case index == 11:
             backgroundColor = "#4874BA";
             break;
     }
