@@ -231,6 +231,11 @@ footer {
     width: calc(100vw - var(--marginH) * 2);
 }
 
+
+#backgroundIndex .support {
+    margin-bottom: 0vh!important;
+}
+
 .support {
     margin-bottom: 4vh;
 }
