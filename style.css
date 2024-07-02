@@ -136,6 +136,10 @@ header {
     height: min(var(--headerHmin), 500px);
 }
 
+.noneMobile{
+    display: none;
+}
+
 .menu {
     display: flex;
     justify-content: space-between;
