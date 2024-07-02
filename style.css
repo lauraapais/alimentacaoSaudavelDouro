@@ -938,13 +938,12 @@ svg {
         display: none;
     }
 
-    .arrow{
-        display: none;
+    .infoVideop{
+        align-self: flex-start;
     }
 
-    .exploreVideos {
-        width: 100%;
-        position: relative;
+    .arrow{
+        display: none;
     }
 
     .arrowMobile{
@@ -967,7 +966,12 @@ svg {
         width: 3vw;
         stroke-width: 2px;
     }
-
+    #closeMenu,
+    #closeGame {
+        width: calc(15px + 1.5vw) !important;
+        height: fit-content;
+    }
+   
 }
 
 
@@ -1007,6 +1011,10 @@ svg {
         margin: calc(var(--marginHMobile)/2) 0 calc(var(--marginHMobile)/4) 0
     }
 
+
+    .infoVideop{
+        margin:0 !important;
+    }
 
 
 
@@ -1309,6 +1317,36 @@ svg {
     .arrowMobile{
         width: calc(100% - var(--marginHMobile)*2);
         padding: var(--marginHMobile);
+    }
+
+    .arrow{
+        display: none;
+    }
+
+    .exploreVideos {
+        width: 100%;
+        position: relative;
+    }
+
+    .arrowMobile{
+        display: flex;
+        width: calc(100% - var(--marginH)*2);
+        position: absolute;
+        justify-content: space-between;
+        padding: var(--marginH);
+        background-color: #F3822B;
+        transition: background-color 1s ease;
+        bottom: 0;
+    }
+
+    #arrowLeftMobile {
+        width: 3vw;
+        stroke-width: 2px;
+    }
+
+    #arrowRightMobile {
+        width: 3vw;
+        stroke-width: 2px;
     }
 
    

@@ -193,11 +193,11 @@ function loadLevels() {
         new UIFinish('data/jogo/endLevel/8.png', color(232, 210, 54))
     );
     level_three.addItem(items.turnip, true, 'data/jogo/certoErrado/certo.png');
-    level_three.addItem(items.broccoli, true, 'data/jogo/certoErrado/certo.png');
+    level_three.addItem(items.potato, true, 'data/jogo/certoErrado/certo.png');
     level_three.addItem(items.bread2, false, 'data/jogo/certoErrado/errado.png');
     level_three.addItem(items.leek, true, 'data/jogo/certoErrado/certo.png');
     level_three.addItem(items.pepper, true, 'data/jogo/certoErrado/certo.png');
-    level_three.addItem(items.potato, false, 'data/jogo/certoErrado/errado.png');
+    level_three.addItem(items.broccoli, false, 'data/jogo/certoErrado/errado.png');
     level_three.setDefaultPosition();
     //Carne Peixe Ovos
     level_four = new Level(color(91, 165, 218),
@@ -579,7 +579,7 @@ class Level {
             }
             lastY = y;
         } else if (w < 1500) {
-            let maxWidth = windowWidth * 0.7;
+            let maxWidth = windowWidth * 0.8;
             let lines = wrapText(this.question, maxWidth);
             let y = marginDesktop + textAscent();
             for (let i = 0; i < lines.length; i++) {
