@@ -365,6 +365,7 @@ svg {
 .illustrationsIndex div {
     display: grid;
     justify-items: center;
+    margin-bottom: var(--marginHMobile);
 }
 
 
