@@ -135,9 +135,7 @@ header {
     height: min(var(--headerHmin), 500px);
 }
 
-.noneMobile{
-    display: none;
-}
+
 
 .menu {
     display: flex;
@@ -927,10 +925,48 @@ svg {
 
     .infoVideop {
         margin-left: 0.9vw !important;
-        margin-top: 0 !important;
+        margin-top: var(--marginH) !important;
         align-self: flex-start;
-
     }
+
+    .exploreInfo p{
+        margin: calc(var(--marginH) ) 0;
+    }
+
+    .noneMobile{
+        display: none;
+    }
+
+    .arrow{
+        display: none;
+    }
+
+    .exploreVideos {
+        width: 100%;
+        position: relative;
+    }
+
+    .arrowMobile{
+        display: flex;
+        width: calc(100% - var(--marginH)*2);
+        position: absolute;
+        justify-content: space-between;
+        padding: var(--marginH);
+        background-color: #F3822B;
+        transition: background-color 1s ease;
+        bottom: 0;
+    }
+
+    #arrowLeftMobile {
+        width: 3vw;
+        stroke-width: 2px;
+    }
+
+    #arrowRightMobile {
+        width: 3vw;
+        stroke-width: 2px;
+    }
+
 }
 
 
@@ -1222,6 +1258,9 @@ svg {
         height: fit-content;
     }
 
+    .noneMobile{
+        display: none;
+    }
 
 
     /*new explore*/
@@ -1266,23 +1305,10 @@ svg {
     max-height: calc(var(--vh, 1h)* 100 - var(--marginHmobile)* 3 - var(--headerHminMobile));
     }
 
-    .arrow{
-        display: none;
-    }
-
-    .exploreVideos {
-        width: 100%;
-        position: relative;
-    }
-
     .arrowMobile{
-        display: flex;
         width: calc(100% - var(--marginHMobile)*2);
-        position: absolute;
-        justify-content: space-between;
         padding: var(--marginHMobile);
-        background-color: #F3822B;
-        transition: background-color 1s ease;
-        bottom: 0;
     }
+
+   
 }
