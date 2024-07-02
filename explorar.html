@@ -83,7 +83,7 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video autoplay loop muted>
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_01.jpg">
                                     <source src="data/videos/Animation_01.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -109,7 +109,7 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video playsinline autoplay loop muted>
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_02.jpg">
                                     <source src="data/videos/Animation_02.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -129,7 +129,7 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video playsinline autoplay loop muted>
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_03.jpg">
                                     <source src="data/videos/Animation_03.mp4" type="video/mp4">
                             </div>
                             <div class="exploreInfo">
@@ -147,7 +147,7 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video playsinline autoplay loop muted>
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_04.jpg">
                                     <source src="data/videos/Animation_04.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -166,7 +166,7 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video playsinline autoplay loop muted>
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_05.jpg">
                                     <source src="data/videos/Animation_05.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -184,7 +184,7 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video playsinline autoplay loop muted>
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_06.jpg">
                                     <source src="data/videos/Animation_06.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -202,7 +202,7 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video playsinline autoplay loop muted>
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_07.jpg">
                                     <source src="data/videos/Animation_07.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -228,7 +228,7 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video playsinline autoplay loop muted>
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_08.jpg">
                                     <source src="data/videos/Animation_08.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -250,7 +250,7 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video playsinline autoplay loop muted>
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_09.jpg">
                                     <source src="data/videos/Animation_09.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -271,7 +271,7 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video playsinline autoplay loop muted>
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_10.jpg">
                                     <source src="data/videos/Animation_10.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -293,7 +293,7 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video playsinline autoplay loop muted>
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_11.jpg">
                                     <source src="data/videos/Animation_11.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -315,16 +315,16 @@
                     <div class="video_plus_info">
                         <div class="videoInfoFlex">
                             <div class="videoContainer">
-                                <video id="douroVideo" playsinline autoplay loop muted poster="data/videos/Animation_01.jpg" onerror="showFallbackImage()">
+                                <video playsinline autoplay loop muted poster="data/videos/Animation_12.jpg">
                                     <source src="data/videos/Animation_12.mp4" type="video/mp4">
                                 </video>
-                                <img id="fallbackImage" src="data/images/Animation_12_fallback.jpg" alt="Produtos locais do Douro">
                             </div>
                             <div class="exploreInfo">
-                                <h3 class="infoVideoTitle">Produtos locais<br>do Douro</h3>
+                                <h3 class="infoVideoTitle">Produtos locais<br>do douro</h3>
                                 <div class="infoVideop">
                                     <p>Vamos conhecer melhor alguns alimentos da nossa região?</p>
-                                    <p>Conhecendo melhor estes produtos poderás começar a introduzi-los nas tuas refeições:</p>
+                                    <p>Conhecendo melhor estes produtos poderás começar a introduzi-los nas tuas
+                                        refeições:</p>
                                     <p>Azeite, Mel, Amêndoa, Tomate Coração de Boi, Laranja, Maçã.</p>
                                 </div>
                             </div>
@@ -346,17 +346,6 @@
         </main>
     </div>
 
-
-    <script>
-        function showFallbackImage() {
-            var videoElement = document.getElementById('douroVideo');
-            var fallbackImage = document.getElementById('fallbackImage');
-            
-            videoElement.style.display = 'none';
-            fallbackImage.style.display = 'block';
-        }
-        document.getElementById('douroVideo').addEventListener('error', showFallbackImage);
-    </script>
 
     <script src="JS/explorar.js"></script>
     <script src="JS/header.js"></script>
