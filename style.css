@@ -140,7 +140,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: fit-content;
-    align-items: flex-start;
+    align-items: flex-start!important;
 }
 
 .menu li {
