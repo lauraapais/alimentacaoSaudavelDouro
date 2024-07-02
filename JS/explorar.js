@@ -38,6 +38,12 @@ function showVideo(index) {
             video.style.display = 'none';
         }
     });
+
+    // Ocultar ou mostrar as setas dependendo do índice
+    arrowLeft.style.display = (index === 0) ? 'none' : 'block';
+    arrowRight.style.display = (index === videos.length - 1) ? 'none' : 'block';
+    arrowLeftMobile.style.display = (index === 0) ? 'none' : 'block';
+    arrowRightMobile.style.display = (index === videos.length - 1) ? 'none' : 'block';
 }
 
 function changeBackgroundColor(index) {
@@ -79,7 +85,6 @@ function changeBackgroundColor(index) {
     arrowMobile.style.transition = 'background-color 1s ease';
     arrowMobile.style.backgroundColor = backgroundColor;
 
-
     exploreInfoH3.forEach(exploreInfo_H3 => {
         exploreInfo_H3.style.transition = 'color 1s ease';
         exploreInfo_H3.style.color = color;
@@ -91,13 +96,17 @@ function changeBackgroundColor(index) {
 }
 
 function handleArrowRightClick() {
-    currentVideo = (currentVideo + 1) % videos.length;
+    if (currentVideo < videos.length - 1) {
+        currentVideo++;
+    }
     showVideo(currentVideo);
     changeBackgroundColor(currentVideo);
 }
 
 function handleArrowLeftClick() {
-    currentVideo = (currentVideo - 1 + videos.length) % videos.length;
+    if (currentVideo > 0) {
+        currentVideo--;
+    }
     showVideo(currentVideo);
     changeBackgroundColor(currentVideo);
 }
@@ -109,9 +118,9 @@ arrowRightMobile.addEventListener('click', handleArrowRightClick);
 arrowLeftMobile.addEventListener('click', handleArrowLeftClick);
 
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowRight') {
+    if (event.key === 'ArrowRight' && currentVideo < videos.length - 1) {
         handleArrowRightClick();
-    } else if (event.key === 'ArrowLeft') {
+    } else if (event.key === 'ArrowLeft' && currentVideo > 0) {
         handleArrowLeftClick();
     }
 });

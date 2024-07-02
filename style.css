@@ -965,6 +965,7 @@ svg {
     #arrowRightMobile {
         width: 3vw;
         stroke-width: 2px;
+        
     }
     #closeMenu,
     #closeGame {
@@ -1340,13 +1341,19 @@ svg {
     }
 
     #arrowLeftMobile {
-        width: 3vw;
+        width: 6vw;
         stroke-width: 2px;
+        position: absolute;
+        left: var(--marginHMobile);
+        bottom: var(--marginHMobile);
     }
 
     #arrowRightMobile {
-        width: 3vw;
+        width: 6vw;
         stroke-width: 2px;
+        position: absolute;
+        right: var(--marginHMobile);
+        bottom: var(--marginHMobile);
     }
 
    
