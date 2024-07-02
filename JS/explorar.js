@@ -16,28 +16,23 @@ function showVideo(index) {
     infoVideo.forEach((video, i) => {
         if (i === index) {
             video.style.display = 'flex';
-            setTimeout(() => {
-                video.style.opacity = 1;
-            });
+            video.style.opacity = 1;
         } else {
             video.style.opacity = 0;
-            setTimeout(() => {
-                video.style.display = 'none';
-            });
+            video.style.display = 'none';
         }
     });
 
     exploreVideo.forEach((video, i) => {
         if (i === index) {
             video.style.display = 'flex';
-            setTimeout(() => {
-                video.style.opacity = 1;
-            });
+            video.style.opacity = 1;
+            video.play();
         } else {
             video.style.opacity = 0;
-            setTimeout(() => {
-                video.style.display = 'none';
-            });
+            video.pause();
+            video.currentTime = 0;
+            video.style.display = 'none';
         }
     });
 }

@@ -14,9 +14,6 @@ window.addEventListener('load', (event) => {
 
 scroller.stop();
 
-scroller.on('scroll', (instance) => {
-    onScrollMenu(instance.scroll.y);
-});
 
 window.onload = function () {
     scroller.update();
