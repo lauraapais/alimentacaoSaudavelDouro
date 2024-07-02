@@ -37,7 +37,6 @@
 #explorarBackground {
     background-color: #F3822B;
     transition: background-color 1s ease;
-
 }
 
 #escolasBackground {
@@ -284,8 +283,6 @@ svg {
 
 
 /** Index **/
-.logoHeader {}
-
 .logoHeaderIndex img {
     width: auto;
     height: 100%;
@@ -786,6 +783,10 @@ svg {
     display: none;
 }
 
+.arrowMobile{
+    display: none;
+}
+
 
 
 
@@ -1224,8 +1225,6 @@ svg {
 
 
     /*new explore*/
-
-
     .video_plus_info {
         display: flex;
         flex-direction: column;
@@ -1237,24 +1236,20 @@ svg {
 
     .exploreInfo {
         width: 100%;
-        margin-bottom: var(--marginHMobile);
+        margin-bottom: calc(var(--marginHMobile)/2) 0 ;
     }
 
     .exploreContainer {
         align-items: flex-start;
     }
 
-    .exploreInfo {
-        margin-top: var(--marginHMobile);
-    }
-
-    #arrowLeft {
-        width: 6vw;
+    #arrowLeftMobile {
+        width: 7vw;
         stroke-width: 2px;
     }
 
-    #arrowRight {
-        width: 6vw;
+    #arrowRightMobile {
+        width: 7vw;
         stroke-width: 2px;
     }
 
@@ -1272,6 +1267,22 @@ svg {
     }
 
     .arrow{
-        align-self: flex-end;
+        display: none;
+    }
+
+    .exploreVideos {
+        width: 100%;
+        position: relative;
+    }
+
+    .arrowMobile{
+        display: flex;
+        width: calc(100% - var(--marginHMobile)*2);
+        position: absolute;
+        justify-content: space-between;
+        padding: var(--marginHMobile);
+        background-color: #F3822B;
+        transition: background-color 1s ease;
+        bottom: 0;
     }
 }

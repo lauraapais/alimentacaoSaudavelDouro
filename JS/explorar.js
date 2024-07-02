@@ -5,12 +5,15 @@ var infoVideo = document.querySelectorAll('.exploreInfo');
 var exploreVideo = document.querySelectorAll('.video_plus_info video');
 var videos = document.querySelectorAll('.exploreInfo');
 var arrow = document.querySelectorAll('.arrow');
+var arrowMobile = document.getElementById('arrowMobile');
 
 var exploreInfoH3 = document.querySelectorAll('.exploreInfo h3');
 var exploreInfop = document.querySelectorAll('.exploreInfo p');
 
 var arrowLeft = document.getElementById('arrowLeft');
 var arrowRight = document.getElementById('arrowRight');
+var arrowLeftMobile = document.getElementById('arrowLeftMobile');
+var arrowRightMobile = document.getElementById('arrowRightMobile');
 
 function showVideo(index) {
     infoVideo.forEach((video, i) => {
@@ -73,6 +76,8 @@ function changeBackgroundColor(index) {
 
     explorarBackground.style.transition = 'background-color 1s ease';
     explorarBackground.style.backgroundColor = backgroundColor;
+    arrowMobile.style.transition = 'background-color 1s ease';
+    arrowMobile.style.backgroundColor = backgroundColor;
 
 
     exploreInfoH3.forEach(exploreInfo_H3 => {
@@ -99,6 +104,9 @@ function handleArrowLeftClick() {
 
 arrowRight.addEventListener('click', handleArrowRightClick);
 arrowLeft.addEventListener('click', handleArrowLeftClick);
+
+arrowRightMobile.addEventListener('click', handleArrowRightClick);
+arrowLeftMobile.addEventListener('click', handleArrowLeftClick);
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight') {
