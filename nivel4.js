@@ -540,7 +540,7 @@ class Level {
             }
             lastY = y;
         } else if (w < 1500) {
-            let maxWidth = windowWidth * 0.8;
+            let maxWidth = windowWidth * 0.9;
             let lines = wrapText(this.question, maxWidth);
             let y = marginDesktop + textAscent();
             for (let i = 0; i < lines.length; i++) {
