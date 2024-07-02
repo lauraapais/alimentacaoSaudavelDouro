@@ -168,7 +168,7 @@ function loadLevels() {
     //Almoço
     level_two = new Level(color(156, 153, 54),
         'Cria um almoço equilibrado e com alimentos saudáveis!',
-        new UIFinish('data/jogo/endLevel/13.png'), color(156, 153, 54));
+        new UIFinish('data/jogo/endLevel/13.png', color(156, 153, 54)));
     level_two.addItem(items.sausage2, false, 'data/jogo/certoErrado/errado.png');
     level_two.addItem(items.rice, true, 'data/jogo/certoErrado/certo.png');
     level_two.addItem(items.chicken, true, 'data/jogo/certoErrado/certo.png');
@@ -179,7 +179,7 @@ function loadLevels() {
     //Lanche
     level_three = new Level(color(237, 119, 38),
         'Cria um lanche equilibrado e com alimentos saudáveis!',
-        new UIFinish('data/jogo/endLevel/14.png'), color(237, 119, 38));
+        new UIFinish('data/jogo/endLevel/14.png', color(237, 119, 38)));
     level_three.addItem(items.bread2, true, 'data/jogo/certoErrado/certo.png');
     level_three.addItem(items.sausage, false, 'data/jogo/certoErrado/errado.png');
     level_three.addItem(items.watermelon, true, 'data/jogo/certoErrado/certo.png');
@@ -190,7 +190,7 @@ function loadLevels() {
     //Jantar
     level_four = new Level(color(27, 117, 187),
         'Cria um jantar equilibrado e com alimentos saudáveis!',
-        new UIFinish('data/jogo/endLevel/15.png'), color(27, 117, 187));
+        new UIFinish('data/jogo/endLevel/15.png', color(27, 117, 187)));
     level_four.addItem(items.pasta2, true, 'data/jogo/certoErrado/certo.png');
     level_four.addItem(items.shrimp, true, 'data/jogo/certoErrado/certo.png');
     level_four.addItem(items.cheese4, false, 'data/jogo/certoErrado/errado.png');
