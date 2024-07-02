@@ -1011,10 +1011,11 @@ svg {
 
     .illustrationsIndex img {
         height: 50vw;
+        margin-bottom: 2vh;
     }
 
     .illustrationsIndex div {
-        margin-bottom: var(--marginHMobile);
+        margin-bottom: calc(var(--marginHMobile)*2);
     }
 
 
