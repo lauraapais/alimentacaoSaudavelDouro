@@ -21,7 +21,7 @@ marginMobile = 0.06 * w;
 marginDesktop = 0.02 * w;
 
 function preload() {
-    plate = loadImage('data/jogo/plate.png');
+    plate = loadImage('data/jogo/mapa_2.png');
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTICSans-130.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
@@ -438,7 +438,7 @@ class Level {
             }
             lastY = y;
         } else if (w < 1500) {
-            let maxWidth = windowWidth * 0.8;
+            let maxWidth = windowWidth * 0.5;
             let lines = wrapText(this.question, maxWidth);
             let y = marginDesktop + textAscent();
             for (let i = 0; i < lines.length; i++) {

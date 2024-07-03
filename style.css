@@ -289,7 +289,7 @@ svg {
 }
 
 .mainLanding {
-    height: calc(100vh - min(var(--headerHmin), 500px) - var(--marginH) * 4);
+    height: calc(83vh - min(var(--headerHmin), 500px) - var(--marginH) * 4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -326,9 +326,11 @@ svg {
 }
 
 .landingIntro {
-    margin-top: 15vh;
-    margin-bottom: 20vh;
-    width: 45%;
+    margin-bottom: 10vh;
+    width: 100%;
+}
+.mainInfoTextLanding{
+    flex-direction: row-reverse!important;
 }
 
 .landingIntro p {
@@ -613,8 +615,12 @@ svg {
 }
 
 .imageInfo img {
-    width: 70%;
+    width: 60%;
     height: auto;
+}
+
+.imageLand{
+    margin-top:20vh;
 }
 
 #textInfoTitle span {
@@ -800,9 +806,6 @@ svg {
         max-height: 15vw;
     }
 
-    .landingIntro {
-        width: 70%;
-    }
 
     .indexImage .indexIllustration {
         margin-bottom: 20vh;
@@ -961,6 +964,9 @@ svg {
     #arrowRightMobile {
         width: 3vw;
         stroke-width: 2px;
+        position: absolute;
+        right: var(--marginHMobile);
+        bottom: var(--marginHMobile);
         
     }
     #closeMenu,

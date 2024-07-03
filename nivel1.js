@@ -444,16 +444,7 @@ class Level {
 
     display() {
         background(this.background);
-        push();
-
-        if (w < 900) {
-            image(plate, width / 2, height / 2.2, plateSize, plateSize);
-        } else if (w < 1500) {
-            image(plate, width / 2, height / 2.1, plateSize, plateSize);
-        } else {
-            image(plate, width / 2, height / 2.1, plateSize, plateSize);
-        }
-        pop();
+    
 
         for (let i = 0; i < this.items.length; i++) {
             let item = this.items[i];
@@ -492,7 +483,7 @@ class Level {
             }
             lastY = y;
         } else if (w < 1500) {
-            let maxWidth = windowWidth * 0.8;
+            let maxWidth = windowWidth * 0.5;
             let lines = wrapText(this.question, maxWidth);
             let y = marginDesktop + textAscent();
             for (let i = 0; i < lines.length; i++) {
@@ -529,6 +520,11 @@ class Level {
         }
         pop();
 
+        push();
+        stroke(255);
+        strokeWeight(2);
+        line(width/10, height * (1 - itemsScale)-50, width - (width/10), height * (1 - itemsScale)-50);
+        pop();
 
         if (this.lastPlateItem != null && this.currentTextTimer != 0) {
             if (w < 900) {

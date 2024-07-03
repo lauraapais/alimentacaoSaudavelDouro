@@ -1,4 +1,4 @@
-//header absolute
+
 var menuDiv = document.getElementById("menuDiv");
 
 var menuIcon = document.getElementById("menuIcon");

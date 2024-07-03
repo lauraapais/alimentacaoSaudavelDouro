@@ -491,7 +491,7 @@ class Level {
             }
             lastY = y;
         } else if (w < 1500) {
-            let maxWidth = windowWidth * 0.9;
+            let maxWidth = windowWidth * 0.8;
             let lines = wrapText(this.question, maxWidth);
             let y = marginDesktop + textAscent();
             for (let i = 0; i < lines.length; i++) {
@@ -500,7 +500,7 @@ class Level {
             }
             lastY = y;
         } else {
-            let maxWidth = windowWidth * 0.3;
+            let maxWidth = windowWidth * 0.4;
             let lines = wrapText(this.question, maxWidth);
             let y = marginDesktop + textAscent();
             for (let i = 0; i < lines.length; i++) {
@@ -601,15 +601,12 @@ class Level {
     setDefaultPosition() {
         let space;
         let rowSpacingFactor = 1.4;
-
-        if (w < 600) {
+        if (w < 900) {
             space = width * 0.95 / (this.items.length / 2 + 3);
             for (let i = 0; i < this.items.length; i++) {
                 let xd;
                 if (i % 2 == 0) xd = 0;
                 else xd = 1;
-
-
                 this.items[i].pos.set(
                     (width * 0.025) + space * (i + 1 - xd),
                     height * (1 - itemsScale / 1.8 * (1 + xd * rowSpacingFactor))

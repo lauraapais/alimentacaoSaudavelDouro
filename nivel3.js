@@ -21,7 +21,7 @@ marginMobile = 0.06 * w;
 marginDesktop = 0.02 * w;
 
 function preload() {
-    plate = loadImage('data/jogo/plate.png');
+    plate = loadImage('data/jogo/rodaAlimentos_2.png');
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTICSans-130.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
@@ -193,11 +193,11 @@ function loadLevels() {
         new UIFinish('data/jogo/endLevel/8.png', color(232, 210, 54))
     );
     level_three.addItem(items.turnip, true, 'data/jogo/certoErrado/certo.png');
-    level_three.addItem(items.potato, true, 'data/jogo/certoErrado/certo.png');
+    level_three.addItem(items.potato, false, 'data/jogo/certoErrado/certo.png');
     level_three.addItem(items.bread2, false, 'data/jogo/certoErrado/errado.png');
     level_three.addItem(items.leek, true, 'data/jogo/certoErrado/certo.png');
     level_three.addItem(items.pepper, true, 'data/jogo/certoErrado/certo.png');
-    level_three.addItem(items.broccoli, false, 'data/jogo/certoErrado/errado.png');
+    level_three.addItem(items.broccoli, true, 'data/jogo/certoErrado/errado.png');
     level_three.setDefaultPosition();
     //Carne Peixe Ovos
     level_four = new Level(color(91, 165, 218),
@@ -539,7 +539,7 @@ class Level {
             }
             lastY = y;
         } else {
-            let maxWidth = windowWidth * 0.3;
+            let maxWidth = windowWidth * 0.4;
             let lines = wrapText(this.question, maxWidth);
             let y = marginDesktop + textAscent();
             for (let i = 0; i < lines.length; i++) {

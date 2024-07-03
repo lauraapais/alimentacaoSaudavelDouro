@@ -6,27 +6,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="sketch.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
+
+
 <body class="gameBody" id="backgroundNiveis">
 
-    <div class="headerGame">
-        <div class="logoHeaderIndex">
-            <a href="index.html"><img src="data/general/logoWhite.png"
-                    alt="Alimentação Saudável e Sustentável de Trás-os-Montes"></a>
-        </div>
-        <div class="gameMenu">
-            <a href="index.html">
-                <svg id="closeGame" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                <g>
-                  <line class="cls-1" x1="17" y1="17" x2="1" y2="1"/>
-                  <line class="cls-1" x1="1" y1="17" x2="17" y2="1"/>
-                </g>
-              </svg></a>
+    <div class="menuDiv loading" id="menuDiv">
+        <header>
+            <div class="logoHeaderIndex logoHeader">
+                <a href="index.html"><img src="data/general/logoWhite.png"
+                        alt="Alimentação Saudável e Sustentável de Trás-os-Montes"></a>
+            </div>
+            <div class="menu">
+                <svg id="closeMenu" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                    <g>
+                      <line class="cls-1" x1="17" y1="17" x2="1" y2="1"/>
+                      <line class="cls-1" x1="1" y1="17" x2="17" y2="1"/>
+                    </g>
+                  </svg>
+            </div>
+        </header>
+        <div class="menuItems">
+                <li>O Projeto</li>
+            <a href="escolas.html">
+                <li>Para as Escolas</li>
+            </a>
+            <a href="pais.html">
+                <li>Para os Pais</li>
+            </a>
+            <a href="explorar.html">
+                <li id="menuExplorePage">Explorar</li>
+            </a>
+                <li>Filme</li>
+                <a href="niveisMenu.html">
+                    <li>Jogo</li>
+                </a>
         </div>
     </div>
+
+
+    <div id="main-container" data-scroll-container>
+        <header data-scroll-section>
+            <div class="logoHeaderIndex logoHeader">
+                <a href="index.html"><img src="data/general/logoWhite.png"
+                        alt="Alimentação Saudável e Sustentável de Trás-os-Montes"></a>
+            </div>
+            <div class="menu" id="openMenu">
+                <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.98 49.56">
+                    <g class="cls-3">
+                      <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_1-2" data-name="Layer 1">
+                          <g class="cls-1">
+                            <line class="cls-2" x1="3.3" y1="46.26" x2="86.68" y2="46.26"/>
+                            <line class="cls-2" x1="3.3" y1="24.48" x2="86.68" y2="24.48"/>
+                            <line class="cls-2" x1="3.3" y1="3.3" x2="86.68" y2="3.3"/>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+            </div>
+        </header>
 
     <main id="levelMain">
         <div class="levelFlex">
@@ -60,6 +102,7 @@
     </div>
     </main>
 
+    <script src="JS/header.js"></script>
     <script src="interact.js" defer></script>
     <script src="JS/mobileHeight.js"></script>
 </body>
