@@ -158,45 +158,45 @@ function loadLevels() {
     level_one = new Level(color(232, 210, 54),
         'Cria um pequeno-almoço equilibrado e com alimentos saudáveis!',
         new UIFinish('data/jogo/endLevel/12.png', color(232, 210, 54)));
-    level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png');
-    level_one.addItem(items.croissant, false, 'data/jogo/certoErrado/errado.png');
-    level_one.addItem(items.apple, true, 'data/jogo/certoErrado/certo.png');
-    level_one.addItem(items.yogurt, true, 'data/jogo/certoErrado/certo.png');
-    level_one.addItem(items.sausage, false, 'data/jogo/certoErrado/errado.png');
-    level_one.addItem(items.eggs, true, 'data/jogo/certoErrado/certo.png');
+    level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png', 'Amêndoa');
+    level_one.addItem(items.croissant, false, 'data/jogo/certoErrado/errado.png', 'Croissant');
+    level_one.addItem(items.apple, true, 'data/jogo/certoErrado/certo.png', 'Maçã');
+    level_one.addItem(items.yogurt, true, 'data/jogo/certoErrado/certo.png', 'Iogurte');
+    level_one.addItem(items.sausage, false, 'data/jogo/certoErrado/errado.png', 'Chouriço');
+    level_one.addItem(items.eggs, true, 'data/jogo/certoErrado/certo.png', 'Ovos');
     level_one.setDefaultPosition();
     //Almoço
     level_two = new Level(color(156, 153, 54),
         'Cria um almoço equilibrado e com alimentos saudáveis!',
         new UIFinish('data/jogo/endLevel/13.png', color(156, 153, 54)));
-    level_two.addItem(items.sausage2, false, 'data/jogo/certoErrado/errado.png');
-    level_two.addItem(items.rice, true, 'data/jogo/certoErrado/certo.png');
-    level_two.addItem(items.chicken, true, 'data/jogo/certoErrado/certo.png');
-    level_two.addItem(items.cheese3, false, 'data/jogo/certoErrado/errado.png');
-    level_two.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png');
-    level_two.addItem(items.bacon, false, 'data/jogo/certoErrado/errado.png');
+    level_two.addItem(items.sausage2, false, 'data/jogo/certoErrado/errado.png', 'Salsicha');
+    level_two.addItem(items.rice, true, 'data/jogo/certoErrado/certo.png', 'Arroz');
+    level_two.addItem(items.chicken, true, 'data/jogo/certoErrado/certo.png', 'Frango');
+    level_two.addItem(items.cheese3, false, 'data/jogo/certoErrado/errado.png', 'Queijo');
+    level_two.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');
+    level_two.addItem(items.bacon, false, 'data/jogo/certoErrado/errado.png', 'Bacon');
     level_two.setDefaultPosition();
     //Lanche
     level_three = new Level(color(237, 119, 38),
         'Cria um lanche equilibrado e com alimentos saudáveis!',
         new UIFinish('data/jogo/endLevel/14.png', color(237, 119, 38)));
-    level_three.addItem(items.bread2, true, 'data/jogo/certoErrado/certo.png');
-    level_three.addItem(items.sausage, false, 'data/jogo/certoErrado/errado.png');
-    level_three.addItem(items.watermelon, true, 'data/jogo/certoErrado/certo.png');
-    level_three.addItem(items.milk, true, 'data/jogo/certoErrado/certo.png');
-    level_three.addItem(items.sausage2, false, 'data/jogo/certoErrado/errado.png');
-    level_three.addItem(items.croissant, false, 'data/jogo/certoErrado/errado.png');
+    level_three.addItem(items.bread2, true, 'data/jogo/certoErrado/certo.png', 'Pão');
+    level_three.addItem(items.sausage, false, 'data/jogo/certoErrado/errado.png', 'Chouriço');
+    level_three.addItem(items.watermelon, true, 'data/jogo/certoErrado/certo.png', 'Melancia');
+    level_three.addItem(items.milk, true, 'data/jogo/certoErrado/certo.png', 'Leite');
+    level_three.addItem(items.sausage2, false, 'data/jogo/certoErrado/errado.png', 'Salsicha');
+    level_three.addItem(items.croissant, false, 'data/jogo/certoErrado/errado.png', 'Croissant');
     level_three.setDefaultPosition();
     //Jantar
     level_four = new Level(color(27, 117, 187),
         'Cria um jantar equilibrado e com alimentos saudáveis!',
         new UIFinish('data/jogo/endLevel/15.png', color(27, 117, 187)));
-    level_four.addItem(items.pasta2, true, 'data/jogo/certoErrado/certo.png');
-    level_four.addItem(items.shrimp, true, 'data/jogo/certoErrado/certo.png');
-    level_four.addItem(items.cheese4, false, 'data/jogo/certoErrado/errado.png');
-    level_four.addItem(items.oliveOil, true, 'data/jogo/certoErrado/certo.png');
-    level_four.addItem(items.sausage2, false, 'data/jogo/certoErrado/errado.png');
-    level_four.addItem(items.lettuce, true, 'data/jogo/certoErrado/certo.png');
+    level_four.addItem(items.pasta2, true, 'data/jogo/certoErrado/certo.png', 'Massa');
+    level_four.addItem(items.shrimp, true, 'data/jogo/certoErrado/certo.png', 'Camarão');
+    level_four.addItem(items.cheese4, false, 'data/jogo/certoErrado/errado.png', 'Queijo');
+    level_four.addItem(items.oliveOil, true, 'data/jogo/certoErrado/certo.png', 'Azeite');
+    level_four.addItem(items.sausage2, false, 'data/jogo/certoErrado/errado.png', 'Salsicha');
+    level_four.addItem(items.lettuce, true, 'data/jogo/certoErrado/certo.png', 'Alface');
     level_four.setDefaultPosition();
 
     levels = new LevelLoader();
@@ -422,11 +422,12 @@ class Level {
         this.status = false;
     }
 
-    addItem(item, value, description) {
+    addItem(item, value, description, name) {
         this.items.push({
             "item": item,
             "value": value,
             "description": loadImage(description),
+            "name": name,
             "pos": createVector(0, 0),
             "scale": itemsScale,
             "plate": false,

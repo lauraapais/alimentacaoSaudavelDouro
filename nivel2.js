@@ -139,12 +139,12 @@ function loadLevels() {
     'Quais são os alimentos locais do Douro?' ,
     new UIFinish('data/jogo/endLevel/5.png', color(237,119,38))
 );
-    level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png');
-    level_one.addItem(items.cherry, false, 'data/jogo/certoErrado/errado.png');
-    level_one.addItem(items.oliveOil, true, 'data/jogo/certoErrado/certo.png');
-    level_one.addItem(items.fig, false, 'data/jogo/certoErrado/errado.png');
-    level_one.addItem(items.papaya, false, 'data/jogo/certoErrado/errado.png');
-    level_one.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png');    
+    level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png', 'Amêndoa');
+    level_one.addItem(items.cherry, false, 'data/jogo/certoErrado/errado.png', 'Cerejas');
+    level_one.addItem(items.oliveOil, true, 'data/jogo/certoErrado/certo.png', 'Azeite');
+    level_one.addItem(items.fig, false, 'data/jogo/certoErrado/errado.png', 'Figo');
+    level_one.addItem(items.papaya, false, 'data/jogo/certoErrado/errado.png', 'Papaia');
+    level_one.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');    
     level_one.setDefaultPosition();
 
     levels = new LevelLoader();
@@ -369,11 +369,12 @@ class Level {
         this.status = false;
     }
 
-    addItem(item, value, description) {
+    addItem(item, value, description, name) {
         this.items.push({
             "item": item,
             "value": value,
             "description": loadImage(description),
+            "name": name,
             "pos": createVector(0, 0),
             "scale": itemsScale,
             "plate": false,

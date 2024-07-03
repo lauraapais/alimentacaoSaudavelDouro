@@ -21,7 +21,7 @@ marginMobile = 0.06 * w;
 marginDesktop = 0.02 * w;
 
 function preload() {
-    plate = loadImage('data/jogo/rodaAlimentos_2.png');
+    plate = loadImage('data/jogo/rodaAlimentos_1.png');
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTICSans-130.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
@@ -167,73 +167,73 @@ function loadLevels() {
     //Laticineos
     level_one = new Level(color(27, 117, 187),
         'Sabes que alimentos são laticíneos?',
-        new UIFinish('data/jogo/endLevel/6.png', color(27, 117, 187)));
-    level_one.addItem(items.milk, true, 'data/jogo/certoErrado/certo.png');
-    level_one.addItem(items.redonion, false, 'data/jogo/certoErrado/errado.png');
-    level_one.addItem(items.cheese, true, 'data/jogo/certoErrado/certo.png');
-    level_one.addItem(items.yogurt, true, 'data/jogo/certoErrado/certo.png');
-    level_one.addItem(items.chicken, false, 'data/jogo/certoErrado/errado.png');
-    level_one.addItem(items.carot, false, 'data/jogo/certoErrado/errado.png');
+        new UIFinish('data/jogo/endLevel/6.png', color(27, 117, 187)), 'data/jogo/rodaAlimentos_1.png');
+    level_one.addItem(items.milk, true, 'data/jogo/certoErrado/certo.png', 'Leite');
+    level_one.addItem(items.redonion, false, 'data/jogo/certoErrado/errado.png', 'Cebola');
+    level_one.addItem(items.cheese, true, 'data/jogo/certoErrado/certo.png', 'Queijo');
+    level_one.addItem(items.yogurt, true, 'data/jogo/certoErrado/certo.png', 'Iogurte');
+    level_one.addItem(items.chicken, false, 'data/jogo/certoErrado/errado.png', 'Frango');
+    level_one.addItem(items.carot, false, 'data/jogo/certoErrado/errado.png', 'Cenoura');
     level_one.setDefaultPosition();
     //Frutas
     level_two = new Level(color(235, 153, 194),
         'Sabes que alimentos são da família das frutas?',
-        new UIFinish('data/jogo/endLevel/7.png', color(235, 153, 194))
+        new UIFinish('data/jogo/endLevel/7.png', color(235, 153, 194)), 'data/jogo/rodaAlimentos_2.png'
     );
-    level_two.addItem(items.pinaple, true, 'data/jogo/certoErrado/certo.png');
-    level_two.addItem(items.peach, true, 'data/jogo/certoErrado/certo.png');
-    level_two.addItem(items.cauliflower, false, 'data/jogo/certoErrado/errado.png');
-    level_two.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png');
-    level_two.addItem(items.eggplant, false, 'data/jogo/certoErrado/errado.png');
-    level_two.addItem(items.lemon, true, 'data/jogo/certoErrado/certo.png');
+    level_two.addItem(items.pinaple, true, 'data/jogo/certoErrado/certo.png', 'Ananás');
+    level_two.addItem(items.peach, true, 'data/jogo/certoErrado/certo.png', 'Pêssego');
+    level_two.addItem(items.cauliflower, false, 'data/jogo/certoErrado/errado.png', 'Couve-Flor');
+    level_two.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');
+    level_two.addItem(items.eggplant, false, 'data/jogo/certoErrado/errado.png', 'Beringela');
+    level_two.addItem(items.lemon, true, 'data/jogo/certoErrado/certo.png', 'Limão');
     level_two.setDefaultPosition();
     //Hortículas
     level_three = new Level(color(232, 210, 54),
         'Sabes que alimentos são do grupo dos hortículas?',
-        new UIFinish('data/jogo/endLevel/8.png', color(232, 210, 54))
+        new UIFinish('data/jogo/endLevel/8.png', color(232, 210, 54)), 'data/jogo/rodaAlimentos_3.png'
     );
-    level_three.addItem(items.turnip, true, 'data/jogo/certoErrado/certo.png');
-    level_three.addItem(items.potato, false, 'data/jogo/certoErrado/certo.png');
-    level_three.addItem(items.bread2, false, 'data/jogo/certoErrado/errado.png');
-    level_three.addItem(items.leek, true, 'data/jogo/certoErrado/certo.png');
-    level_three.addItem(items.pepper, true, 'data/jogo/certoErrado/certo.png');
-    level_three.addItem(items.broccoli, true, 'data/jogo/certoErrado/errado.png');
+    level_three.addItem(items.turnip, true, 'data/jogo/certoErrado/certo.png', 'Nabo');
+    level_three.addItem(items.potato, false, 'data/jogo/certoErrado/errado.png', 'Batata');
+    level_three.addItem(items.bread2, false, 'data/jogo/certoErrado/errado.png', 'Pão');
+    level_three.addItem(items.leek, true, 'data/jogo/certoErrado/certo.png', 'Alho-Francês');
+    level_three.addItem(items.pepper, true, 'data/jogo/certoErrado/certo.png', 'Pimento');
+    level_three.addItem(items.broccoli, true, 'data/jogo/certoErrado/certo.png', 'Bróculo');
     level_three.setDefaultPosition();
     //Carne Peixe Ovos
     level_four = new Level(color(91, 165, 218),
         'Sabes que alimentos são do grupo carne, pescado e ovos?',
-        new UIFinish('data/jogo/endLevel/9.png', color(91, 165, 218))
+        new UIFinish('data/jogo/endLevel/9.png', color(91, 165, 218)), 'data/jogo/rodaAlimentos_4.png'
     );
-    level_four.addItem(items.fish, true, 'data/jogo/certoErrado/certo.png');
-    level_four.addItem(items.mushroom, false, 'data/jogo/certoErrado/errado.png');
-    level_four.addItem(items.shrimp, true, 'data/jogo/certoErrado/certo.png');
-    level_four.addItem(items.potato, false, 'data/jogo/certoErrado/errado.png');
-    level_four.addItem(items.eggs, true, 'data/jogo/certoErrado/certo.png');
-    level_four.addItem(items.bacon, true, 'data/jogo/certoErrado/certo.png');
+    level_four.addItem(items.fish, true, 'data/jogo/certoErrado/certo.png', 'Peixe');
+    level_four.addItem(items.mushroom, false, 'data/jogo/certoErrado/errado.png', 'Cogumelo');
+    level_four.addItem(items.shrimp, true, 'data/jogo/certoErrado/certo.png', 'Camarão');
+    level_four.addItem(items.potato, false, 'data/jogo/certoErrado/errado.png', 'Batata');
+    level_four.addItem(items.eggs, true, 'data/jogo/certoErrado/certo.png', 'Ovos');
+    level_four.addItem(items.bacon, true, 'data/jogo/certoErrado/certo.png', 'Bacon');
     level_four.setDefaultPosition();
     //GordurasOleos
     level_five = new Level(color(171, 169, 169),
         'Sabes que alimentos são gorduras e óleos?',
-        new UIFinish('data/jogo/endLevel/10.png', color(171, 169, 169))
+        new UIFinish('data/jogo/endLevel/10.png', color(171, 169, 169)), 'data/jogo/rodaAlimentos_5.png'
     );
-    level_five.addItem(items.cheese, false, 'data/jogo/certoErrado/errado.png');
-    level_five.addItem(items.milk, false, 'data/jogo/certoErrado/errado.png');
-    level_five.addItem(items.pasta, false, 'data/jogo/certoErrado/errado.png');
-    level_five.addItem(items.lemon, false, 'data/jogo/certoErrado/errado.png');
-    level_five.addItem(items.oliveOli, true, 'data/jogo/certoErrado/certo.png');
-    level_five.addItem(items.butter, true, 'data/jogo/certoErrado/certo.png');
+    level_five.addItem(items.cheese, false, 'data/jogo/certoErrado/errado.png', 'Queijo');
+    level_five.addItem(items.milk, false, 'data/jogo/certoErrado/errado.png', 'Leite');
+    level_five.addItem(items.pasta, false, 'data/jogo/certoErrado/errado.png', 'Massa');
+    level_five.addItem(items.lemon, false, 'data/jogo/certoErrado/errado.png', 'Limão');
+    level_five.addItem(items.oliveOli, true, 'data/jogo/certoErrado/certo.png', 'Azeite');
+    level_five.addItem(items.butter, true, 'data/jogo/certoErrado/certo.png', 'Manteiga');
     level_five.setDefaultPosition();
     //Cereais
     level_six = new Level(color(237, 119, 38),
         'Sabes que alimentos são cereais, derivados e tubérculos?',
-        new UIFinish('data/jogo/endLevel/11.png', color(237, 119, 38))
+        new UIFinish('data/jogo/endLevel/11.png', color(237, 119, 38)), 'data/jogo/rodaAlimentos_6.png'
     );
-    level_six.addItem(items.rice, true, 'data/jogo/certoErrado/certo.png');
-    level_six.addItem(items.cabbage, false, 'data/jogo/certoErrado/errado.png');
-    level_six.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png');
-    level_six.addItem(items.leek, false, 'data/jogo/certoErrado/errado.png');
-    level_six.addItem(items.bread, false, 'data/jogo/certoErrado/errado.png');
-    level_six.addItem(items.pasta, true, 'data/jogo/certoErrado/certo.png');
+    level_six.addItem(items.rice, true, 'data/jogo/certoErrado/certo.png', 'Arroz');
+    level_six.addItem(items.cabbage, false, 'data/jogo/certoErrado/errado.png', 'Couve');
+    level_six.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');
+    level_six.addItem(items.leek, false, 'data/jogo/certoErrado/errado.png', 'Alho-Francês');
+    level_six.addItem(items.bread, false, 'data/jogo/certoErrado/errado.png', 'Pão');
+    level_six.addItem(items.pasta, true, 'data/jogo/certoErrado/certo.png', 'Massa');
     level_six.setDefaultPosition();
 
     levels = new LevelLoader();
@@ -461,11 +461,12 @@ class Level {
         this.status = false;
     }
 
-    addItem(item, value, description) {
+    addItem(item, value, description, name) {
         this.items.push({
             "item": item,
             "value": value,
             "description": loadImage(description),
+            "name": name,
             "pos": createVector(0, 0),
             "scale": itemsScale,
             "plate": false,
