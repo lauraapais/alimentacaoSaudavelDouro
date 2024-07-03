@@ -157,7 +157,7 @@ function loadLevels() {
     );
     level_one.addItem(items.grape, false, 'data/jogo/certoErrado/errado.png', 'Uva');
     level_one.addItem(items.cherry, true, 'data/jogo/certoErrado/certo.png', 'Cereja');
-    level_one.addItem(items.pea, true, 'data/jogo/certoErrado/certo.png'), 'Fava';
+    level_one.addItem(items.pea, true, 'data/jogo/certoErrado/certo.png', 'Fava');
     level_one.addItem(items.lemon, false, 'data/jogo/certoErrado/errado.png', 'Fava');
     level_one.addItem(items.redonion, true, 'data/jogo/certoErrado/certo.png', 'Cebola');
     level_one.addItem(items.tomato, false, 'data/jogo/certoErrado/errado.png', 'Tomate');
@@ -452,6 +452,17 @@ class Level {
             item.item.show(item.pos,
                 (itemSize + itemSize * item.dragScale / this.timeScaleMax / 10) //Animation Scale
             );
+            let d = dist(mouseX, mouseY, item.pos.x, item.pos.y);
+            if (d < item.item.image.width * itemSize / 2) {
+                text(item.name, item.pos.x, item.pos.y);
+            }
+            /*if (item.plate && !item.value) {
+                image(item.description,
+                    item.pos.x + item.item.image.width * itemsScale/4,
+                    item.pos.y + item.item.image.height * itemsScale/4, 
+                    item.item.image.width * itemsScale/2,
+                    item.item.image.width * itemsScale/2)
+            }*/
         }
 
         this.ui();
@@ -626,7 +637,8 @@ class Level {
 
 
     insidePlate(item) {
-        if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
+        if (item.pos.y < height * (1 - itemsScale)-50) {
+        //if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
@@ -661,8 +673,8 @@ class Gameitem {
 
     show(pos, scale) {
         image(this.image, pos.x, pos.y,
-            this.image.width * scale,
-            this.image.height * scale);
+                this.image.width * scale,
+                this.image.height * scale);
     }
 }
 

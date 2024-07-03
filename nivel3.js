@@ -167,7 +167,8 @@ function loadLevels() {
     //Laticineos
     level_one = new Level(color(27, 117, 187),
         'Sabes que alimentos são laticíneos?',
-        new UIFinish('data/jogo/endLevel/6.png', color(27, 117, 187)), 'data/jogo/rodaAlimentos_1.png');
+        new UIFinish('data/jogo/endLevel/6.png', color(27, 117, 187)), 
+        loadImage('data/jogo/rodaAlimentos_1.png'));
     level_one.addItem(items.milk, true, 'data/jogo/certoErrado/certo.png', 'Leite');
     level_one.addItem(items.redonion, false, 'data/jogo/certoErrado/errado.png', 'Cebola');
     level_one.addItem(items.cheese, true, 'data/jogo/certoErrado/certo.png', 'Queijo');
@@ -178,7 +179,8 @@ function loadLevels() {
     //Frutas
     level_two = new Level(color(235, 153, 194),
         'Sabes que alimentos são da família das frutas?',
-        new UIFinish('data/jogo/endLevel/7.png', color(235, 153, 194)), 'data/jogo/rodaAlimentos_2.png'
+        new UIFinish('data/jogo/endLevel/7.png', color(235, 153, 194)), 
+        loadImage('data/jogo/rodaAlimentos_2.png')
     );
     level_two.addItem(items.pinaple, true, 'data/jogo/certoErrado/certo.png', 'Ananás');
     level_two.addItem(items.peach, true, 'data/jogo/certoErrado/certo.png', 'Pêssego');
@@ -190,7 +192,8 @@ function loadLevels() {
     //Hortículas
     level_three = new Level(color(232, 210, 54),
         'Sabes que alimentos são do grupo dos hortículas?',
-        new UIFinish('data/jogo/endLevel/8.png', color(232, 210, 54)), 'data/jogo/rodaAlimentos_3.png'
+        new UIFinish('data/jogo/endLevel/8.png', color(232, 210, 54)), 
+        loadImage('data/jogo/rodaAlimentos_3.png')
     );
     level_three.addItem(items.turnip, true, 'data/jogo/certoErrado/certo.png', 'Nabo');
     level_three.addItem(items.potato, false, 'data/jogo/certoErrado/errado.png', 'Batata');
@@ -202,7 +205,8 @@ function loadLevels() {
     //Carne Peixe Ovos
     level_four = new Level(color(91, 165, 218),
         'Sabes que alimentos são do grupo carne, pescado e ovos?',
-        new UIFinish('data/jogo/endLevel/9.png', color(91, 165, 218)), 'data/jogo/rodaAlimentos_4.png'
+        new UIFinish('data/jogo/endLevel/9.png', color(91, 165, 218)), 
+        loadImage('data/jogo/rodaAlimentos_4.png')
     );
     level_four.addItem(items.fish, true, 'data/jogo/certoErrado/certo.png', 'Peixe');
     level_four.addItem(items.mushroom, false, 'data/jogo/certoErrado/errado.png', 'Cogumelo');
@@ -214,7 +218,8 @@ function loadLevels() {
     //GordurasOleos
     level_five = new Level(color(171, 169, 169),
         'Sabes que alimentos são gorduras e óleos?',
-        new UIFinish('data/jogo/endLevel/10.png', color(171, 169, 169)), 'data/jogo/rodaAlimentos_5.png'
+        new UIFinish('data/jogo/endLevel/10.png', color(171, 169, 169)), 
+        loadImage('data/jogo/rodaAlimentos_5.png')
     );
     level_five.addItem(items.cheese, false, 'data/jogo/certoErrado/errado.png', 'Queijo');
     level_five.addItem(items.milk, false, 'data/jogo/certoErrado/errado.png', 'Leite');
@@ -226,7 +231,8 @@ function loadLevels() {
     //Cereais
     level_six = new Level(color(237, 119, 38),
         'Sabes que alimentos são cereais, derivados e tubérculos?',
-        new UIFinish('data/jogo/endLevel/11.png', color(237, 119, 38)), 'data/jogo/rodaAlimentos_6.png'
+        new UIFinish('data/jogo/endLevel/11.png', color(237, 119, 38)), 
+        loadImage('data/jogo/rodaAlimentos_6.png')
     );
     level_six.addItem(items.rice, true, 'data/jogo/certoErrado/certo.png', 'Arroz');
     level_six.addItem(items.cabbage, false, 'data/jogo/certoErrado/errado.png', 'Couve');
@@ -438,13 +444,14 @@ class UIFinish {
 }
 
 class Level {
-    constructor(background, question, uiEndLevel) {
+    constructor(background, question, uiEndLevel, imageLevel) {
         this.items = [];
         this.textSize = 50;
         this.draggingItem = null;
         this.offsetX = 0;
         this.offsetY = 0;
         this.background = background;
+        this.imageLevel = imageLevel;
         this.totalTrues = 0;
         this.totalFalses = 0;
         this.question = question;
@@ -486,11 +493,11 @@ class Level {
         push();
 
         if (w < 900) {
-            image(plate, width / 2, height / 2.2, plateSize, plateSize);
+            image(this.imageLevel, width / 2, height / 2.2, plateSize, plateSize);
         } else if (w < 1500) {
-            image(plate, width / 2, height / 2.1, plateSize, plateSize);
+            image(this.imageLevel, width / 2, height / 2.1, plateSize, plateSize);
         } else {
-            image(plate, width / 2, height / 2.1, plateSize, plateSize);
+            image(this.imageLevel, width / 2, height / 2.1, plateSize, plateSize);
         }
         pop();
 
@@ -588,7 +595,10 @@ class Level {
     animationScale() {
         for (let i = 0; i < this.items.length; i++) {
             if (this.items[i] != this.draggingItem) {
-                if (this.items[i].dragScale > 0)
+                if (this.items[i].plate) {
+                    if (this.items[i].dragScale < this.timeScaleMax*2)
+                        this.items[i].dragScale++;
+                } else if (this.items[i].dragScale > 0)
                     this.items[i].dragScale--;
             } else {
                 if (this.items[i].dragScale < this.timeScaleMax)
