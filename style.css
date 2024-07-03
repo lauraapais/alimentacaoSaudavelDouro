@@ -556,7 +556,6 @@ svg {
     right: 0;
     top: 0;
     margin: var(--marginH);
-    mix-blend-mode: multiply;
 }
 
 .closeIcon {

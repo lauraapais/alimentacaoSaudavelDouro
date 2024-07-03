@@ -357,10 +357,8 @@ class UIFinish {
 
     mousePressed() {
         if (w < 900) {
-            if (mouseX > width / 2 - (45 / 2) &&
-                mouseX < width / 2 + (45 / 2) &&
-                mouseY > (height / 2 + 105 - 7.5) - (22 / 2) &&
-                mouseY < (height / 2 + 105 - 7.5) + (22 / 2)) {
+            if (mouseX > width / 2 - 75 && mouseX < width / 2 + 75 && // metade da largura do retângulo
+                mouseY > height / 2 + 105 - 7.5 - 22.5 && mouseY < height / 2 + 105 - 7.5 + 22.5) { // metade da altura do retângulo
                 this.status = true;
             }
             else if (mouseX > (width / 2 - 102) - 30 / 2 &&
@@ -373,10 +371,8 @@ class UIFinish {
 
         else if (w > 2500) {
 
-            if (mouseX > width / 2 - (75 / 2) &&
-                mouseX < width / 2 + (75 / 2) &&
-                mouseY > (height / 2 + 175 - 12.5) - (22 / 2) &&
-                mouseY < (height / 2 + 175 - 12.5) + (22 / 2)) {
+            if (mouseX > width / 2 - 125 && mouseX < width / 2 + 125 &&
+                mouseY > height / 2 + 175 - 12.5 - 37.5 && mouseY < height / 2 + 175 - 12.5 + 37.5) {
                 this.status = true;
             }
             else if (mouseX > (width / 2 - 170) - 50 / 2 &&
@@ -388,10 +384,8 @@ class UIFinish {
         }
 
         else {
-            if (mouseX > width / 2 - (60 / 2) &&
-                mouseX < width / 2 + (60 / 2) &&
-                mouseY > (height / 2 + 140 - 10) - (22 / 2) &&
-                mouseY < (height / 2 + 140 - 10) + (22 / 2)) {
+            if (mouseX > width / 2 - 100 && mouseX < width / 2 + 100 &&
+                mouseY > height / 2 + 140 - 10 - 30 && mouseY < height / 2 + 140 - 10 + 30) {
                 this.status = true;
             }
             else if (mouseX > (width / 2 - 136) - 40 / 2 &&
@@ -402,49 +396,6 @@ class UIFinish {
             }
         }
     }
-
-    mouseMoved() {
-    if (w < 900) {
-        if ((mouseX > width / 2 - (45 / 2) &&
-             mouseX < width / 2 + (45 / 2) &&
-             mouseY > (height / 2 + 105 - 7.5) - (22 / 2) &&
-             mouseY < (height / 2 + 105 - 7.5) + (22 / 2)) ||
-            (mouseX > (width / 2 - 102) - 30 / 2 &&
-             mouseX < (width / 2 - 102) + 30 / 2 &&
-             mouseY > (height / 2 - 195) - (30 / 2) &&
-             mouseY < (height / 2 - 105) + (30 / 2))) {
-            document.body.style.cursor = 'pointer';
-        } else {
-            document.body.style.cursor = 'default';
-        }
-    } else if (w > 2500) {
-        if ((mouseX > width / 2 - (75 / 2) &&
-             mouseX < width / 2 + (75 / 2) &&
-             mouseY > (height / 2 + 175 - 12.5) - (22 / 2) &&
-             mouseY < (height / 2 + 175 - 12.5) + (22 / 2)) ||
-            (mouseX > (width / 2 - 170) - 50 / 2 &&
-             mouseX < (width / 2 - 170) + 50 / 2 &&
-             mouseY > (height / 2 - 175) - (50 / 2) &&
-             mouseY < (height / 2 - 175) + (50 / 2))) {
-            document.body.style.cursor = 'pointer';
-        } else {
-            document.body.style.cursor = 'default';
-        }
-    } else {
-        if ((mouseX > width / 2 - (60 / 2) &&
-             mouseX < width / 2 + (60 / 2) &&
-             mouseY > (height / 2 + 140 - 10) - (22 / 2) &&
-             mouseY < (height / 2 + 140 - 10) + (22 / 2)) ||
-            (mouseX > (width / 2 - 136) - 40 / 2 &&
-             mouseX < (width / 2 - 136) + 40 / 2 &&
-             mouseY > (height / 2 - 140) - (50 / 2) &&
-             mouseY < (height / 2 - 140) + (50 / 2))) {
-            document.body.style.cursor = 'pointer';
-        } else {
-            document.body.style.cursor = 'default';
-        }
-    }
-}
 }
 
 class Level {
