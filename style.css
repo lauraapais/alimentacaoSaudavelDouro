@@ -556,6 +556,7 @@ svg {
     right: 0;
     top: 0;
     margin: var(--marginH);
+    mix-blend-mode: multiply;
 }
 
 .closeIcon {
@@ -918,7 +919,6 @@ svg {
 
     .infoVideoTitle {
         margin-left: 0.9vw !important;
-        margin-top: 0 !important;
     }
 
     .infoVideop {
