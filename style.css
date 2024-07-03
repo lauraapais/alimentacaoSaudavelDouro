@@ -1353,5 +1353,9 @@ svg {
         bottom: var(--marginHMobile);
     }
 
+    .infoVideoTitle {
+        margin-top: 0!important;
+    }
+
    
 }
