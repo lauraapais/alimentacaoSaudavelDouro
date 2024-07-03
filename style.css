@@ -176,18 +176,15 @@ header {
 
 #menuIcon {
     width: calc(15px + 1.5vw) !important;
-    height: fit-content;
+    height: auto;
+    stroke-width: 5px;
+    cursor: pointer;
 }
 
 #closeMenu,
 #closeGame {
     width: calc(1px + 1.5vw) !important;
     height: fit-content;
-}
-
-#menuIcon {
-    stroke-width: 5px;
-    cursor: pointer;
 }
 
 #closeMenu,
