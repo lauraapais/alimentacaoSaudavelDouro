@@ -184,7 +184,7 @@ header {
 #closeMenu,
 #closeGame {
     width: calc(1px + 1.5vw) !important;
-    height: fit-content;
+    height: auto;
 }
 
 #closeMenu,
