@@ -602,6 +602,7 @@ svg {
 /** Project **/
 .mainInfoText {
     display: flex;
+    flex-direction: row-reverse
 }
 
 .leftInfoText {
