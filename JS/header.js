@@ -1,6 +1,4 @@
-
 var menuDiv = document.getElementById("menuDiv");
-
 var menuIcon = document.getElementById("menuIcon");
 
 menuIcon.addEventListener("click", function () {

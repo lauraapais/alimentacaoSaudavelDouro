@@ -135,6 +135,11 @@ header {
     height: min(var(--headerHmin), 500px);
 }
 
+.logosMenu{
+    display: flex;
+    position: absolute;
+    bottom: var(--marginH);
+}
 
 
 .menu {
@@ -1170,6 +1175,12 @@ svg {
         align-content: center;
     }
 
+    .logosMenu {
+        display: flex;
+        position: absolute;
+        bottom: var(--marginHMobile);
+        flex-direction: column;
+    }
 
 
 
