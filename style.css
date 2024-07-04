@@ -377,7 +377,7 @@ svg {
 /** Level Menu **/
 #levelMain {
     width: calc(100vw - var(--marginH) * 2);
-    min-height: calc(100vh - min(var(--headerHmin), 500px) - var(--marginH) * 4);
+    min-height: calc(100vh - min(var(--headerHmin), 500px) - var(--marginH) * 3);
     height: calc(100vh - var(--headerHmin) - var(--marginH)*4);
     display: flex;
     flex-wrap: wrap;
