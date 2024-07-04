@@ -22,7 +22,7 @@ marginMobile = 0.06 * w;
 marginDesktop = 0.02 * w;
 
 function preload() {
-    plate = loadImage('data/jogo/plate.png');
+    plate = loadImage('data/jogo/cesta.png');
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTICSans-130.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
