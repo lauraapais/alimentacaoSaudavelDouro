@@ -289,7 +289,7 @@ svg {
 }
 
 .mainLanding {
-    height: calc(83vh - min(var(--headerHmin), 500px) - var(--marginH) * 4);
+    height: calc(100vh - min(var(--headerHmin), 500px) - var(--marginH) * 4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -597,7 +597,7 @@ svg {
 
 
 .info {
-    margin-top: calc(var(--marginH));
+    margin-top: calc(var(--marginH)*4);
     position: relative;
 }
 

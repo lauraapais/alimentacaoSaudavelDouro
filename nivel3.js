@@ -236,9 +236,9 @@ function loadLevels() {
     );
     level_six.addItem(items.rice, true, 'data/jogo/certoErrado/certo.png', 'Arroz');
     level_six.addItem(items.cabbage, false, 'data/jogo/certoErrado/errado.png', 'Couve');
-    level_six.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');
+    level_six.addItem(items.tomato, false, 'data/jogo/certoErrado/errado.png', 'Tomate');
     level_six.addItem(items.leek, false, 'data/jogo/certoErrado/errado.png', 'Alho-Francês');
-    level_six.addItem(items.bread, false, 'data/jogo/certoErrado/errado.png', 'Pão');
+    level_six.addItem(items.bread, true, 'data/jogo/certoErrado/certo.png', 'Pão');
     level_six.addItem(items.pasta, true, 'data/jogo/certoErrado/certo.png', 'Massa');
     level_six.setDefaultPosition();
 
@@ -506,6 +506,17 @@ class Level {
             item.item.show(item.pos,
                 (itemSize + itemSize * item.dragScale / this.timeScaleMax / 10) //Animation Scale
             );
+            push();
+            textSize(h2Size / 2.8);
+            textFont(fontBold);
+            fill(255);
+            textAlign(CENTER);
+            rectMode(CENTER);
+            let d = dist(mouseX, mouseY, item.pos.x, item.pos.y);
+            if (d < item.item.image.width * itemSize / 2 && !item.plate) {
+                text(item.name, item.pos.x, item.pos.y + (item.item.image.height * itemSize / 2) + 30);
+            }
+            pop();
         }
 
         this.ui();
@@ -596,10 +607,10 @@ class Level {
         for (let i = 0; i < this.items.length; i++) {
             if (this.items[i] != this.draggingItem) {
                 if (this.items[i].plate) {
-                    if (this.items[i].dragScale < this.timeScaleMax*2)
-                        this.items[i].dragScale++;
+                    if (this.items[i].dragScale < this.timeScaleMax*3)
+                        this.items[i].dragScale+=2;
                 } else if (this.items[i].dragScale > 0)
-                    this.items[i].dragScale--;
+                    this.items[i].dragScale-=2;
             } else {
                 if (this.items[i].dragScale < this.timeScaleMax)
                     this.items[i].dragScale++;

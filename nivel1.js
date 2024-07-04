@@ -9,6 +9,7 @@ var close;
 var heightQuestion = 300;
 var widthQuestionMobile;
 
+
 let maxWidth;
 
 var pw, ph;
@@ -156,9 +157,9 @@ function loadLevels() {
         new UIFinish('data/jogo/endLevel/1.png', color(235, 154, 194))
     );
     level_one.addItem(items.grape, false, 'data/jogo/certoErrado/errado.png', 'Uva');
-    level_one.addItem(items.cherry, true, 'data/jogo/certoErrado/certo.png', 'Cereja');
-    level_one.addItem(items.pea, true, 'data/jogo/certoErrado/certo.png', 'Fava');
-    level_one.addItem(items.lemon, false, 'data/jogo/certoErrado/errado.png', 'Fava');
+    level_one.addItem(items.cherry, true, 'data/jogo/certoErrado/certo.png', 'Cerejas');
+    level_one.addItem(items.pea, true, 'data/jogo/certoErrado/certo.png', 'Favas');
+    level_one.addItem(items.lemon, false, 'data/jogo/certoErrado/errado.png', 'Limão');
     level_one.addItem(items.redonion, true, 'data/jogo/certoErrado/certo.png', 'Cebola');
     level_one.addItem(items.tomato, false, 'data/jogo/certoErrado/errado.png', 'Tomate');
     level_one.setDefaultPosition();
@@ -406,6 +407,8 @@ class Level {
         this.draggingItem = null;
         this.offsetX = 0;
         this.offsetY = 0;
+
+
         this.background = background;
         this.totalTrues = 0;
         this.totalFalses = 0;
@@ -445,24 +448,34 @@ class Level {
 
     display() {
         background(this.background);
-    
+        push();
+
+        if (w < 900) {
+            image(plate, width / 2, height / 2.2, plateSize, plateSize);
+        } else if (w < 1500) {
+            image(plate, width / 2, height / 2.1, plateSize, plateSize);
+        } else {
+            image(plate, width / 2, height / 2.1, plateSize, plateSize);
+        }
+        pop();
+
 
         for (let i = 0; i < this.items.length; i++) {
             let item = this.items[i];
             item.item.show(item.pos,
                 (itemSize + itemSize * item.dragScale / this.timeScaleMax / 10) //Animation Scale
             );
+            push();
+            textSize(h2Size / 2.8);
+            textFont(fontBold);
+            fill(255);
+            textAlign(CENTER);
+            rectMode(CENTER);
             let d = dist(mouseX, mouseY, item.pos.x, item.pos.y);
-            if (d < item.item.image.width * itemSize / 2) {
-                text(item.name, item.pos.x, item.pos.y);
+            if (d < item.item.image.width * itemSize / 2 && !item.plate) {
+                text(item.name, item.pos.x, item.pos.y + (item.item.image.height * itemSize / 2) + 30);
             }
-            /*if (item.plate && !item.value) {
-                image(item.description,
-                    item.pos.x + item.item.image.width * itemsScale/4,
-                    item.pos.y + item.item.image.height * itemsScale/4, 
-                    item.item.image.width * itemsScale/2,
-                    item.item.image.width * itemsScale/2)
-            }*/
+            pop();
         }
 
         this.ui();
@@ -495,7 +508,7 @@ class Level {
             }
             lastY = y;
         } else if (w < 1500) {
-            let maxWidth = windowWidth * 0.5;
+            let maxWidth = windowWidth * 0.8;
             let lines = wrapText(this.question, maxWidth);
             let y = marginDesktop + textAscent();
             for (let i = 0; i < lines.length; i++) {
@@ -504,7 +517,7 @@ class Level {
             }
             lastY = y;
         } else {
-            let maxWidth = windowWidth * 0.3;
+            let maxWidth = windowWidth * 0.4;
             let lines = wrapText(this.question, maxWidth);
             let y = marginDesktop + textAscent();
             for (let i = 0; i < lines.length; i++) {
@@ -532,11 +545,6 @@ class Level {
         }
         pop();
 
-        push();
-        stroke(255);
-        strokeWeight(2);
-        line(width/10, height * (1 - itemsScale)-50, width - (width/10), height * (1 - itemsScale)-50);
-        pop();
 
         if (this.lastPlateItem != null && this.currentTextTimer != 0) {
             if (w < 900) {
@@ -557,8 +565,11 @@ class Level {
     animationScale() {
         for (let i = 0; i < this.items.length; i++) {
             if (this.items[i] != this.draggingItem) {
-                if (this.items[i].dragScale > 0)
-                    this.items[i].dragScale--;
+                if (this.items[i].plate) {
+                    if (this.items[i].dragScale < this.timeScaleMax*3)
+                        this.items[i].dragScale+=2;
+                } else if (this.items[i].dragScale > 0)
+                    this.items[i].dragScale-=2;
             } else {
                 if (this.items[i].dragScale < this.timeScaleMax)
                     this.items[i].dragScale++;
@@ -610,15 +621,12 @@ class Level {
     setDefaultPosition() {
         let space;
         let rowSpacingFactor = 1.4;
-
-        if (w < 600) {
+        if (w < 900) {
             space = width * 0.95 / (this.items.length / 2 + 3);
             for (let i = 0; i < this.items.length; i++) {
                 let xd;
                 if (i % 2 == 0) xd = 0;
                 else xd = 1;
-
-
                 this.items[i].pos.set(
                     (width * 0.025) + space * (i + 1 - xd),
                     height * (1 - itemsScale / 1.8 * (1 + xd * rowSpacingFactor))
@@ -637,8 +645,7 @@ class Level {
 
 
     insidePlate(item) {
-        if (item.pos.y < height * (1 - itemsScale)-50) {
-        //if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
+        if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
@@ -673,8 +680,8 @@ class Gameitem {
 
     show(pos, scale) {
         image(this.image, pos.x, pos.y,
-                this.image.width * scale,
-                this.image.height * scale);
+            this.image.width * scale,
+            this.image.height * scale);
     }
 }
 

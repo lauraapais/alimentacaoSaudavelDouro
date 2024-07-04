@@ -121,82 +121,83 @@ function textsize() {
     }
 }
 
-
 function loadItems() {
-    //Pequeno-Almoço
+    //Primavera
+    items.grape = new Gameitem('data/jogo/level1/screen1/1.png');
+    items.cherry = new Gameitem('data/jogo/level1/screen1/2.png');
+    items.pea = new Gameitem('data/jogo/level1/screen1/3.png');
+    items.lemon = new Gameitem('data/jogo/level1/screen1/4.png');
+    items.redonion = new Gameitem('data/jogo/level1/screen1/5.png');
+    items.tomato = new Gameitem('data/jogo/level1/screen1/6.png');
+    //Verão
+    items.fig = new Gameitem('data/jogo/level1/screen2/1.png');
+    items.pepper = new Gameitem('data/jogo/level1/screen2/2.png');
+    items.broccoli = new Gameitem('data/jogo/level1/screen2/3.png');
+    items.beans = new Gameitem('data/jogo/level1/screen2/5.png');
+    items.eggplant = new Gameitem('data/jogo/level1/screen2/6.png');
+    //Outono
+    items.pumpkin = new Gameitem('data/jogo/level1/screen3/1.png');
+    items.calabash = new Gameitem('data/jogo/level1/screen3/2.png');
+    items.papaya = new Gameitem('data/jogo/level1/screen3/3.png');
     items.almond = new Gameitem('data/jogo/level1/screen3/4.png');
-    items.bacon = new Gameitem('data/jogo/level3/screen4/4.png');
-    items.croissant = new Gameitem('data/jogo/level4/screen1/2.png');
-    items.apple = new Gameitem('data/jogo/level4/screen1/3.png');
-    items.yogurt = new Gameitem('data/jogo/level3/screen1/4.png');
-    items.sausage = new Gameitem('data/jogo/level4/screen1/5.png');
-    items.eggs = new Gameitem('data/jogo/level3/screen4/6.png');
-
-    //Almoço
-    items.sausage2 = new Gameitem('data/jogo/level4/screen2/1.png');
-    items.chicken = new Gameitem('data/jogo/level3/screen1/5.png');
-    items.cheese3 = new Gameitem('data/jogo/level4/screen2/4.png');
-    items.rice = new Gameitem('data/jogo/level3/screen6/1.png');
-    items.tomato = new Gameitem('data/jogo/level2/screen1/6.png');
-    items.oliveOil = new Gameitem('data/jogo/level2/screen1/3.png');
-
-    //Lanche
-    items.bread2 = new Gameitem('data/jogo/level4/screen3/1.png');
-    items.watermelon = new Gameitem('data/jogo/level4/screen3/3.png');
-    items.milk = new Gameitem('data/jogo/level3/screen1/1.png');
-    //Jantar
-    items.pasta2 = new Gameitem('data/jogo/level4/screen2/2.png');
-    items.shrimp = new Gameitem('data/jogo/level3/screen4/2.png');
-    items.lettuce = new Gameitem('data/jogo/level4/screen2/5.png');
-    items.cheese4 = new Gameitem('data/jogo/level4/screen4/3.png');
-    items.kiwi = new Gameitem('data/jogo/level4/screen4/5.png');
+    items.watermelon = new Gameitem('data/jogo/level1/screen3/6.png');
+    //Inverno
+    items.carot = new Gameitem('data/jogo/level1/screen4/1.png');
+    items.potato = new Gameitem('data/jogo/level1/screen4/2.png');
+    items.banana = new Gameitem('data/jogo/level1/screen4/4.png');
+    items.clementine = new Gameitem('data/jogo/level1/screen4/5.png');
 }
 
 function loadLevels() {
     var level_one, level_two, level_three, level_four;
-    //Pequeno-Almoço
-    level_one = new Level(color(232, 210, 54),
-        'Cria um pequeno-almoço equilibrado e com alimentos saudáveis!',
-        new UIFinish('data/jogo/endLevel/12.png', color(232, 210, 54)));
-    level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png', 'Amêndoa');
-    level_one.addItem(items.croissant, false, 'data/jogo/certoErrado/errado.png', 'Croissant');
-    level_one.addItem(items.apple, true, 'data/jogo/certoErrado/certo.png', 'Maçã');
-    level_one.addItem(items.yogurt, true, 'data/jogo/certoErrado/certo.png', 'Iogurte');
-    level_one.addItem(items.sausage, false, 'data/jogo/certoErrado/errado.png', 'Chouriço');
-    level_one.addItem(items.eggs, true, 'data/jogo/certoErrado/certo.png', 'Ovos');
+    //Primavera
+    level_one = new Level(color(235, 154, 194),
+        'Quais são os alimentos sazonais da primavera?',
+        new UIFinish('data/jogo/endLevel/1.png', color(235, 154, 194))
+    );
+    level_one.addItem(items.grape, false, 'data/jogo/certoErrado/errado.png', 'Uva');
+    level_one.addItem(items.cherry, true, 'data/jogo/certoErrado/certo.png', 'Cereja');
+    level_one.addItem(items.pea, true, 'data/jogo/certoErrado/certo.png', 'Fava');
+    level_one.addItem(items.lemon, false, 'data/jogo/certoErrado/errado.png', 'Fava');
+    level_one.addItem(items.redonion, true, 'data/jogo/certoErrado/certo.png', 'Cebola');
+    level_one.addItem(items.tomato, false, 'data/jogo/certoErrado/errado.png', 'Tomate');
     level_one.setDefaultPosition();
-    //Almoço
-    level_two = new Level(color(156, 153, 54),
-        'Cria um almoço equilibrado e com alimentos saudáveis!',
-        new UIFinish('data/jogo/endLevel/13.png', color(156, 153, 54)));
-    level_two.addItem(items.sausage2, false, 'data/jogo/certoErrado/errado.png', 'Salsicha');
-    level_two.addItem(items.rice, true, 'data/jogo/certoErrado/certo.png', 'Arroz');
-    level_two.addItem(items.chicken, true, 'data/jogo/certoErrado/certo.png', 'Frango');
-    level_two.addItem(items.cheese3, false, 'data/jogo/certoErrado/errado.png', 'Queijo');
+    //Verão
+    level_two = new Level(color(232, 210, 54),
+        'Quais são os alimentos sazonais do verão?',
+        new UIFinish('data/jogo/endLevel/2.png', color(232, 210, 54))
+    );
+    level_two.addItem(items.fig, true, 'data/jogo/certoErrado/certo.png', 'Figo');
+    level_two.addItem(items.pepper, true, 'data/jogo/certoErrado/certo.png', 'Pimento');
+    level_two.addItem(items.broccoli, false, 'data/jogo/certoErrado/errado.png', 'Bróculo');
     level_two.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');
-    level_two.addItem(items.bacon, false, 'data/jogo/certoErrado/errado.png', 'Bacon');
+    level_two.addItem(items.beans, false, 'data/jogo/certoErrado/errado.png', 'Feijão');
+    level_two.addItem(items.eggplant, false, 'data/jogo/certoErrado/errado.png', 'Berigela');
     level_two.setDefaultPosition();
-    //Lanche
-    level_three = new Level(color(237, 119, 38),
-        'Cria um lanche equilibrado e com alimentos saudáveis!',
-        new UIFinish('data/jogo/endLevel/14.png', color(237, 119, 38)));
-    level_three.addItem(items.bread2, true, 'data/jogo/certoErrado/certo.png', 'Pão');
-    level_three.addItem(items.sausage, false, 'data/jogo/certoErrado/errado.png', 'Chouriço');
-    level_three.addItem(items.watermelon, true, 'data/jogo/certoErrado/certo.png', 'Melancia');
-    level_three.addItem(items.milk, true, 'data/jogo/certoErrado/certo.png', 'Leite');
-    level_three.addItem(items.sausage2, false, 'data/jogo/certoErrado/errado.png', 'Salsicha');
-    level_three.addItem(items.croissant, false, 'data/jogo/certoErrado/errado.png', 'Croissant');
+    //Outono
+    level_three = new Level(color(29, 117, 188),
+        'Quais são os alimentos sazonais do outono?',
+        new UIFinish('data/jogo/endLevel/3.png', color(29, 117, 188))
+    );
+    level_three.addItem(items.pumpkin, true, 'data/jogo/certoErrado/certo.png', 'Abóbora');
+    level_three.addItem(items.calabash, true, 'data/jogo/certoErrado/certo.png', 'Cabaça');
+    level_three.addItem(items.papaya, false, 'data/jogo/certoErrado/errado.png', 'Papaia');
+    level_three.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png', 'Amêndoa');
+    level_three.addItem(items.pepper, false, 'data/jogo/certoErrado/errado.png', 'Pimento');
+    level_three.addItem(items.watermelon, false, 'data/jogo/certoErrado/errado.png', 'Melancia');
     level_three.setDefaultPosition();
-    //Jantar
-    level_four = new Level(color(27, 117, 187),
-        'Cria um jantar equilibrado e com alimentos saudáveis!',
-        new UIFinish('data/jogo/endLevel/15.png', color(27, 117, 187)));
-    level_four.addItem(items.pasta2, true, 'data/jogo/certoErrado/certo.png', 'Massa');
-    level_four.addItem(items.shrimp, true, 'data/jogo/certoErrado/certo.png', 'Camarão');
-    level_four.addItem(items.cheese4, false, 'data/jogo/certoErrado/errado.png', 'Queijo');
-    level_four.addItem(items.oliveOil, true, 'data/jogo/certoErrado/certo.png', 'Azeite');
-    level_four.addItem(items.sausage2, false, 'data/jogo/certoErrado/errado.png', 'Salsicha');
-    level_four.addItem(items.lettuce, true, 'data/jogo/certoErrado/certo.png', 'Alface');
+    //Inverno
+    level_four = new Level(color(171, 169, 169),
+        'Quais são os alimentos sazonais do inverno?',
+        new UIFinish('data/jogo/endLevel/4.png', color(171, 169, 169))
+    );
+
+    level_four.addItem(items.carot, false, 'data/jogo/certoErrado/errado.png', 'Cenoura');
+    level_four.addItem(items.potato, true, 'data/jogo/certoErrado/certo.png', 'Batata');
+    level_four.addItem(items.pumpkin, false, 'data/jogo/certoErrado/errado.png', 'Abóbora');
+    level_four.addItem(items.banana, false, 'data/jogo/certoErrado/errado.png', 'Banana');
+    level_four.addItem(items.clementine, true, 'data/jogo/certoErrado/certo.png', 'Clementina');
+    level_four.addItem(items.redonion, true, 'data/jogo/certoErrado/certo.png', 'Cebola');
     level_four.setDefaultPosition();
 
     levels = new LevelLoader();
@@ -444,34 +445,28 @@ class Level {
 
     display() {
         background(this.background);
+
         push();
-
-        if (w < 900) {
-            image(plate, width / 2, height / 2.2, plateSize, plateSize);
-        } else if (w < 1500) {
-            image(plate, width / 2, height / 2.1, plateSize, plateSize);
-        } else {
-            image(plate, width / 2, height / 2.1, plateSize, plateSize);
-        }
-        pop();
-
+        textSize(h2Size/2);
+        textFont(fontBold);
+        fill(255);
         for (let i = 0; i < this.items.length; i++) {
             let item = this.items[i];
             item.item.show(item.pos,
                 (itemSize + itemSize * item.dragScale / this.timeScaleMax / 10) //Animation Scale
             );
-
-            push();
-            textSize(h2Size / 2.8);
-            textFont(fontBold);
-            fill(255);
-            textAlign(CENTER);
-            rectMode(CENTER);
             let d = dist(mouseX, mouseY, item.pos.x, item.pos.y);
-            if (d < item.item.image.width * itemSize / 2 && !item.plate) {
-                text(item.name, item.pos.x, item.pos.y + (item.item.image.height * itemSize / 2) + 30);
+            if (d < item.item.image.width * itemSize / 2) {
+                text(item.name, item.pos.x, item.pos.y);
             }
             pop();
+            /*if (item.plate && !item.value) {
+                image(item.description,
+                    item.pos.x + item.item.image.width * itemsScale/4,
+                    item.pos.y + item.item.image.height * itemsScale/4, 
+                    item.item.image.width * itemsScale/2,
+                    item.item.image.width * itemsScale/2)
+            }*/
         }
 
         this.ui();
@@ -504,7 +499,7 @@ class Level {
             }
             lastY = y;
         } else if (w < 1500) {
-            let maxWidth = windowWidth * 0.8;
+            let maxWidth = windowWidth * 0.5;
             let lines = wrapText(this.question, maxWidth);
             let y = marginDesktop + textAscent();
             for (let i = 0; i < lines.length; i++) {
@@ -513,7 +508,7 @@ class Level {
             }
             lastY = y;
         } else {
-            let maxWidth = windowWidth * 0.4;
+            let maxWidth = windowWidth * 0.3;
             let lines = wrapText(this.question, maxWidth);
             let y = marginDesktop + textAscent();
             for (let i = 0; i < lines.length; i++) {
@@ -541,6 +536,11 @@ class Level {
         }
         pop();
 
+        push();
+        stroke(255);
+        strokeWeight(2);
+        line(width / 10, height * (1 - itemsScale) - 50, width - (width / 10), height * (1 - itemsScale) - 50);
+        pop();
 
         if (this.lastPlateItem != null && this.currentTextTimer != 0) {
             if (w < 900) {
@@ -561,11 +561,8 @@ class Level {
     animationScale() {
         for (let i = 0; i < this.items.length; i++) {
             if (this.items[i] != this.draggingItem) {
-                if (this.items[i].plate) {
-                    if (this.items[i].dragScale < this.timeScaleMax*3)
-                        this.items[i].dragScale+=2;
-                } else if (this.items[i].dragScale > 0)
-                    this.items[i].dragScale-=2;
+                if (this.items[i].dragScale > 0)
+                    this.items[i].dragScale--;
             } else {
                 if (this.items[i].dragScale < this.timeScaleMax)
                     this.items[i].dragScale++;
@@ -617,12 +614,15 @@ class Level {
     setDefaultPosition() {
         let space;
         let rowSpacingFactor = 1.4;
-        if (w < 900) {
+
+        if (w < 600) {
             space = width * 0.95 / (this.items.length / 2 + 3);
             for (let i = 0; i < this.items.length; i++) {
                 let xd;
                 if (i % 2 == 0) xd = 0;
                 else xd = 1;
+
+
                 this.items[i].pos.set(
                     (width * 0.025) + space * (i + 1 - xd),
                     height * (1 - itemsScale / 1.8 * (1 + xd * rowSpacingFactor))
@@ -641,7 +641,8 @@ class Level {
 
 
     insidePlate(item) {
-        if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
+        if (item.pos.y < height * (1 - itemsScale) - 50) {
+            //if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
