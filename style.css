@@ -790,6 +790,11 @@ svg {
 }
 
 
+@media screen and (max-width:2000px) {
+    li {
+        font-size: calc(37px + 0.390625vw);
+}
+}
 
 
 @media screen and (max-width:1500px) {
@@ -1130,7 +1135,7 @@ svg {
         background-image: url(data/jogo/levels/alimentacaoEquilibrada.png);
     }
 
-    #menuExplorePage {
+    #menuLastPage {
         margin-bottom: 10vh;
     }
 
