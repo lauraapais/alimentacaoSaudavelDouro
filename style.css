@@ -602,6 +602,10 @@ svg {
 /** Project **/
 .mainInfoText {
     display: flex;
+    
+}
+
+.mainInfoTextLanding{
     flex-direction: row-reverse
 }
 
