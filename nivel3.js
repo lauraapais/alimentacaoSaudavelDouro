@@ -129,6 +129,7 @@ function loadItems() {
     items.yogurt = new Gameitem('data/jogo/level3/screen1/4.png');
     items.chicken = new Gameitem('data/jogo/level3/screen1/5.png');
     items.carot = new Gameitem('data/jogo/level1/screen4/1.png');
+    items.watermelon = new Gameitem('data/jogo/level1/screen3/6.png');
     //Frutas
     items.peach = new Gameitem('data/jogo/level3/screen2/1.png');
     items.cauliflower = new Gameitem('data/jogo/level3/screen2/2.png');
@@ -177,22 +178,22 @@ function loadLevels() {
     level_one.addItem(items.carot, false, 'data/jogo/certoErrado/errado.png', 'Cenoura');
     level_one.setDefaultPosition();
     //Frutas
-    level_two = new Level(color(235, 153, 194),
+    level_two = new Level(color(244, 120, 34),
         'Sabes que alimentos são da família das frutas?',
-        new UIFinish('data/jogo/endLevel/7.png', color(235, 153, 194)), 
+        new UIFinish('data/jogo/endLevel/7.png', color(244, 120, 34)), 
         loadImage('data/jogo/rodaAlimentos_2.png')
     );
     level_two.addItem(items.pinaple, true, 'data/jogo/certoErrado/certo.png', 'Ananás');
-    level_two.addItem(items.peach, true, 'data/jogo/certoErrado/certo.png', 'Pêssego');
+    level_two.addItem(items.watermelon, true, 'data/jogo/certoErrado/certo.png', 'Melancia');
     level_two.addItem(items.cauliflower, false, 'data/jogo/certoErrado/errado.png', 'Couve-Flor');
     level_two.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');
     level_two.addItem(items.eggplant, false, 'data/jogo/certoErrado/errado.png', 'Beringela');
     level_two.addItem(items.lemon, true, 'data/jogo/certoErrado/certo.png', 'Limão');
     level_two.setDefaultPosition();
     //Hortículas
-    level_three = new Level(color(232, 210, 54),
+    level_three = new Level(color(156, 153, 54),
         'Sabes que alimentos são do grupo dos hortículas?',
-        new UIFinish('data/jogo/endLevel/8.png', color(232, 210, 54)), 
+        new UIFinish('data/jogo/endLevel/8.png', color(156, 153, 54)), 
         loadImage('data/jogo/rodaAlimentos_3.png')
     );
     level_three.addItem(items.turnip, true, 'data/jogo/certoErrado/certo.png', 'Nabo');
