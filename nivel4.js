@@ -469,7 +469,7 @@ class Level {
             rectMode(CENTER);
             let d = dist(mouseX, mouseY, item.pos.x, item.pos.y);
             if (d < item.item.image.width * itemSize / 2 && !item.plate &&this.draggingItem==null)  {
-                text(item.name, item.pos.x, item.pos.y + (item.item.image.height * itemSize / 2) + 30);
+                text(item.name, item.pos.x, item.pos.y - (item.item.image.height * itemSize / 1.5));
             }
             pop();
         }

@@ -473,7 +473,7 @@ class Level {
             rectMode(CENTER);
             let d = dist(mouseX, mouseY, item.pos.x, item.pos.y);
             if (d < item.item.image.width * itemSize / 2 && !item.plate &&this.draggingItem==null)  {
-                text(item.name, item.pos.x, item.pos.y + (item.item.image.height * itemSize / 2) + 30);
+                text(item.name, item.pos.x, item.pos.y - (item.item.image.height * itemSize / 1.5));
             }
             pop();
         }
@@ -645,12 +645,21 @@ class Level {
 
 
     insidePlate(item) {
+        if (item.pos.x > width / 2 - plateSize / 2 &&
+            item.pos.x < width / 2 + plateSize / 2 &&
+            item.pos.y > height / 2 - plateSize / 4 &&
+            item.pos.y < height / 2 + plateSize / 2) {
+            item.plate = true;
+            this.lastPlateItem = item;
+            this.currentTextTimer = 50;
+            if (item.value) this.points++;
+        }/*
         if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
             if (item.value) this.points++;
-        } else if (item.plate) {
+        }*/ else if (item.plate) {
             item.plate = false;
             if (item.value) this.points--;
         }

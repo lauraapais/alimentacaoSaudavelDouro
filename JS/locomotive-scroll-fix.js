@@ -19,6 +19,21 @@ window.onload = function () {
     scroller.update();
 }
 
+
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
+anchorLinks.forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetID = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetID);
+
+        if (targetElement) {
+            scroller.scrollTo(targetElement);
+        }
+    });
+});
+
+
 function scrollerMenu() {
     if (!menu.classList.contains("active")) {
         scroller.start();

@@ -887,6 +887,7 @@ svg {
         justify-content: center;
         width: calc(100vw);
         min-height: calc(var(--vh, 1h) * 100 - var(--marginHMobile)  - min(var(--headerHminMobile), 500px));
+        height: calc(100vh - var(--headerHminMobile) - var(--marginHmobile)*4);
         padding: 0;
         gap: var(--marginHMobile);
     }

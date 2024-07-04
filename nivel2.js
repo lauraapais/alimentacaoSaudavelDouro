@@ -135,23 +135,23 @@ function loadItems() {
 function loadLevels() {
     var level_one;
     //Douro
-    level_one = new Level(color(237,119,38),
-    'Quais são os alimentos locais do Douro?' ,
-    new UIFinish('data/jogo/endLevel/5.png', color(237,119,38))
-);
+    level_one = new Level(color(237, 119, 38),
+        'Quais são os alimentos locais do Douro?',
+        new UIFinish('data/jogo/endLevel/5.png', color(237, 119, 38))
+    );
     level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png', 'Amêndoas');
     level_one.addItem(items.cherry, false, 'data/jogo/certoErrado/errado.png', 'Cebola');
     level_one.addItem(items.oliveOil, true, 'data/jogo/certoErrado/certo.png', 'Azeite');
     level_one.addItem(items.fig, false, 'data/jogo/certoErrado/errado.png', 'Figo');
     level_one.addItem(items.papaya, false, 'data/jogo/certoErrado/errado.png', 'Papaia');
-    level_one.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');    
+    level_one.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');
     level_one.setDefaultPosition();
 
     levels = new LevelLoader();
     levels.addLevel(level_one);
 
     levels.play();
-    
+
 }
 
 class LevelLoader {
@@ -260,11 +260,11 @@ class UIFinish {
 
         pop();
 
-  
+
         push();
         rectMode(CENTER);
         noStroke();
-        fill(this.buttonColor); 
+        fill(this.buttonColor);
 
         if (w < 900) {
             rect(width / 2, height / 2 + 105 - 7.5, 150, 45, 22);
@@ -402,7 +402,7 @@ class Level {
         }
         pop();
 
-        
+
         for (let i = 0; i < this.items.length; i++) {
             let item = this.items[i];
             item.item.show(item.pos,
@@ -415,12 +415,11 @@ class Level {
             textAlign(CENTER);
             rectMode(CENTER);
             let d = dist(mouseX, mouseY, item.pos.x, item.pos.y);
-            if (d < item.item.image.width * itemSize / 2 && !item.plate &&this.draggingItem==null)  {
-                text(item.name, item.pos.x, item.pos.y + (item.item.image.height * itemSize / 2) + 30);
+            if (d < item.item.image.width * itemSize / 2 && !item.plate && this.draggingItem == null) {
+                text(item.name, item.pos.x, item.pos.y - (item.item.image.height * itemSize / 1.5));
             }
             pop();
         }
-
 
         this.ui();
 
@@ -510,10 +509,10 @@ class Level {
         for (let i = 0; i < this.items.length; i++) {
             if (this.items[i] != this.draggingItem) {
                 if (this.items[i].plate) {
-                    if (this.items[i].dragScale < this.timeScaleMax*3)
-                        this.items[i].dragScale+=2;
+                    if (this.items[i].dragScale < this.timeScaleMax * 3)
+                        this.items[i].dragScale += 2;
                 } else if (this.items[i].dragScale > 0)
-                    this.items[i].dragScale-=2;
+                    this.items[i].dragScale -= 2;
             } else {
                 if (this.items[i].dragScale < this.timeScaleMax)
                     this.items[i].dragScale++;
@@ -592,12 +591,22 @@ class Level {
 
 
     insidePlate(item) {
-        if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
+        /*QUAD*/
+        if (item.pos.x > width / 2 - plateSize / 2 &&
+            item.pos.x < width / 2 + plateSize / 2 &&
+            item.pos.y > height / 2 - plateSize / 2 &&
+            item.pos.y < height / 2 + plateSize / 2) {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
             if (item.value) this.points++;
-        } else if (item.plate) {
+        }
+        /*if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
+            item.plate = true;
+            this.lastPlateItem = item;
+            this.currentTextTimer = 50;
+            if (item.value) this.points++;
+        }*/ else if (item.plate) {
             item.plate = false;
             if (item.value) this.points--;
         }

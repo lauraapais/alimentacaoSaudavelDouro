@@ -6,7 +6,9 @@ menuIcon.addEventListener("click", function () {
     document.body.classList.add("overflow-hidden");
 });
 
-closeMenu.addEventListener("click", function () {
+closeMenu.addEventListener("click", close_menu);
+
+function close_menu() {
     menuDiv.classList.remove("active");
     document.body.classList.remove("overflow-hidden");
-});
+}
