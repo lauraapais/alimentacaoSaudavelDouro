@@ -462,7 +462,12 @@ class Level {
             );
 
             push();
-            textSize(h2Size / 2.8);
+            if (w < 900) {
+                textSize(h2Size / 2);
+            }
+            else{
+            textSize(h2Size / 2.6);
+        }
             textFont(fontBold);
             fill(255);
             textAlign(CENTER);
