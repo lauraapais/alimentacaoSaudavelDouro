@@ -466,7 +466,12 @@ class Level {
                 (itemSize + itemSize * item.dragScale / this.timeScaleMax / 10) //Animation Scale
             );
             push();
+            if (w < 900) {
+                textSize(h2Size / 2.2);
+            }
+            else{
             textSize(h2Size / 2.8);
+        }
             textFont(fontBold);
             fill(255);
             textAlign(CENTER);
