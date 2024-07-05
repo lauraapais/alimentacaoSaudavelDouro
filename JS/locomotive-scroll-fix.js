@@ -6,7 +6,7 @@ window.addEventListener('load', (event) => {
         smooth: true
     });
     //scroller.init();
-    //scroller.start();
+    scroller.start();
 
     let loadingElements = document.querySelectorAll('.loading');
     loadingElements.forEach(element => {

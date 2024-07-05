@@ -492,7 +492,6 @@ class Level {
     display() {
         background(this.background);
         push();
-
         if (w < 900) {
             image(this.imageLevel, width / 2, height / 2.2, plateSize, plateSize);
         } else if (w < 1500) {
