@@ -23,7 +23,7 @@ marginDesktop = 0.02 * w;
 function preload() {
     plate = loadImage('data/jogo/plate.png');
     close = loadImage('data/icons/home.png');
-    fontBold = loadFont('data/font/AUTHENTICSans-130.otf');
+    fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
 }
 
@@ -158,7 +158,7 @@ function loadLevels() {
     level_one = new Level(color(232, 210, 54),
         'Cria um pequeno-almoço equilibrado e com alimentos saudáveis!',
         new UIFinish('data/jogo/endLevel/12.png', color(232, 210, 54)));
-    level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png', 'Amêndoa');
+    level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png', 'Amêndoas');
     level_one.addItem(items.croissant, false, 'data/jogo/certoErrado/errado.png', 'Croissant');
     level_one.addItem(items.apple, true, 'data/jogo/certoErrado/certo.png', 'Maçã');
     level_one.addItem(items.yogurt, true, 'data/jogo/certoErrado/certo.png', 'Iogurte');

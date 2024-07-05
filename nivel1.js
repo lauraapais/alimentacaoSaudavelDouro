@@ -24,7 +24,7 @@ marginDesktop = 0.02 * w;
 function preload() {
     plate = loadImage('data/jogo/cesta.png');
     close = loadImage('data/icons/home.png');
-    fontBold = loadFont('data/font/AUTHENTICSans-130.otf');
+    fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
 }
 
@@ -156,7 +156,7 @@ function loadLevels() {
         'Quais são os alimentos sazonais da primavera?',
         new UIFinish('data/jogo/endLevel/1.png', color(235, 154, 194))
     );
-    level_one.addItem(items.grape, false, 'data/jogo/certoErrado/errado.png', 'Uva');
+    level_one.addItem(items.grape, false, 'data/jogo/certoErrado/errado.png', 'Uvas');
     level_one.addItem(items.cherry, true, 'data/jogo/certoErrado/certo.png', 'Cerejas');
     level_one.addItem(items.pea, true, 'data/jogo/certoErrado/certo.png', 'Favas');
     level_one.addItem(items.lemon, false, 'data/jogo/certoErrado/errado.png', 'Limão');
@@ -183,7 +183,7 @@ function loadLevels() {
     level_three.addItem(items.pumpkin, true, 'data/jogo/certoErrado/certo.png', 'Abóbora');
     level_three.addItem(items.calabash, true, 'data/jogo/certoErrado/certo.png', 'Cabaça');
     level_three.addItem(items.papaya, false, 'data/jogo/certoErrado/errado.png', 'Papaia');
-    level_three.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png', 'Amêndoa');
+    level_three.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png', 'Amêndoas');
     level_three.addItem(items.pepper, false, 'data/jogo/certoErrado/errado.png', 'Pimento');
     level_three.addItem(items.watermelon, false, 'data/jogo/certoErrado/errado.png', 'Melancia');
     level_three.setDefaultPosition();

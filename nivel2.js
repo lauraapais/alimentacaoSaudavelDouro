@@ -23,7 +23,7 @@ marginDesktop = 0.02 * w;
 function preload() {
     plate = loadImage('data/jogo/mapa.png');
     close = loadImage('data/icons/home.png');
-    fontBold = loadFont('data/font/AUTHENTICSans-130.otf');
+    fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
 }
 
