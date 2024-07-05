@@ -1,12 +1,12 @@
-const scroller = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-});
+var scroller;
 
 window.addEventListener('load', (event) => {
-    scroller.start();
-    scroller.init();
-    scroller.update();
+    scroller = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true
+    });
+    //scroller.init();
+    //scroller.start();
 
     let loadingElements = document.querySelectorAll('.loading');
     loadingElements.forEach(element => {
@@ -15,7 +15,7 @@ window.addEventListener('load', (event) => {
     });
 });
 
-scroller.stop();
+//scroller.stop();
 
 
 window.onload = function () {
