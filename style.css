@@ -620,10 +620,13 @@ svg {
 
 
 .info {
-    margin-top: calc(var(--marginH)*4);
+    margin-top: calc(var(--marginH)*2);
     position: relative;
 }
 
+.infoIndex{
+    margin-top: calc(var(--marginH)*4)!important;
+}
 
 .textInfoBox {
     display: flex;
