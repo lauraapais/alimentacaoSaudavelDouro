@@ -5,10 +5,13 @@ const scroller = new LocomotiveScroll({
 
 window.addEventListener('load', (event) => {
     scroller.start();
+    scroller.init();
+    scroller.update();
 
     let loadingElements = document.querySelectorAll('.loading');
     loadingElements.forEach(element => {
         element.classList.remove('loading');
+        
     });
 });
 
