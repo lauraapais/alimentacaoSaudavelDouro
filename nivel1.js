@@ -467,7 +467,7 @@ class Level {
             );
             push();
             if (w < 900) {
-                textSize(h2Size / 2.2);
+                textSize(h2Size / 2);
             }
             else{
             textSize(h2Size / 2.6);
