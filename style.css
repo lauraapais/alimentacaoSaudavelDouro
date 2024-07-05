@@ -1363,7 +1363,7 @@ svg {
     }
 
     .infoVideoTitle {
-        margin-bottom: calc(var(--marginHMobile) / 4);
+        margin: var(--marginH) 0 !important;
     }
 
     .videoInfoFlex{
@@ -1416,9 +1416,6 @@ svg {
         bottom: var(--marginHMobile);
     }
 
-    .infoVideoTitle {
-        margin-top: 0!important;
-    }
 
    
 }
