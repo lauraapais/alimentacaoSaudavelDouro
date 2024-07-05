@@ -470,7 +470,7 @@ class Level {
                 textSize(h2Size / 2.2);
             }
             else{
-            textSize(h2Size / 2.8);
+            textSize(h2Size / 2.6);
         }
             textFont(fontBold);
             fill(255);
