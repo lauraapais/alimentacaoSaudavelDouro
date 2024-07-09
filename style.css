@@ -910,27 +910,7 @@ svg {
     ::-webkit-scrollbar {
         width: 0px;
       }
-    .leftInfoText {
-        width: 100%;
-    }
 
-    .imageInfo img {
-        position: static;
-    }
-
-    #textInfoTitle img {
-        width: 70vw;
-        margin-bottom: calc(var(--marginHMobile) /2);
-        margin-top: calc(var(--marginHMobile) /2);
-    }
-
-    .info {
-        margin-top: calc(var(--marginH) * 3);
-    }
-
-    .imageInfo img {
-        width: 70%;
-    }
 
     .imageInfo {
         margin: var(--marginHMobile) 0;
@@ -940,16 +920,7 @@ svg {
         flex-direction: column;
     }
 
-    .mainInfoText {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10vh;
-    }
-
-
-    .imageInfo {
-        width: 100%;
-    }
+ 
 
 
 
