@@ -130,7 +130,7 @@ function textsize() {
 function loadItems() {
     //Laticíneos
     items.milk = new Gameitem('data/jogo/level3/screen1/1.png');
-    items.redonion = new Gameitem('data/jogo/level1/screen1/6.png');
+    items.redonion = new Gameitem('data/jogo/level1/screen1/5.png');
     items.cheese = new Gameitem('data/jogo/level3/screen1/3.png');
     items.yogurt = new Gameitem('data/jogo/level3/screen1/4.png');
     items.chicken = new Gameitem('data/jogo/level3/screen1/5.png');
