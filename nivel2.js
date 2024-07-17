@@ -27,9 +27,10 @@ function preload() {
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
+    /*
     soundFormats('mp3', 'ogg');
     soundTrue = loadSound('data/sound1.mp3');
-    soundFalse = loadSound('data/sound2.mp3');
+    soundFalse = loadSound('data/sound2.mp3');*/
 }
 
 function setup() {
@@ -609,12 +610,13 @@ class Level {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
+            /*
             if (item.value) {
                 this.points++;
                 soundTrue.play();
             } else {
                 soundFalse.play();
-            }
+            }*/
         }
         /*if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
             item.plate = true;
