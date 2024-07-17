@@ -132,7 +132,7 @@ function loadItems() {
     items.almond = new Gameitem('data/jogo/level1/screen3/4.png');
     items.cherry = new Gameitem('data/jogo/level1/screen1/5.png');
     items.oliveOil = new Gameitem('data/jogo/level2/screen1/3.png');
-    items.fig = new Gameitem('data/jogo/level1/screen2/1.png');
+    items.banana = new Gameitem('data/jogo/level1/screen4/4.png');
     items.papaya = new Gameitem('data/jogo/level1/screen3/3.png');
     items.tomato = new Gameitem('data/jogo/level2/screen1/6.png');
 }
@@ -147,7 +147,7 @@ function loadLevels() {
     level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png', 'Amêndoas');
     level_one.addItem(items.cherry, false, 'data/jogo/certoErrado/errado.png', 'Cebola');
     level_one.addItem(items.oliveOil, true, 'data/jogo/certoErrado/certo.png', 'Azeite');
-    level_one.addItem(items.fig, false, 'data/jogo/certoErrado/errado.png', 'Figo');
+    level_one.addItem(items.banana, false, 'data/jogo/certoErrado/errado.png', 'Banana');
     level_one.addItem(items.papaya, false, 'data/jogo/certoErrado/errado.png', 'Papaia');
     level_one.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');
     level_one.setDefaultPosition();
