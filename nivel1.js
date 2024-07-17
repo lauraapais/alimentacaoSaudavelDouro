@@ -663,12 +663,13 @@ class Level {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
+            /*
             if (item.value) {
                 this.points++;
                 soundTrue.play();
             } else {
                 soundFalse.play();
-            }
+            }*/
         }/*
         if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
             item.plate = true;
