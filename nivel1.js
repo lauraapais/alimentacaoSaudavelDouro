@@ -30,12 +30,12 @@ function preload() {
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
     soundFormats('mp3', 'ogg');
     try {
-        soundTrue = loadSound('data/sound1.mp3', soundLoadedCallback, loadErrorCallback);
+        soundTrue = loadSound('data/sound1.mp3');
     } catch (error) {
         console.error('Error loading sound:', error);
     }
     try {
-        soundFalse = loadSound('data/sound2.mp3', soundLoadedCallback, loadErrorCallback);
+        soundFalse = loadSound('data/sound2.mp3');
     } catch (error) {
         console.error('Error loading sound:', error);
     }
