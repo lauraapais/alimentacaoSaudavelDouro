@@ -19,6 +19,7 @@ var endLevel = false, level = 1;
 var h1Size, h2Size;
 
 var soundTrue, soundFalse;
+var soundLoad = false;
 
 marginMobile = 0.06 * w;
 marginDesktop = 0.02 * w;
@@ -28,17 +29,14 @@ function preload() {
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
+}
+
+function loadSound() {
     soundFormats('mp3', 'ogg');
-    try {
-        soundTrue = loadSound('data/sound1.mp3');
-    } catch (error) {
-        console.error('Error loading sound:', error);
-    }
-    try {
-        soundFalse = loadSound('data/sound2.mp3');
-    } catch (error) {
-        console.error('Error loading sound:', error);
-    }
+    soundTrue = loadSound('data/sound1.mp3');
+    soundFalse = loadSound('data/sound2.mp3');
+    soundLoad = true;
+    console.log("LOADED");
 }
 
 function setup() {
@@ -674,8 +672,12 @@ class Level {
             
             if (item.value) {
                 this.points++;
+                if(!soundLoad) loadSound();
+                else
                 soundTrue.play();
             } else {
+                if(!soundLoad) loadSound();
+                else
                 soundFalse.play();
             }
         }/*
