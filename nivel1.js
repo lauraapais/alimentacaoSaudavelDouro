@@ -29,8 +29,16 @@ function preload() {
     fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
     soundFormats('mp3', 'ogg');
-    soundTrue = loadSound('data/sound1.mp3');
-    soundFalse = loadSound('data/sound2.mp3');
+    try {
+        soundTrue = loadSound('data/sound1.mp3', soundLoadedCallback, loadErrorCallback);
+    } catch (error) {
+        console.error('Error loading sound:', error);
+    }
+    try {
+        soundFalse = loadSound('data/sound2.mp3', soundLoadedCallback, loadErrorCallback);
+    } catch (error) {
+        console.error('Error loading sound:', error);
+    }
 }
 
 function setup() {
@@ -666,7 +674,9 @@ class Level {
             
             if (item.value) {
                 this.points++;
+                soundTrue.play();
             } else {
+                soundFalse.play();
             }
         }/*
         if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
