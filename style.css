@@ -815,6 +815,18 @@ svg {
     display: none;
 }
 
+.videoPage{
+    height: calc(100vh - var(--marginH) - var(--marginH)* 6);
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--marginH);
+}
+
+.videoPage video{
+    height: 100%;
+    width: -webkit-fill-available;
+}
+
 
 @media screen and (max-width:2000px) {
     li {
@@ -1387,6 +1399,18 @@ svg {
         bottom: var(--marginHMobile);
     }
 
-
+    .videoPage{
+        height: auto;
+        display: block;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .videoPage video{
+        height: auto;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    
    
 }
