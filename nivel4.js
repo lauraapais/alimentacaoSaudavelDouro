@@ -27,8 +27,8 @@ function preload() {
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
-    soundTrue = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound1.wav');
-    soundFalse = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound2.wav');
+    soundTrue = loadSound('data/sound1.wav');
+    soundFalse = loadSound('data/sound2.wav');
 }
 
 function setup() {
@@ -659,13 +659,11 @@ class Level {
                 this.points++;
                 soundTrue.play();
             } else {
-                
+                soundFalse.play();
             }
         } else if (item.plate) {
             item.plate = false;
-            if (item.value){ this.points--;
-                soundFalse.play();
-            }
+            if (item.value) this.points--;
         }
     }
 
