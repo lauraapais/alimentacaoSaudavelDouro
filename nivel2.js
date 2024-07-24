@@ -132,7 +132,7 @@ function loadItems() {
     items.cherry = new Gameitem('data/jogo/level1/screen1/5.png');
     items.oliveOil = new Gameitem('data/jogo/level2/screen1/3.png');
     items.banana = new Gameitem('data/jogo/level1/screen4/4.png');
-    items.papaya = new Gameitem('data/jogo/level1/screen3/3.png');
+    items.calabash = new Gameitem('data/jogo/level1/screen3/2.png');
     items.tomato = new Gameitem('data/jogo/level2/screen1/6.png');
 }
 
@@ -147,7 +147,7 @@ function loadLevels() {
     level_one.addItem(items.cherry, false, 'data/jogo/certoErrado/errado.png', 'Cebola');
     level_one.addItem(items.oliveOil, true, 'data/jogo/certoErrado/certo.png', 'Azeite');
     level_one.addItem(items.banana, false, 'data/jogo/certoErrado/errado.png', 'Banana');
-    level_one.addItem(items.papaya, false, 'data/jogo/certoErrado/errado.png', 'Papaia');
+    level_one.addItem(items.calabash, false, 'data/jogo/certoErrado/errado.png', 'Cabaça');
     level_one.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');
     level_one.setDefaultPosition();
 
@@ -424,7 +424,7 @@ class Level {
             textAlign(CENTER);
             rectMode(CENTER);
             let d = dist(mouseX, mouseY, item.pos.x, item.pos.y);
-            if (d < item.item.image.width * itemSize / 2 && !item.plate && this.draggingItem == null) {
+            if (d < item.item.image.width * itemSize / 2  && this.draggingItem == null) {
                 text(item.name, item.pos.x, item.pos.y - (item.item.image.height * itemSize / 1.5));
             }
             pop();

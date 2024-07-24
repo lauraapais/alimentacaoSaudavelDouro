@@ -190,7 +190,7 @@ function loadLevels() {
     level_two.addItem(items.pinaple, true, 'data/jogo/certoErrado/certo.png', 'Ananás');
     level_two.addItem(items.watermelon, true, 'data/jogo/certoErrado/certo.png', 'Melancia');
     level_two.addItem(items.cauliflower, false, 'data/jogo/certoErrado/errado.png', 'Couve-Flor');
-    level_two.addItem(items.tomato, true, 'data/jogo/certoErrado/certo.png', 'Tomate');
+    level_two.addItem(items.tomato, false, 'data/jogo/certoErrado/errado.png', 'Tomate');
     level_two.addItem(items.eggplant, false, 'data/jogo/certoErrado/errado.png', 'Beringela');
     level_two.addItem(items.lemon, true, 'data/jogo/certoErrado/certo.png', 'Limão');
     level_two.setDefaultPosition();
@@ -522,7 +522,7 @@ class Level {
             textAlign(CENTER);
             rectMode(CENTER);
             let d = dist(mouseX, mouseY, item.pos.x, item.pos.y);
-            if (d < item.item.image.width * itemSize / 2 && !item.plate &&this.draggingItem==null)  {
+            if (d < item.item.image.width * itemSize / 2 &&this.draggingItem==null)  {
                 text(item.name, item.pos.x, item.pos.y - (item.item.image.height * itemSize / 1.5));
             }
             pop();
