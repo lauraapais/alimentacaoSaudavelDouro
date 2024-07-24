@@ -28,7 +28,6 @@ function preload() {
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
-    soundFormats('wav', 'ogg');
     soundTrue = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound1.wav');
     soundFalse = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound2.wav');
 }

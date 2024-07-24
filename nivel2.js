@@ -618,12 +618,12 @@ class Level {
                 soundFalse.play();
             }*/
         }
-        /*if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
+        if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
             if (item.value) this.points++;
-        }*/ else if (item.plate) {
+        } else if (item.plate) {
             item.plate = false;
             if (item.value) this.points--;
         }
