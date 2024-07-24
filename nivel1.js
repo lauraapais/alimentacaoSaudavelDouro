@@ -30,7 +30,7 @@ function preload() {
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
     soundFormats('mp3', 'ogg');
     soundTrue = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound1.mp3');
-    soundFalse = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound1.mp3');
+    soundFalse = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound2.mp3');
 }
 
 function setup() {
