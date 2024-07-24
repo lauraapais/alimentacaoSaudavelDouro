@@ -27,10 +27,8 @@ function preload() {
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
-    /*
-    soundFormats('mp3', 'ogg');
-    soundTrue = loadSound('data/sound1.mp3');
-    soundFalse = loadSound('data/sound2.mp3');*/
+    soundTrue = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound1.wav');
+    soundFalse = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound2.wav');
 }
 
 function setup() {
@@ -144,7 +142,7 @@ function loadItems() {
     items.lemon = new Gameitem('data/jogo/level3/screen2/5.png');
     items.eggplant = new Gameitem('data/jogo/level1/screen2/6.png');
     items.bread2 = new Gameitem('data/jogo/level4/screen3/1.png');
-    //Horticulas
+    //Horticolas
     items.turnip = new Gameitem('data/jogo/level3/screen3/2.png');
     items.leek = new Gameitem('data/jogo/level3/screen3/3.png');
     items.broccoli = new Gameitem('data/jogo/level1/screen2/3.png');
@@ -196,9 +194,9 @@ function loadLevels() {
     level_two.addItem(items.eggplant, false, 'data/jogo/certoErrado/errado.png', 'Beringela');
     level_two.addItem(items.lemon, true, 'data/jogo/certoErrado/certo.png', 'Limão');
     level_two.setDefaultPosition();
-    //Hortículas
+    //Hortícolas
     level_three = new Level(color(156, 153, 54),
-        'Sabes que alimentos são do grupo dos hortículas?',
+        'Sabes que alimentos são do grupo dos hortícolas?',
         new UIFinish('data/jogo/endLevel/8.png', color(156, 153, 54)), 
         loadImage('data/jogo/rodaAlimentos_3.png')
     );
@@ -704,13 +702,13 @@ class Level {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
-            /*
+            
             if (item.value) {
                 this.points++;
                 soundTrue.play();
             } else {
                 soundFalse.play();
-            }*/
+            }
         } else if (item.plate) {
             item.plate = false;
             if (item.value) this.points--;

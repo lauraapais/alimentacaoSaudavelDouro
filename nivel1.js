@@ -655,29 +655,21 @@ class Level {
 
 
     insidePlate(item) {
-        if (item.pos.x > width / 2 - plateSize / 2 &&
-            item.pos.x < width / 2 + plateSize / 2 &&
-            item.pos.y > height / 2 - plateSize / 4 &&
-            item.pos.y < height / 2 + plateSize / 2) {
-            item.plate = true;
-            this.lastPlateItem = item;
-            this.currentTextTimer = 50;
-            
-            if (item.value) {
-                this.points++;
-                soundTrue.play();
-            } else {
-                soundFalse.play();
-            }
-        }
+        
         if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
-            if (item.value) this.points++;
+            if (item.value){
+                this.points++;
+                soundTrue.play();
+            } 
         } else if (item.plate) {
             item.plate = false;
-            if (item.value) this.points--;
+            if (item.value){
+                this.points--;
+                soundFalse.play();
+            }
         }
     }
 

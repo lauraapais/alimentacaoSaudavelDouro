@@ -27,10 +27,8 @@ function preload() {
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
-    /*
-    soundFormats('mp3', 'ogg');
-    soundTrue = loadSound('data/sound1.mp3');
-    soundFalse = loadSound('data/sound2.mp3');*/
+    soundTrue = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound1.wav');
+    soundFalse = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound2.wav');
 }
 
 function setup() {
@@ -418,9 +416,9 @@ class Level {
             if (w < 900) {
                 textSize(h2Size / 2);
             }
-            else{
-            textSize(h2Size / 2.6);
-        }
+            else {
+                textSize(h2Size / 2.6);
+            }
             textFont(fontBold);
             fill(255);
             textAlign(CENTER);
@@ -610,22 +608,13 @@ class Level {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
-            /*
+
             if (item.value) {
                 this.points++;
                 soundTrue.play();
             } else {
                 soundFalse.play();
-            }*/
-        }
-        if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
-            item.plate = true;
-            this.lastPlateItem = item;
-            this.currentTextTimer = 50;
-            if (item.value) this.points++;
-        } else if (item.plate) {
-            item.plate = false;
-            if (item.value) this.points--;
+            }
         }
     }
 
