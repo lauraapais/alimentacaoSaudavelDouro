@@ -29,8 +29,8 @@ function preload() {
     fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
     soundFormats('mp3', 'ogg');
-    soundTrue = loadSound('https://upload.wikimedia.org/wikipedia/commons/3/3c/Chlidonias_niger_-_Black_Tern_XC428429.mp3');
-    soundFalse = loadSound('https://upload.wikimedia.org/wikipedia/commons/3/3c/Chlidonias_niger_-_Black_Tern_XC428429.mp3');
+    soundTrue = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound1.mp3');
+    soundFalse = loadSound('https://lauraapais.github.io/alimentacaoSaudavelDouro/data/sound1.mp3');
 }
 
 function setup() {
