@@ -29,8 +29,8 @@ function preload() {
     fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
     soundFormats('mp3', 'ogg');
-    soundTrue = loadSound('data/sound1.mp3');
-    soundFalse = loadSound('data/sound2.mp3');
+    soundTrue = loadSound('https://upload.wikimedia.org/wikipedia/commons/3/3c/Chlidonias_niger_-_Black_Tern_XC428429.mp3');
+    soundFalse = loadSound('https://upload.wikimedia.org/wikipedia/commons/3/3c/Chlidonias_niger_-_Black_Tern_XC428429.mp3');
 }
 
 function setup() {
@@ -663,20 +663,20 @@ class Level {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
-            /*
+            
             if (item.value) {
                 this.points++;
                 soundTrue.play();
             } else {
                 soundFalse.play();
-            }*/
-        }/*
+            }
+        }
         if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
             if (item.value) this.points++;
-        }*/ else if (item.plate) {
+        } else if (item.plate) {
             item.plate = false;
             if (item.value) this.points--;
         }
