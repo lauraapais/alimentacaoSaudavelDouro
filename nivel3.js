@@ -190,7 +190,7 @@ function loadLevels() {
     level_two.addItem(items.pinaple, true, 'data/jogo/certoErrado/certo.png', 'Ananás');
     level_two.addItem(items.watermelon, true, 'data/jogo/certoErrado/certo.png', 'Melancia');
     level_two.addItem(items.cauliflower, false, 'data/jogo/certoErrado/errado.png', 'Couve-Flor');
-    level_two.addItem(items.tomato, false, 'data/jogo/certoErrado/errado.png', 'Tomate');
+    level_two.addItem(items.mushroom, false, 'data/jogo/certoErrado/errado.png', 'Cogumelo');
     level_two.addItem(items.eggplant, false, 'data/jogo/certoErrado/errado.png', 'Beringela');
     level_two.addItem(items.lemon, true, 'data/jogo/certoErrado/certo.png', 'Limão');
     level_two.setDefaultPosition();
