@@ -660,15 +660,16 @@ class Level {
             item.plate = true;
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
-            if (item.value){
+            if (item.value) {
                 this.points++;
                 soundTrue.play();
-            } 
+            } else {
+                soundFalse.play();
+            }
         } else if (item.plate) {
             item.plate = false;
             if (item.value){
                 this.points--;
-                soundFalse.play();
             }
         }
     }
