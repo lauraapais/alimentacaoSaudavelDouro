@@ -172,7 +172,7 @@ function loadLevels() {
     //Laticineos
     level_one = new Level(color(27, 117, 187),
         'Sabes que alimentos são laticíneos?',
-        new UIFinish('data/jogo/endLevel/6.png', color(27, 117, 187)), 
+        new UIFinish('data/jogo/endLevel/6_done.png', 'data/jogo/endLevel/6_erro.png', color(27, 117, 187)), 
         loadImage('data/jogo/rodaAlimentos_1.png'));
     level_one.addItem(items.milk, true, 'data/jogo/certoErrado/certo.png', 'Leite');
     level_one.addItem(items.redonion, false, 'data/jogo/certoErrado/errado.png', 'Cebola');
@@ -184,7 +184,7 @@ function loadLevels() {
     //Frutas
     level_two = new Level(color(244, 120, 34),
         'Sabes que alimentos são da família das frutas?',
-        new UIFinish('data/jogo/endLevel/7.png', color(244, 120, 34)), 
+        new UIFinish('data/jogo/endLevel/7_done.png', 'data/jogo/endLevel/7_erro.png', color(244, 120, 34)), 
         loadImage('data/jogo/rodaAlimentos_2.png')
     );
     level_two.addItem(items.pinaple, true, 'data/jogo/certoErrado/certo.png', 'Ananás');
@@ -197,7 +197,7 @@ function loadLevels() {
     //Hortícolas
     level_three = new Level(color(156, 153, 54),
         'Sabes que alimentos são do grupo dos hortícolas?',
-        new UIFinish('data/jogo/endLevel/8.png', color(156, 153, 54)), 
+        new UIFinish('data/jogo/endLevel/8_done.png', 'data/jogo/endLevel/8_erro.png', color(156, 153, 54)), 
         loadImage('data/jogo/rodaAlimentos_3.png')
     );
     level_three.addItem(items.turnip, true, 'data/jogo/certoErrado/certo.png', 'Nabo');
@@ -210,7 +210,7 @@ function loadLevels() {
     //Carne Peixe Ovos
     level_four = new Level(color(91, 165, 218),
         'Sabes que alimentos são do grupo carne, pescado e ovos?',
-        new UIFinish('data/jogo/endLevel/9.png', color(91, 165, 218)), 
+        new UIFinish('data/jogo/endLevel/9_done.png', 'data/jogo/endLevel/9_erro.png', color(91, 165, 218)), 
         loadImage('data/jogo/rodaAlimentos_4.png')
     );
     level_four.addItem(items.fish, true, 'data/jogo/certoErrado/certo.png', 'Peixe');
@@ -223,7 +223,7 @@ function loadLevels() {
     //GordurasOleos
     level_five = new Level(color(171, 169, 169),
         'Sabes que alimentos são gorduras e óleos?',
-        new UIFinish('data/jogo/endLevel/10.png', color(171, 169, 169)), 
+        new UIFinish('data/jogo/endLevel/10_done.png', 'data/jogo/endLevel/10_erro.png', color(171, 169, 169)), 
         loadImage('data/jogo/rodaAlimentos_5.png')
     );
     level_five.addItem(items.cheese, false, 'data/jogo/certoErrado/errado.png', 'Queijo');
@@ -236,7 +236,7 @@ function loadLevels() {
     //Cereais
     level_six = new Level(color(237, 119, 38),
         'Sabes que alimentos são cereais, derivados e tubérculos?',
-        new UIFinish('data/jogo/endLevel/11.png', color(237, 119, 38)), 
+        new UIFinish('data/jogo/endLevel/11_done.png', 'data/jogo/endLevel/11_erro.png', color(237, 119, 38)), 
         loadImage('data/jogo/rodaAlimentos_6.png')
     );
     level_six.addItem(items.rice, true, 'data/jogo/certoErrado/certo.png', 'Arroz');

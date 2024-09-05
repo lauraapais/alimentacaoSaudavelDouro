@@ -141,7 +141,7 @@ function loadLevels() {
     //Douro
     level_one = new Level(color(237, 119, 38),
         'Quais são os alimentos locais do Douro?',
-        new UIFinish('data/jogo/endLevel/5.png', color(237, 119, 38))
+        new UIFinish('data/jogo/endLevel/5_done.png', 'data/jogo/endLevel/5_erro.png', color(237, 119, 38))
     );
     level_one.addItem(items.almond, true, 'data/jogo/certoErrado/certo.png', 'Amêndoas');
     level_one.addItem(items.cherry, false, 'data/jogo/certoErrado/errado.png', 'Cebola');
