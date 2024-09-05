@@ -1111,7 +1111,7 @@ svg {
     }
 
     #arrowIndex{
-        width: 7vw;
+        width: calc(27px + 1.5vw) !important;
         stroke-width: 1.5px;
     }
     
