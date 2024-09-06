@@ -35,6 +35,7 @@ function preload() {
     continueIcon = loadImage('data/jogo/endLevel/icons/continue.png');
 }
 
+
 function setup() {
     canvas = createCanvas(w, h);
     pw = w;

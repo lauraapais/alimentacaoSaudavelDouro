@@ -5,7 +5,7 @@ var items = {};
 var levels;
 var plate, plateSize, itemSize;
 var itemsScale = 0.16;
-var close;
+var close, refreshIcon, continueIcon, homeIcon;
 var heightQuestion = 300;
 var widthQuestionMobile;
 
@@ -17,18 +17,22 @@ var endLevel = false, level = 1;
 
 var h1Size, h2Size;
 
-var soundTrue, soundFalse;
-
 marginMobile = 0.06 * w;
 marginDesktop = 0.02 * w;
 
+
+var soundTrue, soundFalse;
+
 function preload() {
-    plate = loadImage('data/jogo/plate.png');
+    plate = loadImage('data/jogo/cesta.png');
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
     soundTrue = loadSound('data/sound1.wav');
     soundFalse = loadSound('data/sound2.wav');
+    refreshIcon = loadImage('data/jogo/endLevel/icons/refresh.png');
+    homeIcon = loadImage('data/jogo/endLevel/icons/home.png');
+    continueIcon = loadImage('data/jogo/endLevel/icons/continue.png');
 }
 
 function setup() {
