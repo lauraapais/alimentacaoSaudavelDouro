@@ -318,7 +318,7 @@ class UIFinish {
     
         push();
         noStroke();
-        const iconSize = w < 900 ? 30 : w > 2500 ? 55 : 40;
+        const iconSize = w < 900 ? 20 : w > 2500 ? 45 : 35;
         const homeX = width / 2 - buttonOffsetX;
         const actionX = width / 2 + buttonOffsetX;
         image(result ? homeIcon : refreshIcon, homeX, height / 2 + buttonOffsetY, iconSize, iconSize);
@@ -336,7 +336,6 @@ class UIFinish {
         }
         fill(buttonBackground);
         ellipse(width/2 + imgSize/2 - imgSize/7, height/2 - imgSize/2 + imgSize/7, imgSize/5, imgSize/5);
-        
         fill(255);
         textAlign(CENTER, CENTER);  // Centraliza o texto
         text(content, width/2 + imgSize/2 - imgSize/7, height/2 - imgSize/2 + imgSize/7);
