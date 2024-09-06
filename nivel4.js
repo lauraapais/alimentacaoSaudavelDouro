@@ -292,26 +292,26 @@ class UIFinish {
         this.status = false;
     }
 
-    display(result) {
-        let content = this.points + "/" + this.totalTrues + " certos";
+    display(result, pontos, certos, buttonBackground) {
+        let content = pontos + "/" + certos;
+    
         this.result = result;
         imageMode(CENTER);
         const imgSize = w < 900 ? 300 : w > 2500 ? 500 : 400;
         image(result ? this.imageWin : this.imageLose, width / 2, height / 2, imgSize, imgSize);
-
+    
         const buttonSize = w < 900 ? 60 : w > 2500 ? 85 : 70;
         const buttonOffsetY = w < 900 ? 95 : w > 2500 ? 165 : 130;
         const buttonOffsetX = 50;
-
+    
         push();
         rectMode(CENTER);
-        blendMode(MULTIPLY);
         noStroke();
-        fill(109, 111, 113);
+        fill(buttonBackground);
         rect(width / 2 + buttonOffsetX, height / 2 + buttonOffsetY, buttonSize, buttonSize, 10);
         rect(width / 2 - buttonOffsetX, height / 2 + buttonOffsetY, buttonSize, buttonSize, 10);
         pop();
-
+    
         push();
         noStroke();
         const iconSize = w < 900 ? 30 : w > 2500 ? 55 : 40;
@@ -319,6 +319,23 @@ class UIFinish {
         const actionX = width / 2 + buttonOffsetX;
         image(result ? homeIcon : refreshIcon, homeX, height / 2 + buttonOffsetY, iconSize, iconSize);
         image(result ? continueIcon : homeIcon, actionX, height / 2 + buttonOffsetY, iconSize, iconSize);
+        pop();
+    
+        push();
+        rectMode(CENTER);
+        noStroke();
+        if (w < 900) {
+            textSize(h2Size / 2);
+        }
+        else {
+            textSize(h2Size / 2.6);
+        }
+        fill(buttonBackground);
+        ellipse(width/2 + imgSize/2 - imgSize/7, height/2 - imgSize/2 + imgSize/7, imgSize/5, imgSize/5);
+        
+        fill(255);
+        textAlign(CENTER, CENTER);  // Centraliza o texto
+        text(content, width/2 + imgSize/2 - imgSize/7, height/2 - imgSize/2 + imgSize/7);
         pop();
     }
 
@@ -443,7 +460,7 @@ class Level {
             fill(0, 100);
             rect(0, 0, width, height);
 
-            this.uiEndLevel.display(this.erros < 2);
+            this.uiEndLevel.display(this.erros < 2, this.points, this.totalTrues, this.background);
         }
     }
 
