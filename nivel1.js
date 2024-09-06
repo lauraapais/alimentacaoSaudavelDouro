@@ -296,26 +296,26 @@ class UIFinish {
         this.status = false;
     }
 
-    display(result) {
-
+    display(result, pontos, certos, buttonBackground) {
+        let content = pontos + "/" + certos;
+    
         this.result = result;
         imageMode(CENTER);
         const imgSize = w < 900 ? 300 : w > 2500 ? 500 : 400;
         image(result ? this.imageWin : this.imageLose, width / 2, height / 2, imgSize, imgSize);
-
+    
         const buttonSize = w < 900 ? 60 : w > 2500 ? 85 : 70;
         const buttonOffsetY = w < 900 ? 95 : w > 2500 ? 165 : 130;
         const buttonOffsetX = 50;
-
+    
         push();
         rectMode(CENTER);
-        blendMode(MULTIPLY);
         noStroke();
-        fill(109, 111, 113);
+        fill(buttonBackground);
         rect(width / 2 + buttonOffsetX, height / 2 + buttonOffsetY, buttonSize, buttonSize, 10);
         rect(width / 2 - buttonOffsetX, height / 2 + buttonOffsetY, buttonSize, buttonSize, 10);
         pop();
-
+    
         push();
         noStroke();
         const iconSize = w < 900 ? 30 : w > 2500 ? 55 : 40;
@@ -324,7 +324,25 @@ class UIFinish {
         image(result ? homeIcon : refreshIcon, homeX, height / 2 + buttonOffsetY, iconSize, iconSize);
         image(result ? continueIcon : homeIcon, actionX, height / 2 + buttonOffsetY, iconSize, iconSize);
         pop();
+    
+        push();
+        rectMode(CENTER);
+        noStroke();
+        if (w < 900) {
+            textSize(h2Size / 2);
+        }
+        else {
+            textSize(h2Size / 2.6);
+        }
+        fill(buttonBackground);
+        ellipse(width/2 + imgSize/2 - imgSize/7, height/2 - imgSize/2 + imgSize/7, imgSize/5, imgSize/5);
+        
+        fill(255);
+        textAlign(CENTER, CENTER);  // Centraliza o texto
+        text(content, width/2 + imgSize/2 - imgSize/7, height/2 - imgSize/2 + imgSize/7);
+        pop();
     }
+    
 
     mousePressed() {
         const result = this.result;
@@ -404,7 +422,7 @@ class Level {
     display() {
         background(this.background);
         push();
-        blendMode(MULTIPLY);
+
 
         if (w < 900) {
             image(plate, width / 2, height / 2.2, plateSize, plateSize);
@@ -429,8 +447,7 @@ class Level {
                 textSize(h2Size / 2.6);
             }
             textFont(fontBold);
-            fill(109, 111, 113);
-            blendMode(MULTIPLY);
+            fill(255);
             textAlign(CENTER);
             rectMode(CENTER);
             let d = dist(mouseX, mouseY, item.pos.x, item.pos.y);
@@ -448,20 +465,18 @@ class Level {
             fill(0, 100);
             rect(0, 0, width, height);
 
-            this.uiEndLevel.display(this.erros < 2);
+            this.uiEndLevel.display(this.erros < 2, this.points, this.totalTrues, this.background);
         }
     }
 
     ui() {
         push();
         rectMode(CORNERS);
-        blendMode(MULTIPLY);
 
         let lastY;
         textSize(h2Size);
         textFont(fontBold);
-        fill(109, 111, 113);
-        blendMode(MULTIPLY);
+        fill(255);
 
         if (w < 900) {
             let maxWidth = windowWidth * 0.8;
@@ -501,8 +516,7 @@ class Level {
         textFont(fontRegular);
 
         push();
-        fill(109, 111, 113);
-        blendMode(MULTIPLY);
+        fill(255);
 
         if (windowWidth < 900) {
             text(content, marginMobile, lastY + marginMobile / 2);
@@ -716,18 +730,18 @@ function wrapText(txt, maxWidth) {
 
 function resetLevel() {
     let currentLevel = levels.levels[levels.currentLevel];
-    
+
     currentLevel.points = 0;
     currentLevel.erros = 0;
     currentLevel.lastPlateItem = null;
     currentLevel.currentTextTimer = 0;
-    
+
     for (let i = 0; i < currentLevel.items.length; i++) {
         let item = currentLevel.items[i];
-        item.plate = false;  
+        item.plate = false;
         item.dragScale = 0;
-        currentLevel.setDefaultPosition(item);  
+        currentLevel.setDefaultPosition(item);
     }
-    
+
     currentLevel.status = false;
 }

@@ -47,6 +47,10 @@
     background-color: var(--blue);
 }
 
+#exposicaoBackground {
+    background-color: #993DA6;
+}
+
 
 
 
@@ -69,6 +73,10 @@ p {
     font-size: calc(14px + 0.390625vw);
     text-wrap: pretty;
     color: var(--blueText);
+}
+
+.subtitle{
+    font-size: calc(20px + 0.390625vw);
 }
 
 h1 {
@@ -102,6 +110,10 @@ h4 {
     font-size: calc(20px + 0.390625vw);
     text-wrap: pretty;
     color: var(--white);
+}
+
+.underline{
+    text-decoration-color:var(--white);
 }
 
 ::-webkit-scrollbar {
@@ -141,7 +153,9 @@ header {
     bottom: var(--marginH);
 }
 
-
+.noMarginTop{
+    margin-top: 0!important;
+}
 .menu {
     display: flex;
     justify-content: space-between;
@@ -645,6 +659,12 @@ svg {
     width: 60%;
     height: auto;
 }
+
+.imageInfo video {
+    width: 80%;
+    height: auto;
+}
+
 
 .imageLand{
     margin-top:20vh;
@@ -1228,6 +1248,10 @@ svg {
     }
 
     .imageInfo img {
+        width: 100%;
+    }
+
+    .imageInfo video {
         width: 100%;
     }
 
