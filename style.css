@@ -864,7 +864,6 @@ svg {
 
 
 @media screen and (max-width:1500px) {
-
     /*index*/
     .indexImage {
         display: flex;
@@ -1312,6 +1311,7 @@ svg {
 
 
 
+
     /*explore*/
     .mainVideo {
         height: auto;
@@ -1338,6 +1338,9 @@ svg {
     .noneMobile{
         display: none;
     }
+
+
+
 
 
     /*new explore*/
@@ -1435,6 +1438,4 @@ svg {
         width: 100%;
         margin-bottom: 0;
     }
-    
-   
 }
