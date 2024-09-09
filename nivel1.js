@@ -161,7 +161,7 @@ function loadLevels() {
     var level_one, level_two, level_three, level_four;
     //Primavera
     level_one = new Level(color(235, 154, 194),
-        'Quais são os alimentos sazonais da primavera?',
+    'Quais são os 3 alimentos sazonais da primavera?',
         new UIFinish('data/jogo/endLevel/1_done.png', 'data/jogo/endLevel/1_erro.png', color(235, 154, 194))
     );
     level_one.addItem(items.grape, false, 'data/jogo/certoErrado/errado.png', 'Uvas');
@@ -173,7 +173,7 @@ function loadLevels() {
     level_one.setDefaultPosition();
     //Verão
     level_two = new Level(color(232, 210, 54),
-        'Quais são os alimentos sazonais do verão?',
+    'Quais são os 3 alimentos sazonais do verão?',
         new UIFinish('data/jogo/endLevel/2_done.png', 'data/jogo/endLevel/2_erro.png', color(232, 210, 54))
     );
     level_two.addItem(items.fig, true, 'data/jogo/certoErrado/certo.png', 'Figo');
@@ -185,7 +185,7 @@ function loadLevels() {
     level_two.setDefaultPosition();
     //Outono
     level_three = new Level(color(29, 117, 188),
-        'Quais são os alimentos sazonais do outono?',
+    'Quais são os 3 alimentos sazonais do outono?',
         new UIFinish('data/jogo/endLevel/3_done.png', 'data/jogo/endLevel/3_erro.png', color(29, 117, 188))
     );
     level_three.addItem(items.pumpkin, true, 'data/jogo/certoErrado/certo.png', 'Abóbora');
@@ -197,7 +197,7 @@ function loadLevels() {
     level_three.setDefaultPosition();
     //Inverno
     level_four = new Level(color(171, 169, 169),
-        'Quais são os alimentos sazonais do inverno?',
+       'Quais são os 3 alimentos sazonais do inverno?',
         new UIFinish('data/jogo/endLevel/4_done.png', 'data/jogo/endLevel/4_erro.png', color(171, 169, 169))
     );
 
