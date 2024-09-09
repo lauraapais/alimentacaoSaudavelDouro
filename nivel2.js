@@ -24,7 +24,7 @@ marginDesktop = 0.02 * w;
 var soundTrue, soundFalse;
 
 function preload() {
-    plate = loadImage('data/jogo/cesta.png');
+    plate = loadImage('data/jogo/mapa.png');
     close = loadImage('data/icons/home.png');
     fontBold = loadFont('data/font/AUTHENTIC Sans ^.otf');
     fontRegular = loadFont('data/font/AUTHENTICSans-90.otf');
@@ -579,39 +579,28 @@ class Level {
 
 
     insidePlate(item) {
+        /*QUAD*/
         if (item.pos.x > width / 2 - plateSize / 2 &&
             item.pos.x < width / 2 + plateSize / 2 &&
-            item.pos.y > height / 2 - plateSize / 4 &&
+            item.pos.y > height / 2 - plateSize / 2 &&
             item.pos.y < height / 2 + plateSize / 2) {
+            item.plate = true;
             this.lastPlateItem = item;
-            this.currentTextTimer = 100;
-            if (item.value) {
-                item.plate = true;
-                this.points++;
+            this.currentTextTimer = 50;
 
-                soundTrue.play();
-            }
-            else {
-                soundFalse.play();
-                this.erros++;
-                this.setDefaultPosition(item);
-            }
-        }
-        else if (item.plate) {
-            item.plate = false;
             if (item.value) {
-                this.points--;
+                this.points++;
+                soundTrue.play();
+            } else {
+                soundFalse.play();
             }
         }
     }
 
     checkEndLevel() {
-        if (this.erros < this.maxErros) {
-            for (let i = 0; i < this.items.length; i++) {
-                if (this.items[i].value != this.items[i].plate)
-                    return false;
-            }
-
+        for (let i = 0; i < this.items.length; i++) {
+            if (this.items[i].value != this.items[i].plate)
+                return false;
         }
         return true;
     }
