@@ -688,7 +688,7 @@ class Level {
     insidePlate(item) {
         if (item.pos.x > width / 2 - plateSize / 2 &&
             item.pos.x < width / 2 + plateSize / 2 &&
-            item.pos.y > height / 2 - plateSize / 4 &&
+            item.pos.y > height / 2 - plateSize / 2 &&
             item.pos.y < height / 2 + plateSize / 2) {
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
