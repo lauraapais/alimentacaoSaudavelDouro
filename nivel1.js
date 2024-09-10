@@ -128,7 +128,6 @@ function textsize() {
 }
 
 
-
 function loadItems() {
     //Primavera
     items.grape = new Gameitem('data/jogo/level1/screen1/1.png');
@@ -300,16 +299,18 @@ class UIFinish {
 
     display(result, pontos, certos, buttonBackground) {
         let content = pontos + "/" + certos;
-    
         this.result = result;
-        imageMode(CENTER);
+
         const imgSize = w < 900 ? 300 : w > 2500 ? 500 : 400;
-        image(result ? this.imageWin : this.imageLose, width / 2, height / 2, imgSize, imgSize);
-    
         const buttonSize = w < 900 ? 60 : w > 2500 ? 85 : 70;
         const buttonOffsetY = w < 900 ? 95 : w > 2500 ? 165 : 130;
         const buttonOffsetX = 50;
-    
+
+        push();
+        imageMode(CENTER);
+        image(result ? this.imageWin : this.imageLose, width / 2, height / 2, imgSize, imgSize);
+        pop();
+
         push();
         rectMode(CENTER);
         noStroke();
@@ -317,7 +318,7 @@ class UIFinish {
         rect(width / 2 + buttonOffsetX, height / 2 + buttonOffsetY, buttonSize, buttonSize, 10);
         rect(width / 2 - buttonOffsetX, height / 2 + buttonOffsetY, buttonSize, buttonSize, 10);
         pop();
-    
+
         push();
         noStroke();
         const iconSize = w < 900 ? 20 : w > 2500 ? 45 : 35;
@@ -326,22 +327,25 @@ class UIFinish {
         image(result ? homeIcon : refreshIcon, homeX, height / 2 + buttonOffsetY, iconSize, iconSize);
         image(result ? continueIcon : homeIcon, actionX, height / 2 + buttonOffsetY, iconSize, iconSize);
         pop();
-    
+
         push();
         rectMode(CENTER);
         noStroke();
+        fill(buttonBackground);
+        noStroke();
+        ellipse(width / 2 + imgSize / 2 - imgSize / 7, height / 2 - imgSize / 2 + imgSize / 7, imgSize / 5, imgSize / 5);
+        pop();
+
+        push();
         if (w < 900) {
             textSize(h2Size / 2);
         }
         else {
             textSize(h2Size / 2.6);
         }
-        fill(buttonBackground);
-        ellipse(width/2 + imgSize/2 - imgSize/7, height/2 - imgSize/2 + imgSize/7, imgSize/5, imgSize/5);
-        
         fill(255);
         textAlign(CENTER, CENTER);  // Centraliza o texto
-        text(content, width/2 + imgSize/2 - imgSize/7, height/2 - imgSize/2 + imgSize/7);
+        text(content, width / 2 + imgSize / 2 - imgSize / 7, height / 2 - imgSize / 2 + imgSize / 7);
         pop();
     }
 
@@ -636,29 +640,39 @@ class Level {
 
 
     insidePlate(item) {
-        
-        if (dist(item.pos.x, item.pos.y, width / 2, height / 2) < plateSize / 2) {
-            item.plate = true;
+        if (item.pos.x > width / 2 - plateSize / 2 &&
+            item.pos.x < width / 2 + plateSize / 2 &&
+            item.pos.y > height / 2 - plateSize / 4 &&
+            item.pos.y < height / 2 + plateSize / 2) {
             this.lastPlateItem = item;
             this.currentTextTimer = 50;
             if (item.value) {
+                item.plate = true;
                 this.points++;
+
                 soundTrue.play();
-            } else {
-                soundFalse.play();
             }
-        } else if (item.plate) {
+            else {
+                soundFalse.play();
+                this.erros++;
+                this.setDefaultPosition(item);
+            }
+        }
+        else if (item.plate) {
             item.plate = false;
-            if (item.value){
+            if (item.value) {
                 this.points--;
             }
         }
     }
 
     checkEndLevel() {
-        for (let i = 0; i < this.items.length; i++) {
-            if (this.items[i].value != this.items[i].plate)
-                return false;
+        if (this.erros < this.maxErros) {
+            for (let i = 0; i < this.items.length; i++) {
+                if (this.items[i].value != this.items[i].plate)
+                    return false;
+            }
+
         }
         return true;
     }
