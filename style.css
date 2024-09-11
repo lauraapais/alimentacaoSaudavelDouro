@@ -1142,7 +1142,7 @@ svg {
 
    
     .level  .cover{
-        height: 83%;
+        height: 70%;
         background-size: cover;
         background-position: top;
     }
@@ -1157,7 +1157,7 @@ svg {
     }
 
     #rodadosAlimentos .cover {
-        background-image: url(data/jogo/levels/rodaAlimentos.png);
+        background-image: url(data/jogo/levels/rodaAlimentos_2.png);
     }
 
     #alimentacaoEquilibrada .cover {
