@@ -382,10 +382,13 @@ class UIFinish {
 
         push();
         if (w < 900) {
-            textSize(h2Size / 2);
+            textSize(h2Size / 2.5);
+        }
+        else if (w < 1500) {
+            textSize(h2Size /  2);
         }
         else {
-            textSize(h2Size / 2.6);
+            textSize(h2Size /  2.5);
         }
         fill(255);
         textAlign(CENTER, CENTER);  // Centraliza o texto
