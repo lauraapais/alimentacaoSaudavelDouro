@@ -414,7 +414,6 @@ svg {
 #levelMain {
     width: calc(100vw - var(--marginH) * 2);
     min-height: calc(100vh - min(var(--headerHmin), 500px) - var(--marginH) * 3);
-    height: calc(100vh - var(--headerHmin) - var(--marginH)*4);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -429,8 +428,8 @@ svg {
 .level {
     width: 16vw;
     height: 25vw;
-    min-width: 280px;
-    min-height: 410px;
+    min-width: 230px;
+    min-height: 360px;
     border-radius: 25px;
     filter: drop-shadow(0px 0px 0px #4444);
     transition: filter 0.3s;
@@ -904,37 +903,9 @@ svg {
 
 
     /*niveis*/
-    .level {
-        width: 48%;
-        height: 42%;
-        max-width: 300px;
-        max-height: 300px;
-        gap: var(--marginHMobile);
-        box-sizing: border-box;
-        
-        min-width: 200px;
-        min-height: 300px;
-    }
-    
-.level .cover {
-    height: 100%;
-}
-
-    #levelMain {
-        display: flex;
-        justify-content: center;
-        width: calc(100vw);
-        min-height: calc(var(--vh, 1h) * 100 - var(--marginHMobile)  - min(var(--headerHminMobile), 500px));
-        height: calc(100vh - var(--headerHminMobile) - var(--marginHmobile)*4);
-        padding: 0;
-        gap: var(--marginHMobile);
-    }
-
-    .levelTitle {
-        display: none;
-    }
 
     #levelMain span {
+        display: none;
         font-size: calc(20px + 0.6vw);
     }
 
@@ -1281,8 +1252,8 @@ svg {
     /*niveis*/
     .level {
         width: 45%;
-        height: 45vw;
-        max-height: 250px;
+        height: 60vw;
+        max-height: 300px;
         max-width: 250px;
         gap: var(--marginHMobile);
         box-sizing: border-box;
@@ -1299,8 +1270,9 @@ svg {
 
     }
 
-    .levelTitle {
-        display: none;
+    .levelTitle span{
+        font-size: calc(16px + 0.6vw);
+        line-height: calc(16px + 0.6vw);
     }
 
     .headerGameInside {
