@@ -1092,7 +1092,6 @@ svg {
 
     #menuIcon {
         width: calc(27px + 1.5vw) !important;
-        height: fit-content;
     }
 
     #closeMenu,
@@ -1116,7 +1115,7 @@ svg {
     }
 
     .mainLanding {
-        height: calc(var(--vh, 1h)*100 - min(var(--headerHminMobile), 500px) - var(--marginHMobile)* 4);
+        height: calc(var(--vh, 1h)*100 - min(var(--headerHminMobile), 500px) - var(--marginHMobile)* 2);
         margin: 0;
     }
 
