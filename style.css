@@ -194,10 +194,17 @@ header {
     width: 100vw;
     min-height: calc(var(--vh, 1h) * 100);
     position: fixed;
-    top: calc(var(--vh, 1h) * -100);
     z-index: 201;
     transition: top 1s;
     background-color: var(--armygreen);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.active {
+    transition: opacity 1s;
+    top: 0 !important;
+    opacity: 1;
 }
 
 #menuIcon {
@@ -218,10 +225,7 @@ header {
     stroke-width: 1.6px;
 }
 
-.active {
-    transition: top 1s;
-    top: 0 !important;
-}
+
 
 main {
     padding: var(--marginH);
