@@ -221,7 +221,7 @@ function loadLevels() {
     level_four.addItem(items.shrimp, true, 'data/jogo/certoErrado/certo.png', 'Camarão');
     level_four.addItem(items.potato, false, 'data/jogo/certoErrado/errado.png', 'Batata');
     level_four.addItem(items.eggs, true, 'data/jogo/certoErrado/certo.png', 'Ovos');
-    level_four.addItem(items.bacon, true, 'data/jogo/certoErrado/certo.png', 'Bacon');
+    level_four.addItem(items.chicken, true, 'data/jogo/certoErrado/certo.png', 'Frango');
     level_four.setDefaultPosition();
     //GordurasOleos
     level_five = new Level(color(171, 169, 169),
