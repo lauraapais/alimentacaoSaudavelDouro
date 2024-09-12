@@ -39,12 +39,20 @@ function showVideo(index) {
         }
     });
 
-    // Ocultar ou mostrar as setas dependendo do índice
-    arrowLeft.style.display = (index === 0) ? 'none' : 'block';
-    arrowRight.style.display = (index === videos.length - 1) ? 'none' : 'block';
-    arrowLeftMobile.style.display = (index === 0) ? 'none' : 'block';
-    arrowRightMobile.style.display = (index === videos.length - 1) ? 'none' : 'block';
+    arrowLeft.style.opacity = (index === 0) ? 0 : 1;
+    arrowRight.style.opacity = (index === videos.length - 1) ? 0 : 1;
+
+    arrowLeft.style.pointerEvents = (index === 0) ? 'none' : 'auto';
+    arrowRight.style.pointerEvents = (index === videos.length - 1) ? 'none' : 'auto';
+
+    arrowLeftMobile.style.opacity = (index === 0) ? 0 : 1;
+    arrowRightMobile.style.opacity = (index === videos.length - 1) ? 0 : 1;
+
+    arrowLeftMobile.style.pointerEvents = (index === 0) ? 'none' : 'auto';
+    arrowRightMobile.style.pointerEvents = (index === videos.length - 1) ? 'none' : 'auto';
 }
+
+
 
 function changeBackgroundColor(index) {
     let backgroundColor;

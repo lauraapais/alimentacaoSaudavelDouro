@@ -839,7 +839,7 @@ svg {
     display: none;
 }
 
-.arrowMobile{
+.arrowMobileNew{
     display: none;
 }
 
@@ -979,17 +979,6 @@ svg {
         display: none;
     }
 
-    .arrowMobile{
-        display: flex;
-        width: calc(100% - var(--marginH)*2);
-        position: absolute;
-        justify-content: space-between;
-        padding: var(--marginH);
-        background-color: #F3822B;
-        transition: background-color 1s ease;
-        bottom: 0;
-    }
-
     #arrowLeftMobile {
         width: 3vw;
         stroke-width: 2px;
@@ -998,9 +987,6 @@ svg {
     #arrowRightMobile {
         width: 3vw;
         stroke-width: 2px;
-        position: absolute;
-        right: var(--marginHMobile);
-        bottom: var(--marginHMobile);
         
     }
     #closeMenu,
@@ -1008,7 +994,18 @@ svg {
         width: calc(15px + 1.5vw) !important;
         height: fit-content;
     }
-   
+    .arrowMobileNew{
+        width: calc(100% - var(--marginHMobile)* 2);
+        height: fit-content;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        align-items: center;
+        background-color: #F3822B;
+        transition: background-color 1s ease;
+        justify-content: space-between;
+        padding: var(--marginHMobile);
+    }
 }
 
 
@@ -1374,10 +1371,7 @@ svg {
     max-height: calc(var(--vh, 1h)* 100 - var(--marginHmobile)* 3 - var(--headerHminMobile));
     }
 
-    .arrowMobile{
-        width: calc(100% - var(--marginHMobile)*2);
-        padding: var(--marginHMobile);
-    }
+    
 
     .arrow{
         display: none;
@@ -1388,31 +1382,16 @@ svg {
         position: relative;
     }
 
-    .arrowMobile{
-        display: flex;
-        width: calc(100% - var(--marginH)*2);
-        position: absolute;
-        justify-content: space-between;
-        padding: var(--marginH);
-        background-color: #F3822B;
-        transition: background-color 1s ease;
-        bottom: 0;
-    }
+  
 
     #arrowLeftMobile {
         width: 6vw;
         stroke-width: 2px;
-        position: absolute;
-        left: var(--marginHMobile);
-        bottom: var(--marginHMobile);
     }
 
     #arrowRightMobile {
         width: 6vw;
         stroke-width: 2px;
-        position: absolute;
-        right: var(--marginHMobile);
-        bottom: var(--marginHMobile);
     }
 
     .videoPage{
@@ -1426,5 +1405,18 @@ svg {
         height: auto;
         width: 100%;
         margin-bottom: 0;
+    }
+
+    .arrowMobileNew{
+        width: calc(100% - var(--marginHMobile)* 2);
+        height: fit-content;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        align-items: center;
+        background-color: #F3822B;
+        transition: background-color 1s ease;
+        justify-content: space-between;
+        padding: var(--marginHMobile);
     }
 }
