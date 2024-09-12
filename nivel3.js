@@ -382,7 +382,7 @@ class UIFinish {
 
         push();
         if (w < 900) {
-            textSize(h2Size / 2.5);
+            textSize(h2Size / 2);
         }
         else if (w < 1500) {
             textSize(h2Size /  2);
