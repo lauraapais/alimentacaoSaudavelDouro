@@ -199,12 +199,14 @@ header {
     background-color: var(--armygreen);
     opacity: 0;
     transition: opacity 0.5s;
+    pointer-events: none;
 }
 
 .active {
     transition: opacity 1s;
     top: 0 !important;
     opacity: 1;
+    pointer-events: auto;
 }
 
 #menuIcon {
